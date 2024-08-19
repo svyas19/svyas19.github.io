@@ -16,8 +16,8 @@
         }
 
         header {
-            background-color: #333;
-            color: #fff;
+            background-color: #2c3e50; /* Dark blue */
+            color: #ecf0f1; /* Light gray */
             padding: 20px 0;
             text-align: center;
         }
@@ -25,18 +25,19 @@
         nav {
             display: flex;
             justify-content: center;
-            background-color: #444;
+            background-color: #34495e; /* Slightly lighter blue */
         }
 
         nav a {
-            color: white;
+            color: #ecf0f1;
             padding: 14px 20px;
             text-decoration: none;
             text-align: center;
+            transition: background-color 0.3s ease;
         }
 
         nav a:hover {
-            background-color: #555;
+            background-color: #1abc9c; /* Teal */
         }
 
         .container {
@@ -51,8 +52,8 @@
         }
 
         footer {
-            background-color: #333;
-            color: #fff;
+            background-color: #2c3e50;
+            color: #ecf0f1;
             text-align: center;
             padding: 10px 0;
             position: relative;
@@ -73,7 +74,8 @@
         .intro {
             text-align: center;
             padding: 50px 20px;
-            background-color: #f4f4f4;
+            background-color: #ecf0f1; /* Light gray */
+            color: #2c3e50; /* Dark blue */
         }
 
         .projects {
@@ -85,14 +87,25 @@
         .project {
             flex: 1;
             margin: 10px;
-            padding: 10px;
+            padding: 20px;
             border: 1px solid #ddd;
             border-radius: 5px;
-            background-color: #fff;
+            background-color: #ffffff; /* White */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            transition: transform 0.2s;
+        }
+
+        .project:hover {
+            transform: scale(1.05); /* Slight zoom on hover */
         }
 
         .project h3 {
             margin-top: 0;
+            color: #1abc9c; /* Teal */
+        }
+
+        .project p {
+            color: #34495e; /* Slightly lighter blue */
         }
 
         .contact {
