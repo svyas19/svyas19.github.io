@@ -10,26 +10,30 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f9f9f9;
-            color: #333;
+            background-color: #0b0c10; /* Deep space-like dark */
+            color: #c5c6c7; /* Light gray for readability */
             line-height: 1.6;
         }
 
         header {
-            background-color: #2c3e50; /* Dark blue */
-            color: #ecf0f1; /* Light gray */
+            background-color: #1f2833; /* Dark blue-gray, resembling the depth of space */
+            color: #66fcf1; /* Bright cyan, like distant stars */
             padding: 20px 0;
             text-align: center;
+            background-image: url('https://example.com/starry-sky.jpg'); /* Replace with an actual starry sky image */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
         }
 
         nav {
             display: flex;
             justify-content: center;
-            background-color: #34495e; /* Slightly lighter blue */
+            background-color: #0b0c10; /* Consistent dark theme */
         }
 
         nav a {
-            color: #ecf0f1;
+            color: #66fcf1; /* Bright cyan */
             padding: 14px 20px;
             text-decoration: none;
             text-align: center;
@@ -37,7 +41,7 @@
         }
 
         nav a:hover {
-            background-color: #1abc9c; /* Teal */
+            background-color: #45a29e; /* Teal */
         }
 
         .container {
@@ -52,8 +56,8 @@
         }
 
         footer {
-            background-color: #2c3e50;
-            color: #ecf0f1;
+            background-color: #1f2833;
+            color: #66fcf1;
             text-align: center;
             padding: 10px 0;
             position: relative;
@@ -64,6 +68,7 @@
         h1, h2 {
             margin: 0;
             padding-bottom: 10px;
+            color: #c5c6c7; /* Light gray */
         }
 
         p {
@@ -74,8 +79,10 @@
         .intro {
             text-align: center;
             padding: 50px 20px;
-            background-color: #ecf0f1; /* Light gray */
-            color: #2c3e50; /* Dark blue */
+            background-color: #1f2833; /* Dark blue-gray */
+            color: #c5c6c7;
+            border-radius: 5px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Subtle shadow for a floating effect */
         }
 
         .projects {
@@ -88,30 +95,32 @@
             flex: 1;
             margin: 10px;
             padding: 20px;
-            border: 1px solid #ddd;
+            border: 1px solid #45a29e; /* Teal */
             border-radius: 5px;
-            background-color: #ffffff; /* White */
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            background-color: #0b0c10; /* Very dark blue */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Darker shadow */
             transition: transform 0.2s;
         }
 
         .project:hover {
-            transform: scale(1.05); /* Slight zoom on hover */
+            transform: scale(1.05);
         }
 
         .project h3 {
             margin-top: 0;
-            color: #1abc9c; /* Teal */
+            color: #66fcf1; /* Bright cyan */
         }
 
         .project p {
-            color: #34495e; /* Slightly lighter blue */
+            color: #c5c6c7; /* Light gray */
         }
 
         .contact {
             text-align: center;
             padding: 20px;
-            background-color: #f4f4f4;
+            background-color: #1f2833;
+            border-radius: 5px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
         }
 
         @media (max-width: 768px) {
@@ -147,11 +156,11 @@
             <h2>Hello World!</h2>
             <p>What if light could be the next frontier in communication for astronauts and rovers, guiding them across distant planets? Or how might we harness reinforcement learning to perfect spacecraft landings? And can the next evolution in human-machine interfaces help us prevent future pandemics?</p>
 
-            <p>These are the kinds of questions run through my mind</p>
+            <p>These are the kinds of questions that run through my mind.</p>
 
-            <p>I’m  a homo-sapien & explorer of the intersection between technology and the unknown; Whether it’s developing algorithms in Artificial Intelligence or  Chess, or pushing the boundaries of space exploration I'm committed to using data to solve complex problems. This passion extends to the financial markets, where I am diving deep into quantitative analysis to create innovative models that can predict and optimize investment strategies.</p>
+            <p>I’m a homo-sapien and explorer of the intersection between technology and the unknown. Whether it’s developing algorithms in Artificial Intelligence or Chess, or pushing the boundaries of space exploration, I'm committed to using data to solve complex problems. This passion extends to the financial markets, where I am diving deep into quantitative analysis to create innovative models that can predict and optimize investment strategies.</p>
 
-            <p>Python is the language I speak fluently & beliver of Carl Sagan’s quote:</p>
+            <p>Python is the language I speak fluently, and I am a believer in Carl Sagan’s quote:</p>
 
             <blockquote>"Somewhere, something incredible is waiting to be known."</blockquote>
 
@@ -185,7 +194,7 @@
     <section id="contact" class="contact">
         <h2>Contact Me</h2>
         <p>I'm always open to discussing new projects or opportunities. You can reach me at:</p>
-        <p><a href="mailto:shivvyas3030@gmail.com">your-email@example.com</a></p>
+        <p><a href="mailto:shivvyas3030@gmail.com">shivvyas3030@gmail.com</a></p>
     </section>
 
     <footer>
