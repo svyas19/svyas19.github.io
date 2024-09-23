@@ -1,205 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shiv Vyas</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #0b0c10; /* Deep space-like dark */
-            color: #c5c6c7; /* Light gray for readability */
-            line-height: 1.6;
-        }
-
-        header {
-            background-color: #1f2833; /* Dark blue-gray, resembling the depth of space */
-            color: #66fcf1; /* Bright cyan, like distant stars */
-            padding: 20px 0;
-            text-align: center;
-            background-image: url('https://example.com/starry-sky.jpg'); /* Replace with an actual starry sky image */
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-        }
-
-        nav {
-            display: flex;
-            justify-content: center;
-            background-color: #0b0c10; /* Consistent dark theme */
-        }
-
-        nav a {
-            color: #66fcf1; /* Bright cyan */
-            padding: 14px 20px;
-            text-decoration: none;
-            text-align: center;
-            transition: background-color 0.3s ease;
-        }
-
-        nav a:hover {
-            background-color: #45a29e; /* Teal */
-        }
-
-        .container {
-            max-width: 1100px;
-            margin: auto;
-            overflow: hidden;
-            padding: 0 20px;
-        }
-
-        section {
-            padding: 20px 0;
-        }
-
-        footer {
-            background-color: #1f2833;
-            color: #66fcf1;
-            text-align: center;
-            padding: 10px 0;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-        }
-
-        h1, h2 {
-            margin: 0;
-            padding-bottom: 10px;
-            color: #c5c6c7; /* Light gray */
-        }
-
-        p {
-            margin: 0;
-            padding-bottom: 10px;
-        }
-
-        .intro {
-            text-align: center;
-            padding: 50px 20px;
-            background-color: #1f2833; /* Dark blue-gray */
-            color: #c5c6c7;
-            border-radius: 5px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Subtle shadow for a floating effect */
-        }
-
-        .projects {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
-
-        .project {
-            flex: 1;
-            margin: 10px;
-            padding: 20px;
-            border: 1px solid #45a29e; /* Teal */
-            border-radius: 5px;
-            background-color: #0b0c10; /* Very dark blue */
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Darker shadow */
-            transition: transform 0.2s;
-        }
-
-        .project:hover {
-            transform: scale(1.05);
-        }
-
-        .project h3 {
-            margin-top: 0;
-            color: #66fcf1; /* Bright cyan */
-        }
-
-        .project p {
-            color: #c5c6c7; /* Light gray */
-        }
-
-        .contact {
-            text-align: center;
-            padding: 20px;
-            background-color: #1f2833;
-            border-radius: 5px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-        }
-
-        @media (max-width: 768px) {
-            nav {
-                flex-direction: column;
-            }
-
-            .projects {
-                flex-direction: column;
-            }
-
-            .project {
-                margin: 10px 0;
-            }
-        }
-    </style>
+    <title>Shiv Vyas Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
     <header>
         <h1>Shiv Vyas</h1>
-        <p>Aspiring Quant Developer | AI Enthusiast | IoT Engineer</p>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="education.html">Education</a>
+            <a href="experience.html">Experience</a>
+            <a href="skills.html">Skills</a>
+            <a href="contact.html">Contact</a>
+        </nav>
     </header>
 
-    <nav>
-        <a href="#about">About Me</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-    </nav>
-
-    <section id="about" class="container">
-        <div class="intro">
-            <h2>Hello World!</h2>
-            <p>What if light could be the next frontier in communication for astronauts and rovers, guiding them across distant planets? Or how might we harness reinforcement learning to perfect spacecraft landings? And can the next evolution in human-machine interfaces help us prevent future pandemics?</p>
-
-            <p>These are the kinds of questions that run through my mind.</p>
-
-            <p>I’m a homo-sapien and explorer of the intersection between technology and the unknown. Whether it’s developing algorithms in Artificial Intelligence or Chess, or pushing the boundaries of space exploration, I'm committed to using data to solve complex problems. This passion extends to the financial markets, where I am diving deep into quantitative analysis to create innovative models that can predict and optimize investment strategies.</p>
-
-            <p>Python is the language I speak fluently, and I am a believer in Carl Sagan’s quote:</p>
-
-            <blockquote>"Somewhere, something incredible is waiting to be known."</blockquote>
-
-            <p>Whether it’s delving into the complexities of Astrophysics, exploring the potential of AI, or navigating the dynamic landscape of financial markets, I'm always up for a deep conversation. As I step into the world of Quant Development, I’m excited about the challenge of applying my analytical skills to drive innovation in finance.</p>
-
-            <p>And of course, a cup of tea is always by my side, fueling these explorations.</p>
-        </div>
-    </section>
-
-    <section id="projects" class="container">
-        <h2>Projects</h2>
-        <div class="projects">
-            <div class="project">
-                <h3>Project 1</h3>
-                <p>Description of the project. What you did, the technologies you used, and what you learned.</p>
-                <a href="https://github.com/svyas19/project1" target="_blank">View Project</a>
-            </div>
-            <div class="project">
-                <h3>Project 2</h3>
-                <p>Description of the project. What you did, the technologies you used, and what you learned.</p>
-                <a href="https://github.com/svyas19/project2" target="_blank">View Project</a>
-            </div>
-            <div class="project">
-                <h3>Project 3</h3>
-                <p>Description of the project. What you did, the technologies you used, and what you learned.</p>
-                <a href="https://github.com/svyas19/project3" target="_blank">View Project</a>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="contact">
-        <h2>Contact Me</h2>
-        <p>I'm always open to discussing new projects or opportunities. You can reach me at:</p>
-        <p><a href="mailto:shivvyas3030@gmail.com">shivvyas3030@gmail.com</a></p>
+    <section>
+        <h2>Welcome to My Portfolio</h2>
+        <p>Hi, I'm Shiv Vyas, a Computer Science graduate with a focus on IoT, Data Science, and Machine Learning. Explore my work and projects below.</p>
+        <ul>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="experience.html">Professional Experience</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="projects.html">Projects</a></li>
+        </ul>
     </section>
 
     <footer>
-        <p>&copy; 2024 Shiv Vyas. All rights reserved.</p>
+        <p>&copy; 2024 Shiv Vyas</p>
     </footer>
 </body>
-
 </html>
