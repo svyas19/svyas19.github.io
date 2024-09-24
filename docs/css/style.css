@@ -48,7 +48,7 @@ nav ul li a:hover {
 /* Title Section */
 .title-section {
     height: 100vh;
-    background: url('img/LOGO.jpg') center/cover no-repeat; /* Add background image */
+    background: url('img/background-image.jpg') center/cover no-repeat; /* Add background image */
     position: relative;
     display: flex;
     align-items: center;
