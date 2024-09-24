@@ -1,4 +1,4 @@
-# _config.yml
-
-theme: jekyll-theme-primer
+title: "Shiv Vyas Portfolio"
+description: "Quantitative Research, AI, and Data Science Professional"
+theme: jekyll-theme-minimal
 source: ./docs
