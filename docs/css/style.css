@@ -67,8 +67,8 @@ nav ul li a:hover {
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Vertically center content */
-    align-items: center; /* Horizontally center content */
+    justify-content: center; /* Center items vertically */
+    align-items: center; /* Center items horizontally */
     color: #d4af37;
     padding: 0;
 }
@@ -81,21 +81,21 @@ nav ul li a:hover {
     bottom: 0;
     background: rgba(0, 0, 0, 0.5);
     z-index: 1;
-    pointer-events: none; /* Ensure the button is clickable */
+    pointer-events: none; /* Allow clicking through the overlay */
 }
 
-/* Upper content (for Welcome text and Scroll Down button) */
-.upper-content {
-    z-index: 2;
-    text-align: center;
-    margin-bottom: -100px; /* Move upper content higher on the page */
-}
-
-/* Lower content (for Enter the Fourth Dimension) */
+/* "Enter the Fourth Dimension" section */
 .lower-content {
     z-index: 2;
     text-align: center;
-    margin-top: 200px; /* Move lower content lower on the page */
+    margin-bottom: 50px; /* Adjust the gap between "Enter" and "Welcome" */
+}
+
+/* "Welcome to Shiv's Portfolio" and Scroll Down button section */
+.upper-content {
+    z-index: 2;
+    text-align: center;
+    margin-top: 0; /* Keep content closer to "Enter" */
 }
 
 .title-section h1 {
@@ -105,25 +105,26 @@ nav ul li a:hover {
 
 .title-section p {
     font-size: 1.5em;
-    margin-top: 10px; /* Minimal space between welcome text and button */
+    margin-top: 20px; /* Space between "Welcome to Shiv's Portfolio" and the button */
 }
 
 .scroll-down {
     font-size: 1.2em;
-    margin-top: 10px; /* Minimal space above the button */
+    margin-top: 20px; /* Space between the welcome text and the button */
     padding: 10px 20px;
     background-color: #d4af37;
     color: #000;
     border-radius: 20px;
     text-decoration: none;
     transition: background-color 0.3s ease;
-    z-index: 2; /* Ensure the button is above everything */
+    z-index: 2;
     position: relative;
 }
 
 .scroll-down:hover {
     background-color: #ffbf00;
 }
+
 
 
 
