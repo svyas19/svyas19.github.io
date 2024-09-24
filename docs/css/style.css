@@ -6,7 +6,10 @@ body {
     background-color: #0d0d0d;
     color: #e0e0e0;
     scroll-behavior: smooth;
-    text-align: center; /* Ensure centering of all text */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* Navigation Bar */
