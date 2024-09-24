@@ -210,6 +210,7 @@ h2:after {
     position: relative;
 }
 
+/* Central Line for Timeline */
 .timeline::before {
     content: '';
     position: absolute;
@@ -221,69 +222,101 @@ h2:after {
     transform: translateX(-50%);
 }
 
+/* Timeline Container */
 .timeline-container {
     display: flex;
+    justify-content: flex-end;
     align-items: center;
-    justify-content: space-between;
     margin-bottom: 40px;
+    width: 100%;
     position: relative;
 }
 
-.timeline-left, .timeline-right {
-    width: 45%;
-    text-align: left;
+.timeline-container.left {
+    justify-content: flex-end;
 }
 
-.timeline-event {
+.timeline-container.right {
+    justify-content: flex-start;
+}
+
+.timeline-content {
     background-color: #333;
     padding: 20px;
-    border-radius: 20px; /* Rounded corners for the tiles */
+    border-radius: 10px;
+    position: relative;
+    width: 45%;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.7);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.timeline-event:hover {
+/* Flag Shape */
+.timeline-container.left .timeline-content::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -20px;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-left: 20px solid #333;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+}
+
+.timeline-container.right .timeline-content::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -20px;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-right: 20px solid #333;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+}
+
+/* Timeline Hover Effect */
+.timeline-content:hover {
     transform: scale(1.05);
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.9);
 }
 
-.timeline-event h3 {
+.timeline-content h3 {
     color: #d4af37;
     font-size: 1.8em;
     margin-bottom: 10px;
 }
 
-.timeline-event p {
+.timeline-content p {
     font-size: 1.1em;
     color: #e0e0e0;
 }
 
-/* Add different background colors for alternate tiles */
-.timeline-container:nth-child(odd) .timeline-event {
-    background-color: #444; /* Darker tile color */
-}
-
-.timeline-container:nth-child(even) .timeline-event {
-    background-color: #555; /* Slightly lighter tile color */
-}
-
-/* Add hover effect for each */
-.timeline-event:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.8);
-}
-
-/* Responsive Timeline Layout */
+/* Responsive Design for Mobile */
 @media screen and (max-width: 768px) {
     .timeline-container {
-        flex-direction: column;
+        justify-content: center;
     }
 
-    .timeline-left, .timeline-right {
+    .timeline-container.left .timeline-content,
+    .timeline-container.right .timeline-content {
         width: 100%;
-        text-align: center;
+        max-width: 90%;
+    }
+
+    .timeline-container.left .timeline-content::before,
+    .timeline-container.right .timeline-content::before {
+        display: none;
+    }
+
+    /* Hide central line */
+    .timeline::before {
+        display: none;
     }
 }
+
 
 
 /* Awards & Recognition Section */
