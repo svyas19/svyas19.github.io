@@ -5,7 +5,6 @@ body {
     padding: 0;
     background-color: #0d0d0d; /* Dark theme background */
     color: #e0e0e0; /* Light text for contrast */
-    overflow-x: hidden;
     scroll-behavior: smooth; /* Enables smooth scrolling */
 }
 
@@ -55,27 +54,12 @@ nav ul li a:hover {
     font-size: 3em;
 }
 
-/* Tiles for Sections */
-section.tile {
-    min-height: 100vh; /* Full screen height for each section */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-section.tile.active {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.tile-container {
-    max-width: 800px;
-    padding: 20px;
-    text-align: center;
+/* Section Container */
+.section-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: left;
 }
 
 /* About Me Section */
@@ -90,43 +74,21 @@ section.tile.active {
 }
 
 .about-text h2 {
-    font-size: 2em; /* Smaller font for About Me */
+    font-size: 2em; /* Adjusted font for About Me */
     color: #ffcc00;
     margin-bottom: 20px;
 }
 
-.about-text p {
-    font-size: 1.1em; /* Slightly smaller font */
-    color: #e0e0e0;
-}
-
 /* Section Titles */
-.tile-container h2 {
+.section-container h2 {
     font-size: 2.5em;
     margin-bottom: 20px;
     color: #ffcc00;
 }
 
-.degree h3 {
+.degree h3, .job h3 {
     font-size: 1.8em;
     color: #ffcc00;
-}
-
-/* Scroll Animation */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Add animation when section becomes active */
-.tile.active {
-    animation: fadeInUp 0.6s ease-out;
 }
 
 /* Responsive Design */
@@ -138,10 +100,10 @@ section.tile.active {
     .about-text h2 {
         font-size: 1.8em;
     }
-    .tile-container h2 {
+    .section-container h2 {
         font-size: 2em;
     }
-    .degree h3 {
+    .degree h3, .job h3 {
         font-size: 1.5em;
     }
 }
