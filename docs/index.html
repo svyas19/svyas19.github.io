@@ -13,10 +13,10 @@
             <ul>
                 <li><a href="#about">About Me</a></li>
                 <li><a href="#timeline">Timeline</a></li>
+                <li><a href="#awards">Awards & Recognition</a></li>
                 <li><a href="#education">Education</a></li>
                 <li><a href="#experience">Professional Experience</a></li>
                 <li><a href="#skills">Skills</a></li>
-                <li><a href="#awards">Awards & Recognition</a></li>
             </ul>
         </nav>
     </header>
@@ -30,51 +30,13 @@
     <section id="about" class="about-section">
         <div class="about-container">
             <img src="img/profile-photo.png" alt="Shiv Vyas" class="about-pic">
-            <div class="about-text"></div>
+            <div class="about-text">
                 <h2>About Me</h2>
-                <p class="highlight">
-                    I'm Shiv Vyas— IoT Engineer, Data Scientist, and (as Barney Stinson would say) wait for it... 
-                    a start-up founder who discovered that designing affordable vehicle security systems can be so secure, 
-                    they even lock out success! But every journey has its plot twists, and mine is filled with algorithms and ambition.
-                </p>
-                <p>
-                    My passion lies in developing intelligent systems that make a real-world impact.
-                    Whether I'm crafting AI models or strategizing in a chess game, I love playing with algorithms.
-                </p>
-                <p>
-                    Ever wondered why we don't use light as a backup communication method in space for astronauts and rovers? Or how tweaks 
-                    in human-machine interfaces could end pandemics or prevent future ones? These intriguing questions fuel my curiosity and drive my work.
-                </p>
-                <p>
-                    Fueled by tea and a love for Python, I am a firm believer of
-                    "Somewhere, something incredible is waiting to be known" 
-                                                               - Carl Sagan
-                </p>
-                <p>
-                    If you're intrigued by cutting-edge technology, cosmic ideas, or just appreciate a good laugh at entrepreneurial adventures, 
-                    I invite you to explore my portfolio where curiosity meets innovation.
-                </p>
-                <p class="highlight">
-                    P.S. I'm a bad web developer, so if something doesn't work ... it's not a bug; it's a feature!
-                </p>
+                <p>I'm Shiv Vyas—IoT Engineer, Data Scientist, and (as Barney Stinson would say) wait for it... a start-up founder who discovered that designing affordable vehicle security systems can be so secure, they even lock out success! But every great journey has its plot twists, and mine is filled with algorithms and ambition.</p>
+                <p>My passion lies in developing intelligent systems that make a real-world impact. Whether I'm crafting AI models or strategizing in chess, I love playing with algorithms and pushing technological boundaries.</p>
+                <p>Fueled by tea and a love for Python, and as a believer in Carl Sagan’s words, "Somewhere, something incredible is waiting to be known," I’m on a constant quest for innovation that can change the world.</p>
             </div>
         </div>
-    </section>
-
-    <!-- Awards & Recognition Section -->
-    <section id="awards" class="awards-section">
-        <h2>Awards & Recognition</h2>
-        <div class="carousel-container">
-            <div class="carousel-slide">
-                <img src="img/award1.jpg" alt="Award 1">
-                <img src="img/award2.jpg" alt="Award 2">
-                <img src="img/award3.jpg" alt="Award 3">
-                <img src="img/award4.jpg" alt="Award 4">
-            </div>
-        </div>
-        <!-- Carousel Buttons -->
-        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
-        <button class="next" onclick="moveSlide(1)">&#10095;</button>
     </section>
 
     <!-- Timeline Section -->
@@ -127,6 +89,20 @@
                         <p>Graduated: July 2019</p>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Awards & Recognition Section -->
+    <section id="awards" class="awards-section">
+        <h2>Awards & Recognition</h2>
+        <div class="carousel-container">
+            <div class="carousel-slide">
+                <img src="img/award1.jpg" alt="Award 1" class="award-pic">
+                <img src="img/award2.jpg" alt="Award 2" class="award-pic">
+                <img src="img/award3.jpg" alt="Award 3" class="award-pic">
+                <img src="img/award4.jpg" alt="Award 4" class="award-pic">
+                <!-- Add more award images here -->
             </div>
         </div>
     </section>
@@ -234,30 +210,29 @@
         <p>&copy; 2024 Shiv Vyas Portfolio</p>
     </footer>
 
-    
+    <!-- Carousel JavaScript -->
     <script>
         let slideIndex = 0;
         const slides = document.querySelectorAll('.carousel-slide img');
         const totalSlides = slides.length;
-    
+
         function moveSlide(n) {
             slideIndex += n;
-    
+
             if (slideIndex >= totalSlides) {
                 slideIndex = 0;
             } else if (slideIndex < 0) {
                 slideIndex = totalSlides - 1;
             }
-    
+
             const slideWidth = slides[0].clientWidth;
             document.querySelector('.carousel-slide').style.transform = `translateX(${-slideIndex * slideWidth}px)`;
         }
-    
-        // Auto slide every 5 seconds
+
+        // Auto slide every 2 seconds
         setInterval(() => {
             moveSlide(1);
-        }, 5000);
+        }, 2000);
     </script>
-    
 </body>
 </html>
