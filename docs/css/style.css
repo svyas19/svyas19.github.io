@@ -9,6 +9,13 @@ body {
     text-align: center;
 }
 
+/* Main Content Wrapper */
+.container {
+    max-width: 1200px; /* Constrain website width */
+    margin: 0 auto; /* Center align */
+    padding: 20px;
+}
+
 /* Navigation Bar */
 header {
     position: fixed;
@@ -62,6 +69,8 @@ nav ul li a:hover {
     align-items: center;
     flex-direction: column;
     text-align: center;
+    max-width: 800px; /* Constrain width */
+    margin: 0 auto;
 }
 
 .about-pic {
@@ -80,11 +89,97 @@ nav ul li a:hover {
     margin-bottom: 20px;
 }
 
-/* Center the content in sections and limit the width */
+/* General Section Wrapper */
 .section-container {
-    max-width: 900px;
+    max-width: 900px; /* Constrain content width */
     margin: 0 auto;
     padding: 20px;
+}
+
+/* Timeline Section */
+.timeline-section {
+    background-color: #1a1a1a;
+    padding: 60px 0;
+}
+
+.timeline {
+    position: relative;
+    max-width: 900px; /* Limit the timeline width */
+    margin: 0 auto;
+}
+
+.timeline .container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+
+.timeline .container::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: #ffcc00;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+
+.timeline .left {
+    left: 0;
+}
+
+.timeline .right {
+    left: 50%;
+}
+
+.timeline .left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 15px;
+    width: 25px;
+    z-index: 1;
+    right: -30px;
+    border: medium solid #ffcc00;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent #ffcc00;
+}
+
+.timeline .right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 15px;
+    width: 25px;
+    z-index: 1;
+    left: -30px;
+    border: medium solid #ffcc00;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent #ffcc00 transparent transparent;
+}
+
+.timeline .right::after {
+    left: -6px;
+}
+
+.timeline .left::after {
+    left: auto;
+    right: -6px;
+}
+
+.timeline .content {
+    padding: 20px 30px;
+    background-color: #333;
+    position: relative;
+    border-radius: 6px;
+    color: #fff;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.timeline .content h3 {
+    color: #ffcc00;
 }
 
 /* Education & Experience Cards */
