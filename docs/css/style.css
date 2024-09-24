@@ -57,7 +57,7 @@ nav ul li a:hover {
     flex-direction: column;
     justify-content: center; /* Center items vertically */
     color: #d4af37;
-    padding: 50px 0; /* Reduce padding for spacing from top and bottom */
+    padding: 30px 0; /* Further reduce padding for spacing from top and bottom */
 }
 
 .overlay {
@@ -75,14 +75,14 @@ nav ul li a:hover {
 .upper-content {
     z-index: 2;
     text-align: center;
-    margin-top: -50px; /* Adjust this value to bring it closer to the center */
+    margin-bottom: 10px; /* Almost no space between upper and lower content */
 }
 
 /* Lower box (for Welcome text and Scroll Down button) */
 .lower-content {
     z-index: 2;
     text-align: center;
-    margin-top: 40px; /* Reduce the space between upper and lower content */
+    margin-top: 10px; /* Minimal space between the two */
 }
 
 .title-section h1 {
@@ -92,14 +92,14 @@ nav ul li a:hover {
 
 .title-section p {
     font-size: 1.5em;
-    margin-top: 20px;
+    margin-top: 10px; /* Reduced space between welcome text and button */
 }
 
 .scroll-down {
     font-size: 1.2em;
-    margin-top: 20px; /* Add minimal space above the button */
+    margin-top: 10px; /* Minimal space above the button */
     padding: 10px 20px;
-    background-color: #f5d468;
+    background-color: #d4af37;
     color: #000;
     border-radius: 20px;
     text-decoration: none;
@@ -111,6 +111,7 @@ nav ul li a:hover {
 .scroll-down:hover {
     background-color: #ffbf00;
 }
+
 
 
 
