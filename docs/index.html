@@ -14,9 +14,9 @@
                 <li><a href="#about">About Me</a></li>
                 <li><a href="#timeline">Timeline</a></li>
                 <li><a href="#awards">Awards & Recognition</a></li>
-                <li><a href="#education">Education</a></li>
                 <li><a href="#experience">Professional Experience</a></li>
                 <li><a href="#skills">Skills</a></li>
+                <li><a href="#education">Education</a></li>
             </ul>
         </nav>
     </header>
@@ -107,43 +107,69 @@
         </div>
     </section>
 
-    <!-- Education Section -->
-    <section id="education" class="section-container">
-        <h2>Education</h2>
-        <div class="education-card">
-            <h3>M.S. in Computer Science</h3>
-            <p>Graduated: May 2021</p>
-            <p>Florida Institute of Technology, Melbourne, Florida</p>
-            <p>Cumulative GPA: 3.7</p>
-            <ul>
-                <li><strong>Teaching Assistant:</strong> Programming in Python - taught Python programming & Linux to 100+ sophomores.</li>
-                <li><strong>Semi-Automated Grading System:</strong> Reduced grading time by 60% & nearly eliminated all human error by deploying automated grading scripts on the server; utilized Unix, Python & Bash.</li>
-            </ul>
-        </div>
-        <div class="education-card">
-            <h3>B.E. in Computer Engineering</h3>
-            <p>Graduated: July 2019</p>
-            <p>Gujarat Technological University</p>
-            <p>Cumulative GPA: 3.6</p>
-        </div>
-    </section>
-
     <!-- Professional Experience Section -->
     <section id="experience" class="section-container">
         <h2>Professional Experience</h2>
+
+        <!-- Johnson & Johnson -->
         <div class="experience-card">
             <h3>Johnson & Johnson (Tata Consultancy Services)</h3>
             <p>Aug 2022 – Present | Raritan, NJ | IoT Engineer / Architect</p>
-            <p>Developed an IoT solution for J&J’s warehouse, using ML and edge-based human detection algorithms. Improved space utilization by 35% and reduced inventory management time by 20%.</p>
-            <p>Implemented a GxP-compliant edge architecture, connecting 100+ medical instruments to J&J’s Wi-Fi. Enhanced data contextualization, reporting, workflow, and search capabilities across multiple sites.</p>
-            <p>Led the development of an automated video recording system using computer vision. Enabled QR code and gesture-triggered recording with speech-to-text subtitles, reducing manual editing by 70% and increasing portability.</p>
+            <ul>
+                <li>Developed an IoT solution for J&J’s warehouse, using ML and edge-based human detection algorithms. Improved space utilization by 35% and reduced inventory management time by 20%.</li>
+                <li>Implemented a GxP-compliant edge architecture, connecting 100+ medical instruments to J&J’s Wi-Fi. Enhanced data contextualization, reporting, workflow, and search capabilities across multiple sites.</li>
+                <li>Led the development of an automated video recording system using computer vision. Enabled QR code and gesture-triggered recording with speech-to-text subtitles, reducing manual editing by 70% and increasing portability.</li>
+            </ul>
+            <h4>Data Science</h4>
+            <ul>
+                <li>Directed the development of J&J's proprietary anomaly detector for vibration sensors placed across various J&J manufacturing sites to predict machine malfunctions.</li>
+                <li>Developed an LSTM-based anomaly detection system for vibration sensors, achieving 80% accuracy and reducing machine downtime by 15%.</li>
+            </ul>
+            <h4>Software Engineer</h4>
+            <ul>
+                <li>Built analytics systems with Databricks, Spark, and Azure to process over 18M IoT data points in 6 minutes, resolving data gaps and boosting processing speed by 60%.</li>
+                <li>Automated over 40 testing scripts for Embedded-C SDK using pytest, enhancing pipeline efficiency by 25%.</li>
+            </ul>
         </div>
 
+        <!-- Florida Institute of Technology -->
         <div class="experience-card">
             <h3>Florida Institute of Technology | Research Assistant</h3>
             <p>Jun 2021 – Feb 2022 | Melbourne, FL</p>
-            <p>Applied machine learning to satellite imagery, modeling future glacial changes for NSF global climate policy.</p>
-            <p>Processed 150,000+ L&SAT-2 images using neural networks, converting them into actionable data.</p>
+            <ul>
+                <li>Applied machine learning to satellite imagery, modeling future glacial changes for NSF global climate policy.</li>
+                <li>Processed 150,000+ L&SAT-2 images using neural networks, converting them into actionable data.</li>
+            </ul>
+        </div>
+
+        <!-- Engage AI & Florida Institute of Technology -->
+        <div class="experience-card">
+            <h3>Engage AI & Florida Institute of Technology | Data Engineer</h3>
+            <p>Dec 2020 – Jun 2021 | Melbourne, FL</p>
+            <ul>
+                <li>Built a platform using Python & Firebase to help nations achieve UN Sustainable Development Goals.</li>
+                <li>Scraped & compiled 1.5M+ data points from the UN, IMF, and World Bank, developing a UI for efficient data analysis.</li>
+            </ul>
+        </div>
+
+        <!-- Renesas Electronics Americas -->
+        <div class="experience-card">
+            <h3>Renesas Electronics Americas | Business Analyst Intern</h3>
+            <p>May 2020 – Aug 2020 | Palm Bay, FL</p>
+            <ul>
+                <li>Facilitated the integration of two company acquisitions into Renesas' digital ecosystem by leading comprehensive gap analysis, programming, and testing of the RORE platform. This integration resulted in a 40% reduction in order processing time and a 60% decrease in training cost.</li>
+                <li>Managed data consolidation from Oracle, SAP, and NetSuite using Model N, enhancing enterprise-wide collaboration.</li>
+            </ul>
+        </div>
+
+        <!-- Scudo Systems LLP -->
+        <div class="experience-card">
+            <h3>Scudo Systems LLP | Co-Founder</h3>
+            <p>Jan 2017 – Jul 2019 | Ahmedabad, IND</p>
+            <ul>
+                <li>Designed an affordable vehicle security system under $80, securing a Top-5 position in the 2017 Start-Up India Yatra.</li>
+                <li>Raised 1.2M INR in funding, growing market penetration by 20% and retaining 5% ownership after exiting.</li>
+            </ul>
         </div>
     </section>
 
@@ -202,6 +228,27 @@
                     <li>Docker, Git, Kubernetes</li>
                 </ul>
             </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section-container">
+        <h2>Education</h2>
+        <div class="education-card">
+            <h3>M.S. in Computer Science</h3>
+            <p>Graduated: May 2021</p>
+            <p>Florida Institute of Technology, Melbourne, Florida</p>
+            <p>Cumulative GPA: 3.7</p>
+            <ul>
+                <li><strong>Teaching Assistant:</strong> Programming in Python - taught Python programming & Linux to 100+ sophomores.</li>
+                <li><strong>Semi-Automated Grading System:</strong> Reduced grading time by 60% & nearly eliminated all human error by deploying automated grading scripts on the server; utilized Unix, Python & Bash.</li>
+            </ul>
+        </div>
+        <div class="education-card">
+            <h3>B.E. in Computer Engineering</h3>
+            <p>Graduated: July 2019</p>
+            <p>Gujarat Technological University</p>
+            <p>Cumulative GPA: 3.6</p>
         </div>
     </section>
 
