@@ -237,7 +237,7 @@ h2:after {
 .timeline-event {
     background-color: #333;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 20px; /* Rounded corners for the tiles */
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.7);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -257,6 +257,34 @@ h2:after {
     font-size: 1.1em;
     color: #e0e0e0;
 }
+
+/* Add different background colors for alternate tiles */
+.timeline-container:nth-child(odd) .timeline-event {
+    background-color: #444; /* Darker tile color */
+}
+
+.timeline-container:nth-child(even) .timeline-event {
+    background-color: #555; /* Slightly lighter tile color */
+}
+
+/* Add hover effect for each */
+.timeline-event:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.8);
+}
+
+/* Responsive Timeline Layout */
+@media screen and (max-width: 768px) {
+    .timeline-container {
+        flex-direction: column;
+    }
+
+    .timeline-left, .timeline-right {
+        width: 100%;
+        text-align: center;
+    }
+}
+
 
 /* Awards & Recognition Section */
 .awards-section {
