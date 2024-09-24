@@ -166,28 +166,28 @@ nav ul li a:hover {
     color: #ffcc00;
 }
 
-/* Responsive Design */
-@media screen and (max-width: 768px) {
-    .timeline .container {
-        width: 100%;
-        padding-left: 70px;
-        padding-right: 25px;
-    }
+/* Education & Experience Cards */
+.education-card, .experience-card {
+    background-color: #333;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+    text-align: left;
+}
 
-    .timeline .container::before {
-        left: 60px;
-        border: medium solid #ffcc00;
-        border-width: 10px 10px 10px 0;
-        border-color: transparent #ffcc00 transparent transparent;
-    }
+.education-card:hover, .experience-card:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+}
 
-    .timeline .left::after, .timeline .right::after {
-        left: 63px;
-    }
+.education-card h3, .experience-card h3 {
+    color: #ffcc00;
+    margin-bottom: 10px;
+}
 
-    .timeline .right {
-        left: 0%;
-    }
+.education-card p, .experience-card p, .education-card ul, .experience-card ul {
+    color: #e0e0e0;
 }
 
 /* Skills Section */
@@ -226,3 +226,30 @@ nav ul li a:hover {
     line-height: 1.6;
 }
 
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .timeline .container {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+
+    .timeline .container::before {
+        left: 60px;
+        border: medium solid #ffcc00;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent #ffcc00 transparent transparent;
+    }
+
+    .timeline .left::after, .timeline .right::after {
+        left: 63px;
+    }
+
+    .timeline .right {
+        left: 0%;
+    }
+
+    .education-card, .experience-card {
+        text-align: center;
+    }
+}
