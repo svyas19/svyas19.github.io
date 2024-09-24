@@ -67,12 +67,16 @@ h2 {
 }
 
 /* About Me Section */
+.about-section {
+    padding: 100px 20px;
+    background-color: #1a1a1a;
+}
+
 .about-container {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    text-align: center;
     max-width: 800px;
     margin: 0 auto;
 }
@@ -82,23 +86,32 @@ h2 {
     height: 250px;
     border-radius: 50%;
     object-fit: cover;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     border: 5px solid #ffcc00;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.about-text {
+    text-align: center;
 }
 
 .about-text h2 {
-    font-size: 2.5em;
+    font-size: 3em;
     color: #ffcc00;
     margin-bottom: 20px;
-    text-align: center;
 }
 
 .about-text p {
-    font-size: 1.1em;
+    font-size: 1.2em;
+    line-height: 1.6;
     margin-bottom: 20px;
     color: #ddd;
-    text-align: center;
+}
+
+.about-text p.highlight {
+    font-size: 1.3em;
+    color: #ffcc00;
+    font-weight: bold;
 }
 
 /* Section Wrapper */
@@ -169,7 +182,7 @@ h2 {
 
 /* Remove the line */
 .timeline-container::before {
-    display: none; /* This hides the vertical line */
+    display: none;
 }
 
 /* Hover Effect */
