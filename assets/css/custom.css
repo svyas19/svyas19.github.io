@@ -1,230 +1,126 @@
 /* General body styles */
 body {
-    font-family: 'Montserrat', sans-serif;
-    background: radial-gradient(circle at 20% 20%, #000428, #004e92); /* Deep space gradient */
-    color: #ffffff;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #0b0c10; /* Deep space-like dark */
+    color: #c5c6c7; /* Light gray for readability */
     line-height: 1.6;
-    background-image: url('../images/stars.png'); /* Optional starry background */
+    background-image: url('https://example.com/konohagakure-background.jpg'); /* Replace with an actual Naruto background */
     background-size: cover;
     background-attachment: fixed;
 }
 
 /* Header styles */
 header {
-    background: linear-gradient(145deg, #0f2027, #203a43, #2c5364); /* Nebula-themed header */
-    color: #ffffff;
-    padding: 30px 0;
+    background-color: #1f2833; /* Dark blue-gray, resembling the depth of space */
+    color: #66fcf1; /* Bright cyan, like distant stars */
+    padding: 20px 0;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+    font-family: 'serif';
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    background-image: url('https://example.com/starry-sky.jpg'); /* Replace with an actual starry sky image */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
-header h1 {
-    font-family: 'Orbitron', sans-serif;
-    font-size: 3.5em;
-    letter-spacing: 2px;
-    margin: 0;
-    color: #f9f9f9;
-}
-
-header p {
-    font-size: 1.5em;
-    color: #d4fc79;
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #0b0c10; /* Consistent dark theme */
 }
 
 nav a {
-    color: #f4f4f9;
-    margin: 0 15px;
+    color: #66fcf1; /* Bright cyan */
+    padding: 14px 20px;
     text-decoration: none;
-    font-size: 1.2em;
-    font-weight: bold;
-}
-
-nav a:hover {
-    color: #38ef7d; /* Green neon hover effect */
-}
-
-/* Tiles section */
-.tiles {
-    display: flex;
-    justify-content: space-around;
-    margin: 50px auto;
-    flex-wrap: wrap;
-}
-
-.tile {
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
     text-align: center;
-    padding: 30px;
-    margin: 20px;
-    width: 250px;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-.tile h2 {
-    color: #00c6ff; /* Blue neon text */
-    margin-bottom: 15px;
-    font-family: 'Orbitron', sans-serif;
-    font-size: 1.6em;
-}
-
-.tile p {
-    font-size: 1.1em;
-    color: #d4fc79;
-    margin-bottom: 20px;
-}
-
-.tile:hover {
-    background-color: rgba(255, 255, 255, 0.3);
-    transform: scale(1.05); /* Slight zoom on hover */
-}
-
-.btn {
-    text-decoration: none;
-    background-color: #38ef7d;
-    color: #000000;
-    padding: 10px 15px;
-    border-radius: 10px;
-    font-size: 1.1em;
     transition: background-color 0.3s ease;
 }
 
-.btn:hover {
-    background-color: #00c6ff;
+nav a:hover {
+    background-color: #45a29e; /* Teal */
 }
 
-/* Footer */
-footer {
-    background-color: #0f2027;
-    color: #d4fc79;
-    text-align: center;
-    padding: 20px;
+/* Container section */
+.container {
+    max-width: 1100px;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 20px;
+    background-color: rgba(0, 0, 0, 0.7); /* Slight transparency */
+    border-radius: 10px;
 }
 
-footer p {
-    margin: 0;
-    font-size: 1.1em;
-}
-
-footer .social-icons {
-    margin-top: 10px;
-}
-
-footer .social-icons a {
-    margin: 0 15px;
-}
-
-footer .social-icons img {
-    width: 30px;
-    height: 30px;
-    filter: invert(1);
-}
-
-footer .social-icons a:hover img {
-    filter: invert(0.5);
-}
-
-/* Stats */
-.stats {
-    display: flex;
-    justify-content: space-around;
-    margin: 50px auto;
-    text-align: center;
-}
-
-.stat {
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
-    padding: 30px;
-    width: 200px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-}
-
-.stat h3 {
-    color: #00c6ff;
-    font-size: 3em;
-    margin-bottom: 10px;
-    font-family: 'Orbitron', sans-serif;
-}
-
-.stat p {
-    font-size: 1.2em;
-    color: #d4fc79;
-}
-
-/* Additional section styles */
+/* Section styling */
 section {
-    max-width: 1000px;
-    margin: 40px auto;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    padding: 20px 0;
 }
 
-section h2 {
-    color: #00c6ff;
-    font-size: 2.5em;
-    font-family: 'Orbitron', sans-serif;
-    margin-bottom: 20px;
-}
-
-section p, section ul {
-    font-size: 1.2em;
-    color: #d4fc79;
-}
-
-ul {
-    list-style-type: disc;
-    padding-left: 20px;
-}
-
-ul li {
-    margin-bottom: 15px;
-}
-
-/* Progress bars */
-.skill {
-    margin-bottom: 20px;
-}
-
-.progress-bar {
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-    height: 30px;
+/* Footer styles */
+footer {
+    background-color: #1f2833;
+    color: #66fcf1;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
     width: 100%;
-    box-shadow: inset 0 4px 6px rgba(0,0,0,0.3);
+    border-top: 2px solid #45a29e; /* Teal border */
 }
 
-.progress {
-    background-color: #00c6ff;
-    height: 100%;
+h1, h2 {
+    margin: 0;
+    padding-bottom: 10px;
+    color: #c5c6c7; /* Light gray */
+}
+
+/* Intro section styling */
+.intro {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: rgba(45, 45, 45, 0.9); /* Slightly transparent dark background */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Subtle shadow for a floating effect */
     border-radius: 10px;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 2.5em;
-    }
+/* Project cards */
+.projects {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
 
-    header p {
-        font-size: 1.2em;
-    }
+.project {
+    flex: 1;
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #45a29e; /* Teal */
+    border-radius: 5px;
+    background-color: #0b0c10; /* Very dark blue */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Darker shadow */
+    transition: transform 0.2s;
+}
 
-    nav a {
-        margin: 0 10px;
-        font-size: 1em;
-    }
+.project:hover {
+    transform: scale(1.05);
+}
 
-    section {
-        padding: 15px;
-    }
+.project h3 {
+    color: #66fcf1; /* Bright cyan */
+}
 
-    section h2 {
-        font-size: 2em;
-    }
+.project p {
+    color: #c5c6c7; /* Light gray */
+}
+
+/* Contact section */
+.contact {
+    text-align: center;
+    padding: 20px;
+    background-color: #1f2833;
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
