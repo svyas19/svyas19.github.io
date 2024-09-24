@@ -3,9 +3,9 @@ body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #0d0d0d; /* Dark theme background */
-    color: #e0e0e0; /* Light text for contrast */
-    scroll-behavior: smooth; /* Enables smooth scrolling */
+    background-color: #0d0d0d;
+    color: #e0e0e0;
+    scroll-behavior: smooth;
 }
 
 /* Navigation Bar */
@@ -62,7 +62,10 @@ nav ul li a:hover {
     text-align: left;
 }
 
-.about-center {
+.about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
 }
 
@@ -109,9 +112,14 @@ nav ul li a:hover {
     margin-bottom: 10px;
 }
 
-.skill-card p {
+.skill-card ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.skill-card ul li {
     font-size: 1.1em;
-    line-height: 1.5;
+    line-height: 1.6;
 }
 
 /* Section Titles */
