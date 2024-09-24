@@ -58,6 +58,14 @@ nav ul li a:hover {
     text-align: center;
 }
 
+/* Section Titles */
+h2 {
+    font-size: 2.5em;
+    color: #ffcc00;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
 /* About Me Section */
 .about-container {
     display: flex;
@@ -80,7 +88,7 @@ nav ul li a:hover {
 }
 
 .about-text h2 {
-    font-size: 2em;
+    font-size: 2.5em;
     color: #ffcc00;
     margin-bottom: 20px;
     text-align: center;
@@ -118,22 +126,32 @@ nav ul li a:hover {
     padding: 20px 40px;
     position: relative;
     background-color: #333;
-    width: 70%;
+    width: 100%;
     border-radius: 10px;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
     margin-bottom: 40px;
     text-align: center;
-    margin-left: auto;
-    margin-right: auto;
 }
 
-.timeline .container::after {
+.timeline .container::before {
     content: '';
     position: absolute;
     width: 6px;
     background-color: #ffcc00;
     top: 0;
     bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+
+.timeline .container.left::before, 
+.timeline .container.right::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 6px;
+    background-color: #ffcc00;
+    top: 0;
     left: 50%;
     margin-left: -3px;
 }
@@ -145,6 +163,7 @@ nav ul li a:hover {
     border-radius: 6px;
     color: #fff;
     text-align: center;
+    z-index: 1; /* Make sure content is on top of the timeline line */
 }
 
 .timeline .content h3 {
@@ -159,7 +178,7 @@ nav ul li a:hover {
     color: #e0e0e0;
 }
 
-/* Timeline Animation */
+/* Hover Effect */
 .timeline .container {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -247,22 +266,4 @@ footer {
     color: white;
     padding: 20px;
     text-align: center;
-}
-
-/* Responsive Design */
-@media screen and (max-width: 768px) {
-    .timeline .container {
-        width: 100%;
-        padding-left: 70px;
-        padding-right: 25px;
-    }
-
-    .timeline .container::after {
-        left: 50%;
-        margin-left: -3px;
-    }
-
-    .education-card, .experience-card {
-        text-align: center;
-    }
 }
