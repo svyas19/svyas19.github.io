@@ -6,129 +6,32 @@ body {
     background-color: #0d0d0d;
     color: #e0e0e0;
     scroll-behavior: smooth;
-    text-align: center; /* Ensures all text is center-aligned */
-}
-
-/* Main Content Wrapper */
-.container {
-    max-width: 1200px; /* Constrain website width */
-    margin: 0 auto; /* Center align */
-    padding: 20px;
-}
-
-/* Navigation Bar */
-header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: #333;
-    z-index: 1000;
-    padding: 10px 0;
     text-align: center;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
-}
-
-nav ul li {
-    margin: 0 20px;
-}
-
-nav ul li a {
-    background-color: #1a1a1a;
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 10px;
-    border-radius: 4px;
-}
-
-nav ul li a:hover {
-    color: #ffcc00;
-}
-
-/* Title Section */
-.title-section {
-    margin-top: 80px;
-    text-align: center;
-    padding: 60px 0;
-    background-color: #1a1a1a;
-}
-
-.title-section h1 {
-    color: #ffcc00;
-    font-size: 3em;
-    text-align: center; /* Ensure title is centered */
-}
-
-/* About Me Section */
-.about-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center; /* Center-align text */
-    max-width: 800px; /* Constrain width */
-    margin: 0 auto;
-}
-
-.about-pic {
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 40px;
-    border: 5px solid #ffcc00;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
-}
-
-.about-text h2 {
-    font-size: 2em;
-    color: #ffcc00;
-    margin-bottom: 20px;
-    text-align: center; /* Center the heading */
-}
-
-.about-text p {
-    font-size: 1.1em;
-    margin-bottom: 20px;
-    color: #ddd;
-    text-align: center; /* Ensure all paragraphs are centered */
-}
-
-/* Section Wrapper */
-.section-container {
-    max-width: 900px; /* Constrain content width */
-    margin: 0 auto;
-    padding: 20px;
-    text-align: center; /* Center all text within sections */
+    line-height: 1.6; /* Increase readability */
 }
 
 /* Timeline Section */
 .timeline-section {
     background-color: #1a1a1a;
     padding: 60px 0;
-    text-align: center; /* Center-align content */
+    text-align: center;
 }
 
 .timeline {
     position: relative;
     max-width: 900px; /* Limit the timeline width */
     margin: 0 auto;
-    text-align: center; /* Center-align timeline */
 }
 
 .timeline .container {
-    padding: 10px 40px;
+    padding: 20px 40px; /* Add padding for better spacing */
     position: relative;
-    background-color: inherit;
+    background-color: #333; /* Dark card background for contrast */
     width: 50%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5); /* Shadow for modern look */
     text-align: center; /* Center-align container text */
+    margin-bottom: 20px; /* Add margin between cards */
 }
 
 .timeline .container::after {
@@ -154,52 +57,74 @@ nav ul li a:hover {
 
 .timeline .content {
     padding: 20px 30px;
-    background-color: #333;
+    background-color: #333; /* Dark background for cards */
     position: relative;
     border-radius: 6px;
     color: #fff;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
-    text-align: center; /* Ensure content in each timeline item is centered */
+    text-align: center;
 }
 
 .timeline .content h3 {
-    color: #ffcc00;
-    text-align: center; /* Center timeline headings */
+    color: #ffcc00; /* Yellow highlight for headings */
+    font-size: 1.5em; /* Increase font size */
+    margin-bottom: 10px;
+}
+
+.timeline .content p {
+    font-size: 1.1em; /* Increase font size for readability */
+    margin-bottom: 10px;
+    color: #e0e0e0; /* Lighter text for better contrast */
+}
+
+/* Timeline Animation */
+.timeline .container {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline .container:hover {
+    transform: scale(1.05); /* Slight hover scale effect */
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.7); /* Deeper shadow on hover */
 }
 
 /* Education & Experience Cards */
 .education-card, .experience-card {
     background-color: #333;
-    padding: 20px;
-    margin: 20px 0;
+    padding: 30px;
+    margin: 30px 0;
     border-radius: 10px;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
     text-align: center; /* Center-align text inside the cards */
     max-width: 800px; /* Limit the card width */
     margin-left: auto;
     margin-right: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .education-card:hover, .experience-card:hover {
-    transform: scale(1.02);
-    transition: 0.3s ease-in-out;
+    transform: scale(1.05); /* Add subtle hover effect */
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.7); /* Deeper shadow on hover */
 }
 
 .education-card h3, .experience-card h3 {
     color: #ffcc00;
-    margin-bottom: 10px;
-    text-align: center;
+    font-size: 1.8em; /* Make the headings larger */
+    margin-bottom: 15px;
 }
 
-.education-card p, .experience-card p, .education-card ul, .experience-card ul {
-    color: #e0e0e0;
-    text-align: center; /* Center-align lists */
+.education-card p, .experience-card p {
+    font-size: 1.2em; /* Increase font size */
+    color: #ddd;
 }
 
-.experience-list {
-    text-align: center;
+.education-card ul, .experience-card ul {
+    list-style-type: none;
     padding-left: 0;
-    list-style-type: none; /* Remove bullet points to center-align better */
+    margin-top: 20px;
+}
+
+.education-card li, .experience-card li {
+    margin-bottom: 10px;
+    color: #ddd;
 }
 
 /* Skills Section */
@@ -251,32 +176,4 @@ footer {
     color: white;
     padding: 20px;
     text-align: center; /* Ensure footer text is centered */
-}
-
-/* Responsive Design */
-@media screen and (max-width: 768px) {
-    .timeline .container {
-        width: 100%;
-        padding-left: 70px;
-        padding-right: 25px;
-    }
-
-    .timeline .container::before {
-        left: 60px;
-        border: medium solid #ffcc00;
-        border-width: 10px 10px 10px 0;
-        border-color: transparent #ffcc00 transparent transparent;
-    }
-
-    .timeline .left::after, .timeline .right::after {
-        left: 63px;
-    }
-
-    .timeline .right {
-        left: 0%;
-    }
-
-    .education-card, .experience-card {
-        text-align: center;
-    }
 }
