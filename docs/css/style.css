@@ -42,6 +42,19 @@ nav ul li a:hover {
     color: #ff6f61;
 }
 
+/* Title Section */
+.title-section {
+    margin-top: 80px;
+    text-align: center;
+    padding: 60px 0;
+    background-color: #1a1a1a;
+}
+
+.title-section h1 {
+    color: #ffcc00;
+    font-size: 3em;
+}
+
 /* Tiles for Sections */
 section.tile {
     min-height: 100vh; /* Full screen height for each section */
@@ -65,6 +78,7 @@ section.tile.active {
     text-align: center;
 }
 
+/* About Me Section */
 .about-pic {
     width: 250px;
     height: 250px;
@@ -73,6 +87,17 @@ section.tile.active {
     margin-bottom: 40px;
     border: 5px solid #ffcc00; /* Golden border */
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+}
+
+.about-text h2 {
+    font-size: 2em; /* Smaller font for About Me */
+    color: #ffcc00;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    font-size: 1.1em; /* Slightly smaller font */
+    color: #e0e0e0;
 }
 
 /* Section Titles */
@@ -109,6 +134,9 @@ section.tile.active {
     .about-pic {
         width: 200px;
         height: 200px;
+    }
+    .about-text h2 {
+        font-size: 1.8em;
     }
     .tile-container h2 {
         font-size: 2em;
