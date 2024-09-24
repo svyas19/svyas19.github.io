@@ -45,6 +45,7 @@ nav ul li a:hover {
     background-color: rgba(0, 0, 0, 0.2);
 }
 
+
 /* Title Section */
 .title-section {
     height: 100vh;
@@ -72,22 +73,22 @@ nav ul li a:hover {
 .title-content {
     z-index: 2;
     text-align: center;
-    margin-top: -50px;  /* Adjust this value to bring "Enter the Fourth Dimension" higher */
 }
 
 .title-section h1 {
     font-size: 3.5em;
     margin: 0;
+    margin-top: -150px; /* Move the "Enter the Fourth Dimension" line higher */
 }
 
 .title-section p {
     font-size: 1.5em;
-    margin-top: 20px; /* Adjust this value to add some spacing between text */
+    margin-top: 80px; /* Push "Welcome to Shiv's Portfolio" lower */
 }
 
 .scroll-down {
     font-size: 1.2em;
-    margin-top: 40px; /* This pushes the button lower */
+    margin-top: 60px; /* Push the Scroll Down button lower */
     padding: 10px 20px;
     background-color: #d4af37;
     color: #000;
