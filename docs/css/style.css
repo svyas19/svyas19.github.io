@@ -8,7 +8,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
     text-align: center;
     line-height: 1.8;
     flex-direction: column;
@@ -29,13 +28,13 @@ body {
 
 /* Profile Picture Styling */
 .about-pic {
-    width: 300px; /* Adjust this size as needed */
+    width: 300px;
     height: 300px;
-    border-radius: 50%; /* Makes it circular */
-    object-fit: cover; /* Ensures the image fits within the circle */
-    border: 5px solid #ffcc00; /* Golden border for premium feel */
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+    border-radius: 50%; /* Circular image */
+    object-fit: cover;
     margin-bottom: 40px;
+    border: 5px solid #ffcc00; /* Golden border */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5); /* Subtle shadow */
 }
 
 .about-text {
@@ -45,7 +44,7 @@ body {
 .about-text h1 {
     font-size: 2.5em;
     margin-bottom: 20px;
-    color: #ffcc00; /* Highlighted golden color for the title */
+    color: #ffcc00; /* Highlighted title */
 }
 
 .about-text p {
@@ -58,6 +57,49 @@ body {
     color: #ff6f61; /* Coral red for emphasis */
 }
 
+/* Education Section */
+.education-section {
+    padding: 60px 20px;
+    width: 100%;
+}
+
+.education-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left; /* Align text to the left for readability */
+}
+
+.education-container h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #ffcc00; /* Section title color */
+}
+
+.degree {
+    margin-bottom: 40px;
+}
+
+.degree h3 {
+    font-size: 1.8em;
+    color: #ffcc00;
+}
+
+.degree p {
+    font-size: 1.1em;
+    margin: 10px 0;
+}
+
+.degree ul {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.degree ul li {
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .about-pic {
@@ -68,6 +110,18 @@ body {
         font-size: 2em;
     }
     .about-text p {
+        font-size: 1em;
+    }
+
+    .education-container h2 {
+        font-size: 2em;
+    }
+
+    .degree h3 {
+        font-size: 1.5em;
+    }
+
+    .degree p {
         font-size: 1em;
     }
 }
