@@ -88,14 +88,14 @@ nav ul li a:hover {
 .upper-content {
     z-index: 2;
     text-align: center;
-    margin-bottom: 200px; /* Move upper content higher on the page */
+    margin-bottom: 300px; /* Move upper content higher on the page */
 }
 
 /* Lower content (for Enter the Fourth Dimension) */
 .lower-content {
     z-index: 2;
     text-align: center;
-    margin-top: 300px; /* Move lower content lower on the page */
+    margin-top: 700px; /* Move lower content lower on the page */
 }
 
 .title-section h1 {
