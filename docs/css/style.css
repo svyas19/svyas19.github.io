@@ -1,110 +1,7 @@
-/* General Styling */
-body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #0d0d0d;
-    color: #e0e0e0;
-    scroll-behavior: smooth;
-    text-align: center;
-}
-
-/* Navigation Bar */
-header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: #333;
-    z-index: 1000;
-    padding: 10px 0;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
-}
-
-nav ul li {
-    margin: 0 20px;
-}
-
-nav ul li a {
-    background-color: #1a1a1a;
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 10px;
-    border-radius: 4px;
-}
-
-nav ul li a:hover {
-    color: #ffcc00;
-}
-
-/* Title Section */
-.title-section {
-    margin-top: 80px;
-    text-align: center;
-    padding: 60px 0;
-    background-color: #1a1a1a;
-}
-
-.title-section h1 {
-    color: #ffcc00;
-    font-size: 3em;
-    text-align: center;
-}
-
-/* Section Titles */
-h2 {
-    font-size: 2.5em;
-    color: #ffcc00;
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-/* About Me Section */
-.about-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.about-pic {
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 40px;
-    border: 5px solid #ffcc00;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
-}
-
-.about-text h2 {
-    font-size: 2.5em;
-    color: #ffcc00;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.about-text p {
-    font-size: 1.1em;
-    margin-bottom: 20px;
-    color: #ddd;
-    text-align: center;
-}
-
 /* Timeline Section */
 .timeline-section {
     background-color: #1a1a1a;
-    padding: 60px 0;
+    padding: 60px 20px;
     text-align: center;
 }
 
@@ -172,82 +69,33 @@ h2 {
     padding: 0;
 }
 
-/* Awards & Recognition Section */
-.awards-section {
-    background-color: #1a1a1a;
-    padding: 60px 20px;
-    text-align: center;
+/* Vertical Line for Timeline */
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    height: 100%;
+    width: 4px;
+    background-color: #ffcc00;
+    transform: translateX(-50%);
 }
 
-.awards-carousel {
-    max-width: 900px;
-    margin: 0 auto;
-    position: relative;
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    height: 100%;
+    width: 4px;
+    background-color: #ffcc00;
+    transform: translateX(-50%);
 }
 
-.awards-carousel img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    transition: transform 0.5s ease;
+.timeline-item:nth-child(even) {
+    flex-direction: row-reverse;
 }
 
-.awards-carousel img:hover {
-    transform: scale(1.05);
-}
-
-/* Skills Section */
-.skills-section {
-    background-color: #1a1a1a;
-    padding: 60px 20px;
-    text-align: center;
-}
-
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    margin-top: 20px;
-    max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.skill-card {
-    background-color: #333;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
-    text-align: center;
-}
-
-.skill-card h3 {
-    color: #ffcc00;
-    font-size: 1.5em;
-    margin-bottom: 10px;
-}
-
-.skill-card ul {
-    list-style-type: none;
-    padding-left: 0;
-}
-
-.skill-card ul li {
-    font-size: 1.1em;
-    line-height: 1.6;
-    text-align: center;
-}
-
-/* Footer Section */
-footer {
-    background-color: #333;
-    color: white;
-    padding: 20px;
-    text-align: center;
-}
-
-/* Responsive Design */
 @media screen and (max-width: 768px) {
     .timeline-item {
         flex-direction: column;
