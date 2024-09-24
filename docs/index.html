@@ -12,9 +12,19 @@
 </head>
 <body>
 
+    <!-- Navigation Bar -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#education">Education</a></li>
+            </ul>
+        </nav>
+    </header>
+
     <!-- About Me Section -->
-    <section id="about" class="about-section">
-        <div class="about-container">
+    <section id="about" class="tile">
+        <div class="tile-container">
             <img src="img/profile-photo.png" alt="Shiv Vyas Profile Picture" class="about-pic">
             <div class="about-text">
                 <h1>Hello World!</h1>
@@ -22,20 +32,14 @@
 
                 <p>My passion lies in developing intelligent systems that make a real-world impact. Whether I'm crafting AI models or strategizing in chess, I love playing with algorithms and pushing technological boundaries.</p>
 
-                <p>Ever wondered why we don't use light as a backup communication method in space for astronauts and rovers, or how tweaks in human-machine interfaces could end pandemics or prevent future ones? These are the intriguing questions that fuel my curiosity and drive my work.</p>
-
                 <p>Fueled by tea and a love for Python, and as a believer in Carl Sagan's words, "Somewhere, something incredible is waiting to be known," I'm on a constant quest for innovation that can change the world.</p>
-
-                <p>If you're intrigued by cutting-edge technology, cosmic ideas, or just appreciate a good laugh at entrepreneurial adventures, I invite you to explore my portfolio where curiosity meets innovation.</p>
-
-                <p><strong>P.S. I'm a bad web developer, so if something doesn't load... it's not a bug; it's a feature!</strong></p>
             </div>
         </div>
     </section>
 
     <!-- Education Section -->
-    <section id="education" class="education-section">
-        <div class="education-container">
+    <section id="education" class="tile">
+        <div class="tile-container">
             <h2>EDUCATION</h2>
 
             <!-- M.S. Degree -->
@@ -59,6 +63,31 @@
             </div>
         </div>
     </section>
+
+    <!-- JavaScript for Scroll Animation -->
+    <script>
+        // Function to reveal tiles when they scroll into view
+        function revealTiles() {
+            var tiles = document.querySelectorAll(".tile");
+
+            tiles.forEach(function(tile) {
+                var windowHeight = window.innerHeight;
+                var tileTop = tile.getBoundingClientRect().top;
+                var tileVisible = 100; // Adjust this value as needed
+
+                if (tileTop < windowHeight - tileVisible) {
+                    tile.classList.add("active");
+                } else {
+                    tile.classList.remove("active");
+                }
+            });
+        }
+
+        window.addEventListener("scroll", revealTiles);
+
+        // Initial call to show the sections already in view
+        revealTiles();
+    </script>
 
 </body>
 </html>
