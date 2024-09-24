@@ -130,10 +130,39 @@ h2:after {
     margin: 10px auto;
 }
 
+/* About Me Section */
+.about-section {
+    background-color: #1a1a1a;
+    padding: 100px 0;
+    text-align: center;
+}
 
+.about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 800px;
+    margin: 0 auto;
+}
 
+.about-pic {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 40px;
+    border: 5px solid #d4af37;
+    box-shadow: 0px 4px 20px rgba(212, 175, 55, 0.6);
+}
 
-
+.about-text p {
+    font-size: 1.4em;
+    margin-bottom: 20px;
+    color: #ddd;
+    max-width: 700px;
+    line-height: 1.7em;
+}
 
 /* Timeline Section */
 .timeline-section {
@@ -228,28 +257,6 @@ h2:after {
 .timeline-content p {
     font-size: 1.1em;
     color: #e0e0e0;
-}
-
-/* Responsive Design for Mobile */
-@media screen and (max-width: 768px) {
-    .timeline-container {
-        justify-content: center;
-    }
-
-    .timeline-container.left .timeline-content,
-    .timeline-container.right .timeline-content {
-        width: 100%;
-        max-width: 90%;
-    }
-
-    .timeline-container.left .timeline-content::before,
-    .timeline-container.right .timeline-content::before {
-        display: none;
-    }
-
-    .timeline::before {
-        display: none;
-    }
 }
 
 /* Awards & Recognition Section */
@@ -422,14 +429,6 @@ h2:after {
     margin-bottom: 10px;
 }
 
-/* Responsive Design */
-@media screen and (max-width: 768px) {
-    .education-container {
-        padding: 0 20px;
-    }
-}
-
-
 /* Footer Section */
 footer {
     background-color: #333;
@@ -442,12 +441,34 @@ footer {
 
 /* Responsive Design */
 @media screen and (max-width: 768px) {
-    .timeline-container {
-        flex-direction: column;
+    .about-container {
+        padding: 0 20px;
     }
 
-    .timeline-left, .timeline-right {
+    .about-text p {
+        font-size: 1.2em;
+    }
+
+    .timeline-container {
+        justify-content: center;
+    }
+
+    .timeline-container.left .timeline-content,
+    .timeline-container.right .timeline-content {
         width: 100%;
-        text-align: center;
+        max-width: 90%;
+    }
+
+    .timeline-container.left .timeline-content::before,
+    .timeline-container.right .timeline-content::before {
+        display: none;
+    }
+
+    .timeline::before {
+        display: none;
+    }
+
+    .education-container {
+        padding: 0 20px;
     }
 }
