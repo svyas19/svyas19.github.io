@@ -88,7 +88,7 @@ nav ul li a:hover {
 .lower-content {
     z-index: 2;
     text-align: center;
-    margin-bottom: 200px; /* Adjust the gap between "Enter" and "Welcome" */
+    margin-bottom: 400px; /* Adjust the gap between "Enter" and "Welcome" */
 }
 
 /* "Welcome to Shiv's Portfolio" and Scroll Down button section */
