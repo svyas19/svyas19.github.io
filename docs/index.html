@@ -234,6 +234,30 @@
         <p>&copy; 2024 Shiv Vyas Portfolio</p>
     </footer>
 
-    <script src="js/carousel.js"></script> <!-- Include the carousel JavaScript -->
+    
+    <script>
+        let slideIndex = 0;
+        const slides = document.querySelectorAll('.carousel-slide img');
+        const totalSlides = slides.length;
+    
+        function moveSlide(n) {
+            slideIndex += n;
+    
+            if (slideIndex >= totalSlides) {
+                slideIndex = 0;
+            } else if (slideIndex < 0) {
+                slideIndex = totalSlides - 1;
+            }
+    
+            const slideWidth = slides[0].clientWidth;
+            document.querySelector('.carousel-slide').style.transform = `translateX(${-slideIndex * slideWidth}px)`;
+        }
+    
+        // Auto slide every 5 seconds
+        setInterval(() => {
+            moveSlide(1);
+        }, 5000);
+    </script>
+    
 </body>
 </html>
