@@ -185,7 +185,37 @@ h2:after {
     color: #e0e0e0;
 }
 
-/* Professional Experience Section */
+/* Awards & Recognition Section */
+.awards-section {
+    background-color: #1a1a1a;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px; /* Adjust this to change the size of the award images */
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 20px; /* Rounded corners */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5); /* Shadow effect similar to profile photo */
+}
+
+.carousel-slide {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 100%;
+}
+
+.carousel-slide img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px; /* Ensure images have rounded corners */
+    height: 400px; /* Set a fixed height for the images */
+}
+
+/* Experience Section */
 .experience-section {
     background: linear-gradient(135deg, #1a1a1a, #333);
     padding: 100px 20px;

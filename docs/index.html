@@ -77,6 +77,7 @@
                 <img src="img/award1.jpg" alt="Award 1" class="award-pic">
                 <img src="img/award2.jpg" alt="Award 2" class="award-pic">
                 <img src="img/award3.jpg" alt="Award 3" class="award-pic">
+                <img src="img/award4.jpg" alt="Award 4" class="award-pic">
             </div>
         </div>
     </section>
@@ -216,20 +217,18 @@
         const slides = document.querySelectorAll('.carousel-slide img');
         const totalSlides = slides.length;
 
-        function moveSlide(n) {
-            slideIndex += n;
-            if (slideIndex >= totalSlides) {
-                slideIndex = 0;
-            } else if (slideIndex < 0) {
-                slideIndex = totalSlides - 1;
-            }
+        function showSlide(index) {
             const slideWidth = slides[0].clientWidth;
-            document.querySelector('.carousel-slide').style.transform = `translateX(${-slideIndex * slideWidth}px)`;
+            document.querySelector('.carousel-slide').style.transform = `translateX(${-index * slideWidth}px)`;
         }
 
-        setInterval(() => {
-            moveSlide(1);
-        }, 2000);
+        function nextSlide() {
+            slideIndex = (slideIndex + 1) % totalSlides;
+            showSlide(slideIndex);
+        }
+
+        // Auto slide every 2 seconds
+        setInterval(nextSlide, 2000);
     </script>
 </body>
 </html>
