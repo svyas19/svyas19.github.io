@@ -13,14 +13,16 @@
 }
 
 .timeline .container {
-    padding: 20px 40px;
+    padding: 20px 40px; /* Add padding for better spacing */
     position: relative;
     background-color: #333; /* Dark card background for contrast */
-    width: 100%; /* Ensure the container spans full width */
+    width: 70%; /* Make the cards narrower to center them */
     border-radius: 10px;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5); /* Shadow for modern look */
     margin-bottom: 40px; /* Add margin between cards */
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .timeline .container::after {
@@ -30,13 +32,26 @@
     background-color: #ffcc00;
     top: 0;
     bottom: 0;
-    left: 50%; /* Ensure the line is centered */
+    left: 50%;
     margin-left: -3px;
 }
 
+.timeline .container::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 15px;
+    width: 25px;
+    z-index: 1;
+    right: -30px;
+    border: medium solid #ffcc00;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent #ffcc00;
+}
+
 .timeline .content {
-    padding: 20px;
-    background-color: #333;
+    padding: 20px 30px;
+    background-color: #333; /* Dark background for cards */
     position: relative;
     border-radius: 6px;
     color: #fff;
@@ -44,25 +59,33 @@
 }
 
 .timeline .content h3 {
-    color: #ffcc00;
-    font-size: 1.5em;
+    color: #ffcc00; /* Yellow highlight for headings */
+    font-size: 1.5em; /* Increase font size */
     margin-bottom: 10px;
 }
 
 .timeline .content p {
-    font-size: 1.1em;
+    font-size: 1.1em; /* Increase font size for readability */
     margin-bottom: 10px;
-    color: #e0e0e0;
+    color: #e0e0e0; /* Lighter text for better contrast */
 }
 
-/* Center alignment */
-.timeline .container.left, .timeline .container.right {
+/* Fix the alternating issue */
+.timeline .container.left, 
+.timeline .container.right {
     width: 70%; /* Keep all containers centered */
-    margin: 0 auto; /* Center align all containers */
+    text-align: center;
 }
 
-.timeline .container.left .content, .timeline .container.right .content {
-    text-align: center;
+.timeline .left::before,
+.timeline .right::before {
+    display: none; /* Remove the directional arrows */
+}
+
+.timeline .left, 
+.timeline .right {
+    left: 50%;
+    transform: translateX(-50%); /* Center all cards */
 }
 
 /* Timeline Animation */
@@ -71,6 +94,6 @@
 }
 
 .timeline .container:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.7);
+    transform: scale(1.05); /* Slight hover scale effect */
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.7); /* Deeper shadow on hover */
 }
