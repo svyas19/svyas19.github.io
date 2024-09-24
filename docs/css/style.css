@@ -38,6 +38,7 @@ nav ul li a {
     font-weight: bold;
     padding: 10px;
     border-radius: 4px;
+    transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
@@ -54,7 +55,7 @@ nav ul li a:hover {
 
 .title-section h1 {
     color: #ffcc00;
-    font-size: 3em;
+    font-size: 3.5em;
     text-align: center;
 }
 
@@ -95,7 +96,7 @@ h2 {
 }
 
 .about-text p {
-    font-size: 1.1em;
+    font-size: 1.2em;
     margin-bottom: 20px;
     color: #ddd;
     text-align: center;
@@ -114,38 +115,71 @@ h2 {
     background-color: #1a1a1a;
     padding: 60px 0;
     text-align: center;
+    position: relative;
 }
 
 .timeline {
     max-width: 900px;
     margin: 0 auto;
     position: relative;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: #ffcc00;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 5px;
 }
 
 .timeline-container {
     display: flex;
     align-items: center;
+    justify-content: center;
     padding: 20px 0;
     position: relative;
+    width: 100%;
 }
 
-.timeline-left {
-    width: 25%;
-    text-align: right;
-    padding-right: 20px;
+.timeline-container:nth-child(even) .timeline-left {
+    order: 2;
+}
+
+.timeline-container:nth-child(even) .timeline-right {
+    order: 1;
+}
+
+.timeline-left,
+.timeline-right {
+    width: 45%;
+    text-align: center;
     position: relative;
 }
 
-.timeline-right {
-    width: 75%;
-    text-align: left;
-    padding-left: 40px;
+.timeline-left::after,
+.timeline-right::after {
+    content: '';
+    position: absolute;
+    top: 20px;
+    width: 10px;
+    height: 10px;
+    background-color: #ffcc00;
+    border-radius: 50%;
+    border: 2px solid #1a1a1a;
 }
 
-.timeline-year {
-    font-size: 1.2em;
-    color: #ffcc00;
-    text-align: right;
+.timeline-left::after {
+    right: -30px;
+}
+
+.timeline-right::after {
+    left: -30px;
 }
 
 .timeline-event {
@@ -153,27 +187,6 @@ h2 {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
-}
-
-.timeline-event h3 {
-    color: #ffcc00;
-    font-size: 1.5em;
-    margin-bottom: 10px;
-}
-
-.timeline-event p {
-    font-size: 1.1em;
-    margin-bottom: 10px;
-    color: #e0e0e0;
-}
-
-/* Remove the line */
-.timeline-container::before {
-    display: none; /* This hides the vertical line */
-}
-
-/* Hover Effect */
-.timeline-event {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -182,34 +195,67 @@ h2 {
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.7);
 }
 
-/* Education & Experience Cards */
-.education-card, .experience-card {
+/* Professional Experience Section */
+.experience-card {
     background-color: #333;
-    padding: 30px;
-    margin: 30px 0;
-    border-radius: 10px;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+    padding: 40px;
+    margin: 40px 0;
+    border-radius: 15px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5);
     text-align: center;
-    max-width: 800px;
+    max-width: 900px;
     margin-left: auto;
     margin-right: auto;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    position: relative;
 }
 
-.education-card:hover, .experience-card:hover {
+.experience-card:hover {
     transform: scale(1.05);
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.7);
 }
 
-.education-card h3, .experience-card h3 {
+.experience-card h3 {
     color: #ffcc00;
-    font-size: 1.8em;
-    margin-bottom: 15px;
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
-.education-card p, .experience-card p {
+.experience-card p {
     font-size: 1.2em;
     color: #ddd;
+}
+
+.experience-card ul {
+    list-style-type: none;
+    padding-left: 0;
+    font-size: 1.1em;
+    text-align: left;
+}
+
+.experience-card li {
+    margin-bottom: 10px;
+    color: #ccc;
+}
+
+.experience-card li:before {
+    content: '✔ ';
+    color: #ffcc00;
+}
+
+.experience-card .company-logo {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #ffcc00;
+    background-color: #1a1a1a;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 /* Skills Section */
