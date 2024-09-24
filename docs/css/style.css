@@ -11,33 +11,35 @@ body {
     height: 100vh;
     text-align: center;
     line-height: 1.8;
+    flex-direction: column;
 }
 
 /* About Me Section */
 .about-section {
     text-align: center;
-    padding: 60px 20px;
+    width: 100%;
 }
 
 .about-container {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
 /* Profile Picture Styling */
 .about-pic {
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 40px;
+    width: 300px; /* Adjust this size as needed */
+    height: 300px;
+    border-radius: 50%; /* Makes it circular */
+    object-fit: cover; /* Ensures the image fits within the circle */
     border: 5px solid #ffcc00; /* Golden border for premium feel */
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+    margin-bottom: 40px;
 }
 
 .about-text {
-    max-width: 700px;
+    max-width: 800px;
 }
 
 .about-text h1 {
