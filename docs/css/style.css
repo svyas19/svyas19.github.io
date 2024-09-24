@@ -14,7 +14,7 @@ header {
     position: fixed;
     top: 0;
     width: 100%;
-    background: linear-gradient(90deg, #ff7f50 0%, #ffcc00 100%);
+    background: linear-gradient(90deg, #ffbf00 0%, #d4af37 100%);
     z-index: 1000;
     padding: 10px 0;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
@@ -48,25 +48,27 @@ nav ul li a:hover {
 /* Title Section */
 .title-section {
     height: 100vh;
-    background: linear-gradient(135deg, #1a1a1a, #333);
+    background: url('img/background-image.jpg') center/cover no-repeat; /* Add background image */
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
-    color: #ffcc00;
+    color: #d4af37;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
 }
 
 .title-content {
+    z-index: 2;
     text-align: center;
-    position: relative;
-}
-
-.enter-image {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    margin-bottom: 20px;
-    box-shadow: 0px 4px 15px rgba(255, 204, 0, 0.5);
 }
 
 .title-section h1 {
@@ -83,7 +85,7 @@ nav ul li a:hover {
     font-size: 1.2em;
     margin-top: 20px;
     padding: 10px 20px;
-    background-color: #ffcc00;
+    background-color: #d4af37;
     color: #000;
     border-radius: 20px;
     text-decoration: none;
@@ -91,13 +93,13 @@ nav ul li a:hover {
 }
 
 .scroll-down:hover {
-    background-color: #ff7f50;
+    background-color: #ffbf00;
 }
 
 /* Section Titles */
 h2 {
     font-size: 3em;
-    color: #ffcc00;
+    color: #d4af37;
     margin-bottom: 40px;
     position: relative;
     display: inline-block;
@@ -108,7 +110,7 @@ h2:after {
     display: block;
     width: 50px;
     height: 4px;
-    background-color: #ffcc00;
+    background-color: #d4af37;
     margin: 10px auto;
 }
 
@@ -145,8 +147,8 @@ h2:after {
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 40px;
-    border: 5px solid #ffcc00;
-    box-shadow: 0px 4px 20px rgba(255, 204, 0, 0.6);
+    border: 5px solid #d4af37;
+    box-shadow: 0px 4px 20px rgba(212, 175, 55, 0.6);
 }
 
 .about-text p {
@@ -174,7 +176,7 @@ h2:after {
     content: '';
     position: absolute;
     width: 4px;
-    background-color: #ffcc00;
+    background-color: #d4af37;
     top: 0;
     bottom: 0;
     left: 50%;
@@ -208,7 +210,7 @@ h2:after {
 }
 
 .timeline-event h3 {
-    color: #ffcc00;
+    color: #d4af37;
     font-size: 1.8em;
     margin-bottom: 10px;
 }
@@ -274,7 +276,7 @@ h2:after {
 }
 
 .experience-card h3 {
-    color: #ffcc00;
+    color: #d4af37;
     font-size: 2em;
     margin-bottom: 20px;
 }
@@ -313,7 +315,7 @@ h2:after {
 }
 
 .skill-card h3 {
-    color: #ffcc00;
+    color: #d4af37;
     font-size: 1.5em;
 }
 
