@@ -46,6 +46,7 @@ nav ul li a:hover {
 }
 
 
+
 /* Title Section */
 .title-section {
     height: 100vh;
@@ -55,10 +56,10 @@ nav ul li a:hover {
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Center the content vertically */
-    align-items: center; /* Center the content horizontally */
+    justify-content: center; /* Vertically center content */
+    align-items: center; /* Horizontally center content */
     color: #d4af37;
-    padding: 0; /* Remove any padding */
+    padding: 0;
 }
 
 .overlay {
@@ -72,18 +73,18 @@ nav ul li a:hover {
     pointer-events: none; /* Ensure the button is clickable */
 }
 
-/* Upper box (for Welcome text and Scroll Down button) */
-.upper-content {
-    z-index: 2;
-    text-align: center;
-    margin-bottom: 20px; /* Space between upper content and lower content */
-}
-
-/* Lower box (for "Enter the Fourth Dimension") */
+/* First, Enter the Fourth Dimension */
 .lower-content {
     z-index: 2;
     text-align: center;
-    margin-top: 0px; /* Bring the two sections closer */
+    margin-bottom: 20px; /* Small space between "Enter" and "Welcome" */
+}
+
+/* Then, Welcome to Shiv's Portfolio and Scroll Down */
+.upper-content {
+    z-index: 2;
+    text-align: center;
+    margin-top: 0px; /* Keep them close together */
 }
 
 .title-section h1 {
@@ -112,6 +113,7 @@ nav ul li a:hover {
 .scroll-down:hover {
     background-color: #ffbf00;
 }
+
 
 
 
