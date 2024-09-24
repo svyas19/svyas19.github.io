@@ -55,9 +55,10 @@ nav ul li a:hover {
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Center items vertically */
+    justify-content: center; /* Center the content vertically */
+    align-items: center; /* Center the content horizontally */
     color: #d4af37;
-    padding: 30px 0;
+    padding: 0; /* Remove any padding */
 }
 
 .overlay {
@@ -68,21 +69,21 @@ nav ul li a:hover {
     bottom: 0;
     background: rgba(0, 0, 0, 0.5);
     z-index: 1;
-    pointer-events: none; /* Allow clicking through the overlay */
+    pointer-events: none; /* Ensure the button is clickable */
 }
 
 /* Upper box (for Welcome text and Scroll Down button) */
 .upper-content {
     z-index: 2;
     text-align: center;
-    margin-bottom: 30px; /* Add space between the welcome section and "Enter the Fourth Dimension" */
+    margin-bottom: 20px; /* Space between upper content and lower content */
 }
 
 /* Lower box (for "Enter the Fourth Dimension") */
 .lower-content {
     z-index: 2;
     text-align: center;
-    margin-top: 50px; /* Place "Enter the Fourth Dimension" relatively lower */
+    margin-top: 0px; /* Bring the two sections closer */
 }
 
 .title-section h1 {
@@ -92,12 +93,12 @@ nav ul li a:hover {
 
 .title-section p {
     font-size: 1.5em;
-    margin-top: 10px;
+    margin-top: 10px; /* Minimal space between welcome text and button */
 }
 
 .scroll-down {
     font-size: 1.2em;
-    margin-top: 10px;
+    margin-top: 10px; /* Minimal space above the button */
     padding: 10px 20px;
     background-color: #d4af37;
     color: #000;
