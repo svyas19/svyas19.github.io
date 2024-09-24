@@ -1,81 +1,189 @@
 /* General body styles */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f9;
-    color: #333;
+    font-family: 'Montserrat', sans-serif;
+    background: radial-gradient(circle at 20% 20%, #000428, #004e92); /* Deep space gradient */
+    color: #ffffff;
     margin: 0;
     padding: 0;
     line-height: 1.6;
+    background-image: url('../images/stars.png'); /* Optional starry background */
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 /* Header styles */
 header {
-    background-color: #00468B;
-    color: white;
-    padding: 20px 0;
+    background: linear-gradient(145deg, #0f2027, #203a43, #2c5364); /* Nebula-themed header */
+    color: #ffffff;
+    padding: 30px 0;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
 }
 
 header h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3.5em;
+    letter-spacing: 2px;
     margin: 0;
-    font-size: 2.5em;
+    color: #f9f9f9;
 }
 
 header p {
-    font-size: 1.2em;
+    font-size: 1.5em;
+    color: #d4fc79;
 }
 
 nav a {
-    color: white;
+    color: #f4f4f9;
     margin: 0 15px;
     text-decoration: none;
+    font-size: 1.2em;
     font-weight: bold;
 }
 
 nav a:hover {
-    text-decoration: underline;
+    color: #38ef7d; /* Green neon hover effect */
 }
 
 /* Tiles section */
 .tiles {
     display: flex;
     justify-content: space-around;
-    margin: 40px auto;
+    margin: 50px auto;
     flex-wrap: wrap;
 }
 
 .tile {
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
     text-align: center;
-    padding: 20px;
-    margin: 10px;
-    width: 220px;
+    padding: 30px;
+    margin: 20px;
+    width: 250px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .tile h2 {
-    color: #00468B;
+    color: #00c6ff; /* Blue neon text */
     margin-bottom: 15px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.6em;
 }
 
 .tile p {
     font-size: 1.1em;
-    margin-bottom: 15px;
+    color: #d4fc79;
+    margin-bottom: 20px;
+}
+
+.tile:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: scale(1.05); /* Slight zoom on hover */
 }
 
 .btn {
     text-decoration: none;
-    background-color: #00468B;
-    color: white;
+    background-color: #38ef7d;
+    color: #000000;
     padding: 10px 15px;
-    border-radius: 5px;
+    border-radius: 10px;
     font-size: 1.1em;
+    transition: background-color 0.3s ease;
 }
 
 .btn:hover {
-    background-color: #003366;
+    background-color: #00c6ff;
+}
+
+/* Footer */
+footer {
+    background-color: #0f2027;
+    color: #d4fc79;
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1.1em;
+}
+
+footer .social-icons {
+    margin-top: 10px;
+}
+
+footer .social-icons a {
+    margin: 0 15px;
+}
+
+footer .social-icons img {
+    width: 30px;
+    height: 30px;
+    filter: invert(1);
+}
+
+footer .social-icons a:hover img {
+    filter: invert(0.5);
+}
+
+/* Stats */
+.stats {
+    display: flex;
+    justify-content: space-around;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.stat {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 30px;
+    width: 200px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.stat h3 {
+    color: #00c6ff;
+    font-size: 3em;
+    margin-bottom: 10px;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.stat p {
+    font-size: 1.2em;
+    color: #d4fc79;
+}
+
+/* Additional section styles */
+section {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+section h2 {
+    color: #00c6ff;
+    font-size: 2.5em;
+    font-family: 'Orbitron', sans-serif;
+    margin-bottom: 20px;
+}
+
+section p, section ul {
+    font-size: 1.2em;
+    color: #d4fc79;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+ul li {
+    margin-bottom: 15px;
 }
 
 /* Progress bars */
@@ -84,76 +192,39 @@ nav a:hover {
 }
 
 .progress-bar {
-    background-color: #f4f4f9;
+    background-color: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
-    height: 25px;
+    height: 30px;
     width: 100%;
-    box-shadow: inset 0 4px 6px rgba(0,0,0,0.1);
+    box-shadow: inset 0 4px 6px rgba(0,0,0,0.3);
 }
 
 .progress {
-    background-color: #00468B;
+    background-color: #00c6ff;
     height: 100%;
     border-radius: 10px;
 }
 
-/* Stats */
-.stats {
-    display: flex;
-    justify-content: space-between;
-    text-align: center;
-    margin: 40px 0;
-}
+/* Responsive */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5em;
+    }
 
-.stat {
-    background-color: #fff;
-    border-radius: 10px;
-    padding: 20px;
-    width: 30%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
+    header p {
+        font-size: 1.2em;
+    }
 
-.stat h3 {
-    color: #00468B;
-    font-size: 2.5em;
-    margin-bottom: 10px;
-}
+    nav a {
+        margin: 0 10px;
+        font-size: 1em;
+    }
 
-.stat p {
-    font-size: 1.2em;
-    color: #333;
-}
+    section {
+        padding: 15px;
+    }
 
-/* Footer styles */
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
-
-footer p {
-    margin: 0;
-    font-size: 1em;
-}
-
-footer .social-icons {
-    margin-top: 10px;
-}
-
-footer .social-icons a {
-    margin: 0 10px;
-}
-
-footer .social-icons img {
-    width: 30px;
-    height: 30px;
-    filter: brightness(0) invert(1);
-}
-
-footer .social-icons a:hover img {
-    filter: brightness(1) invert(0);
+    section h2 {
+        font-size: 2em;
+    }
 }
