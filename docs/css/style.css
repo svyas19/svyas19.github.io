@@ -95,7 +95,7 @@ nav ul li a:hover {
 .upper-content {
     z-index: 2;
     text-align: center;
-    margin-top: 0; /* Keep content closer to "Enter" */
+    margin-top: 150; /* Keep content closer to "Enter" */
 }
 
 .title-section h1 {
