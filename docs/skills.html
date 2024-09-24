@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Skills - Shiv Vyas</title>
     <link rel="stylesheet" href="assets/css/custom.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Include Chart.js -->
 </head>
 <body>
     <header>
@@ -19,17 +20,56 @@
 
     <section>
         <h2>Technical Skills</h2>
-        <ul>
-            <li><strong>Programming Languages:</strong> Python, C, C++, Java, SQL</li>
-            <li><strong>Machine Learning:</strong> Pytorch, Keras, LSTM, CNN, RNN, Time-Series Modeling</li>
-            <li><strong>Analytics:</strong> Pandas, Plotly, Matplotlib, AutoML</li>
-            <li><strong>Cloud and DevOps:</strong> Azure, Databricks, Docker, Kubernetes</li>
-            <li><strong>Other Skills:</strong> IoT, Data Engineering, Cloud Solutions, SQL Server, Bash Scripting</li>
-        </ul>
+        <canvas id="skillsChart" width="400" height="400"></canvas>
+    </section>
+
+    <section id="progress-bars">
+        <h2>Skills Proficiency</h2>
+        <div class="skill">
+            <p>Python</p>
+            <div class="progress-bar">
+                <div class="progress" style="width: 90%;"></div>
+            </div>
+        </div>
+        <div class="skill">
+            <p>Java</p>
+            <div class="progress-bar">
+                <div class="progress" style="width: 75%;"></div>
+            </div>
+        </div>
+        <div class="skill">
+            <p>Machine Learning</p>
+            <div class="progress-bar">
+                <div class="progress" style="width: 95%;"></div>
+            </div>
+        </div>
     </section>
 
     <footer>
         <p>&copy; 2024 Shiv Vyas</p>
     </footer>
+
+    <script>
+        var ctx = document.getElementById('skillsChart').getContext('2d');
+        var skillsChart = new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Python', 'C++', 'Java', 'SQL', 'Machine Learning', 'Data Engineering', 'Cloud'],
+                datasets: [{
+                    label: 'Skills',
+                    data: [90, 80, 70, 85, 95, 80, 75],
+                    backgroundColor: ['#00468B', '#005BB5', '#0073E6', '#3388FF', '#66A3FF', '#99BFFF', '#CCDFFF'],
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    }
+                }
+            }
+        });
+    </script>
 </body>
 </html>

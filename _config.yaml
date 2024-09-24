@@ -1,4 +1,45 @@
 title: "Shiv Vyas Portfolio"
-description: "Quantitative Research, AI, and Data Science Professional"
+description: "Quantitative Researcher | AI & Data Science Expert"
 theme: jekyll-theme-minimal
 source: ./docs
+markdown: kramdown
+
+# Site URL
+url: "https://svyas19.github.io" # Change this to your GitHub Pages URL
+
+# Base URL
+baseurl: "" # If you're using a project site, adjust this if needed (e.g., "/portfolio")
+
+# Social Links (Used in the footer or social icons)
+social:
+  github: "https://github.com/svyas19"
+  linkedin: "https://linkedin.com/in/shivvyas"
+  email: "shiv@example.com"
+
+# Enable pagination (optional if you need for blogs or posts)
+paginate: 5
+
+# Build settings
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - docs/assets/icons/*
+
+# Include theme and layout settings
+plugins:
+  - jekyll-seo-tag # For better SEO support
+  - jekyll-sitemap # Generate a sitemap.xml for search engines
+  - jekyll-feed    # RSS feed
+  - jekyll-gist    # For embedding GitHub gists
+
+# Markdown Configuration
+kramdown:
+  input: GFM  # Enable GitHub Flavored Markdown (GFM)
+
+# Defaults for all pages
+defaults:
+  - scope:
+      path: "" # Apply to all pages
+    values:
+      layout: "default"
