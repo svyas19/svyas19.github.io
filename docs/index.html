@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello World!</title>
+    <title>Shiv Vyas Portfolio</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -16,6 +16,7 @@
                 <li><a href="#education">Education</a></li>
                 <li><a href="#experience">Professional Experience</a></li>
                 <li><a href="#skills">Skills</a></li>
+                <li><a href="#awards">Awards & Recognition</a></li>
             </ul>
         </nav>
     </header>
@@ -29,7 +30,7 @@
     <section id="about" class="about-section">
         <div class="about-container">
             <img src="img/profile-photo.png" alt="Shiv Vyas" class="about-pic">
-            <div class="about-text">
+            <div class="about-text"></div>
                 <h2>About Me</h2>
                 <p class="highlight">
                     I'm Shiv Vyas— IoT Engineer, Data Scientist, and (as Barney Stinson would say) wait for it... 
@@ -58,6 +59,22 @@
                 </p>
             </div>
         </div>
+    </section>
+
+    <!-- Awards & Recognition Section -->
+    <section id="awards" class="awards-section">
+        <h2>Awards & Recognition</h2>
+        <div class="carousel-container">
+            <div class="carousel-slide">
+                <img src="img/award1.jpg" alt="Award 1">
+                <img src="img/award2.jpg" alt="Award 2">
+                <img src="img/award3.jpg" alt="Award 3">
+                <img src="img/award4.jpg" alt="Award 4">
+            </div>
+        </div>
+        <!-- Carousel Buttons -->
+        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="next" onclick="moveSlide(1)">&#10095;</button>
     </section>
 
     <!-- Timeline Section -->
@@ -216,5 +233,7 @@
     <footer>
         <p>&copy; 2024 Shiv Vyas Portfolio</p>
     </footer>
+
+    <script src="js/carousel.js"></script> <!-- Include the carousel JavaScript -->
 </body>
 </html>
