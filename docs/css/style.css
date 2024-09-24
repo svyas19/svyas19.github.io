@@ -78,7 +78,7 @@ nav ul li a:hover {
 .title-section h1 {
     font-size: 3.5em;
     margin: 0;
-    margin-top: -300px; /* Move the "Enter the Fourth Dimension" line higher */
+    margin-top: -200px; /* Move the "Enter the Fourth Dimension" line higher */
 }
 
 .title-section p {
