@@ -20,7 +20,7 @@
     border-radius: 10px;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5); /* Shadow for modern look */
     margin-bottom: 40px; /* Add margin between cards */
-    text-align: left; /* Align text to the left */
+    text-align: center;
 }
 
 .timeline .container::after {
@@ -32,45 +32,6 @@
     bottom: 0;
     left: 50%; /* Ensure the line is centered */
     margin-left: -3px;
-}
-
-.timeline .left {
-    width: 45%; /* Take up 45% of the container width */
-    position: absolute;
-    left: 0;
-    text-align: right; /* Right-align text for left-side tiles */
-    padding-right: 30px;
-}
-
-.timeline .right {
-    width: 45%; /* Take up 45% of the container width */
-    position: absolute;
-    right: 0;
-    text-align: left; /* Left-align text for right-side tiles */
-    padding-left: 30px;
-}
-
-.timeline .right::before, .timeline .left::before {
-    content: "";
-    position: absolute;
-    top: 15px;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 10px 0px 10px 10px;
-    border-color: transparent transparent transparent #ffcc00;
-}
-
-.timeline .right::before {
-    left: -10px; /* Position left-side arrow */
-    border-width: 10px 10px 10px 0px;
-    border-color: transparent #ffcc00 transparent transparent;
-}
-
-.timeline .left::before {
-    right: -10px; /* Position right-side arrow */
-    border-width: 10px 0px 10px 10px;
-    border-color: transparent transparent transparent #ffcc00;
 }
 
 .timeline .content {
@@ -94,6 +55,16 @@
     color: #e0e0e0;
 }
 
+/* Center alignment */
+.timeline .container.left, .timeline .container.right {
+    width: 70%; /* Keep all containers centered */
+    margin: 0 auto; /* Center align all containers */
+}
+
+.timeline .container.left .content, .timeline .container.right .content {
+    text-align: center;
+}
+
 /* Timeline Animation */
 .timeline .container {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -102,28 +73,4 @@
 .timeline .container:hover {
     transform: scale(1.05);
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.7);
-}
-
-/* Responsive Design */
-@media screen and (max-width: 768px) {
-    .timeline .container {
-        width: 100%;
-        padding-left: 70px;
-        padding-right: 25px;
-    }
-
-    .timeline .left, .timeline .right {
-        width: 100%;
-        text-align: center;
-        padding: 0;
-    }
-
-    .timeline .container::after {
-        left: 50%;
-        margin-left: -3px;
-    }
-
-    .timeline .left::before, .timeline .right::before {
-        display: none;
-    }
 }
