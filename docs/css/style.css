@@ -78,17 +78,17 @@ nav ul li a:hover {
 .title-section h1 {
     font-size: 3.5em;
     margin: 0;
-    margin-top: -150px; /* Move the "Enter the Fourth Dimension" line higher */
+    margin-top: -300px; /* Move the "Enter the Fourth Dimension" line higher */
 }
 
 .title-section p {
     font-size: 1.5em;
-    margin-top: 80px; /* Push "Welcome to Shiv's Portfolio" lower */
+    margin-top: 150px; /* Push "Welcome to Shiv's Portfolio" lower */
 }
 
 .scroll-down {
     font-size: 1.2em;
-    margin-top: 60px; /* Push the Scroll Down button lower */
+    margin-top: 100px; /* Push the Scroll Down button lower */
     padding: 10px 20px;
     background-color: #d4af37;
     color: #000;
