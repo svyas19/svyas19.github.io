@@ -97,15 +97,25 @@
     <!-- Awards & Recognition Section -->
     <section id="awards" class="awards-section">
         <h2>Awards & Recognition</h2>
-        <div class="carousel-container">
-            <div class="carousel-slide">
+        <div class="slideshow-container">
+            <div class="mySlides fade">
                 <img src="img/award1.jpg" alt="Award 1" class="award-pic">
+            </div>
+
+            <div class="mySlides fade">
                 <img src="img/award2.jpg" alt="Award 2" class="award-pic">
+            </div>
+
+            <div class="mySlides fade">
                 <img src="img/award3.jpg" alt="Award 3" class="award-pic">
+            </div>
+
+            <div class="mySlides fade">
                 <img src="img/award4.jpg" alt="Award 4" class="award-pic">
             </div>
         </div>
     </section>
+
 
 
 
@@ -249,24 +259,22 @@
         <p>&copy; 2024 Shiv Vyas Portfolio</p>
     </footer>
 
-    <!-- JS for Awards Carousel -->
+    <!-- JS for Simple Slideshow -->
     <script>
         let slideIndex = 0;
-        const slides = document.querySelectorAll('.carousel-slide img');
-        const totalSlides = slides.length;
+        showSlides();
 
-        function showSlide(index) {
-            const slideWidth = slides[0].clientWidth;
-            document.querySelector('.carousel-slide').style.transform = `translateX(${-index * slideWidth}px)`;
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            slides[slideIndex - 1].style.display = "block";  
+            setTimeout(showSlides, 2000); // Change image every 2 seconds
         }
-
-        function nextSlide() {
-            slideIndex = (slideIndex + 1) % totalSlides;
-            showSlide(slideIndex);
-        }
-
-        // Auto slide every 2 seconds
-        setInterval(nextSlide, 2000);
     </script>
 
 </body>

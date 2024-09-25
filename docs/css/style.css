@@ -159,3 +159,29 @@ h2:after {
     color: #ddd;
     max-width: 700px;
 }
+
+/* Awards Section */
+.awards-section {
+    background-color: #1a1a1a;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.slideshow-container {
+    max-width: 900px; /* Adjust as per your requirement */
+    position: relative;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.mySlides {
+    display: none;
+}
+
+img {
+    width: 100%; /* Scale to container width */
+    height: auto; /* Maintain aspect ratio */
+    border: 5px solid #d4af37; /* Yellow border */
+    border-radius: 10px;
+}
