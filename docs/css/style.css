@@ -347,8 +347,8 @@ h2:after {
 
 /* Skills Section */
 .skills-section {
-    background: linear-gradient(135deg, #1a1a1a, #333);
-    padding: 100px 20px;
+    background-color: #1a1a1a;
+    padding: 60px 20px;
     text-align: center;
 }
 
@@ -390,8 +390,8 @@ h2:after {
 
 /* Education Section */
 .education-section {
-    background: linear-gradient(135deg, #1a1a1a, #333);
-    padding: 100px 20px;
+    background-color: #1a1a1a;
+    padding: 60px 20px;
     text-align: center;
 }
 
