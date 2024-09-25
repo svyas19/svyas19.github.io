@@ -48,16 +48,14 @@ nav ul li a:hover {
 /* Title Section */
 .title-section {
     height: 100vh;
-    background-image: url('../img/background-image.jpg');
+    background-image: url('../img/background-image.jpg'); /* Ensure correct path */
     background-size: cover;
     background-position: center;
     position: relative;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     color: #d4af37;
-    padding: 0;
 }
 
 .overlay {
@@ -68,19 +66,11 @@ nav ul li a:hover {
     bottom: 0;
     background: rgba(0, 0, 0, 0.5);
     z-index: 1;
-    pointer-events: none;
 }
 
-.upper-content {
+.title-content {
     z-index: 2;
     text-align: center;
-    margin-bottom: 700px;
-}
-
-.lower-content {
-    z-index: 2;
-    text-align: center;
-    margin-top: 250px;
 }
 
 .title-section h1 {
@@ -102,23 +92,19 @@ nav ul li a:hover {
     border-radius: 20px;
     text-decoration: none;
     transition: background-color 0.3s ease;
-    z-index: 2;
-    position: relative;
 }
 
 .scroll-down:hover {
     background-color: #ffbf00;
 }
 
-/* Section Titles Styling */
+/* Section Titles */
 h2 {
     font-size: 3em;
     color: #d4af37;
     margin-bottom: 40px;
-    text-align: center;
     position: relative;
     display: inline-block;
-    text-transform: uppercase;
 }
 
 h2:after {
@@ -130,11 +116,21 @@ h2:after {
     margin: 10px auto;
 }
 
+/* Section Dividers */
+.section-divider {
+    height: 100px;
+    background: url('../img/section-divider.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    top: -10px;
+    z-index: -1;
+}
+
 /* About Me Section */
 .about-section {
-    background-color: #1a1a1a;
+    background: linear-gradient(135deg, #333, #444);
     padding: 100px 0;
-    text-align: center;
 }
 
 .about-container {
@@ -142,6 +138,7 @@ h2:after {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    text-align: center;
     max-width: 800px;
     margin: 0 auto;
 }
@@ -161,371 +158,4 @@ h2:after {
     margin-bottom: 20px;
     color: #ddd;
     max-width: 700px;
-    line-height: 1.7em;
-}
-
-/* Timeline Section */
-.timeline-section {
-    background-color: #1a1a1a;
-    padding: 100px 0;
-    text-align: center;
-    position: relative;
-}
-
-.timeline {
-    max-width: 900px;
-    margin: 0 auto;
-    position: relative;
-}
-
-.timeline::before {
-    content: '';
-    position: absolute;
-    width: 4px;
-    background-color: #d4af37;
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.timeline-container {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    margin-bottom: 40px;
-    width: 100%;
-    position: relative;
-}
-
-.timeline-container.left {
-    justify-content: flex-end;
-}
-
-.timeline-container.right {
-    justify-content: flex-start;
-}
-
-.timeline-content {
-    background-color: #333;
-    padding: 20px;
-    border-radius: 10px;
-    position: relative;
-    width: 45%;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.7);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Flag Shape */
-.timeline-container.left .timeline-content::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    right: -20px;
-    transform: translateY(-50%);
-    width: 0;
-    height: 0;
-    border-left: 20px solid #333;
-    border-top: 20px solid transparent;
-    border-bottom: 20px solid transparent;
-}
-
-.timeline-container.right .timeline-content::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: -20px;
-    transform: translateY(-50%);
-    width: 0;
-    height: 0;
-    border-right: 20px solid #333;
-    border-top: 20px solid transparent;
-    border-bottom: 20px solid transparent;
-}
-
-.timeline-content:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.9);
-}
-
-.timeline-content h3 {
-    color: #d4af37;
-    font-size: 1.8em;
-    margin-bottom: 10px;
-}
-
-.timeline-content p {
-    font-size: 1.1em;
-    color: #e0e0e0;
-}
-
-
-/* Awards Section */
-.awards-section {
-    background-color: #1a1a1a;
-    padding: 60px 20px;
-    text-align: center;
-}
-
-.carousel-container {
-    position: relative;
-    width: 100%;
-    max-width: 900px;
-    margin: 0 auto;
-    overflow: hidden;
-    border-radius: 15px;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
-}
-
-.carousel-slide {
-    display: flex;
-    transition: transform 0.5s ease;
-    width: 100%; /* No need to set a specific width as we want the images to flow naturally */
-}
-
-.carousel-slide img {
-    width: auto;  /* Maintain image aspect ratio */
-    height: 500px; /* Set a fixed height for the carousel images */
-    object-fit: contain;  /* Ensure the full image fits within the container */
-    border: 5px solid #d4af37; /* Yellow border */
-    margin: 10px;
-    border-radius: 10px; /* Slightly rounded corners */
-}
-
-
-/* Experience Section */
-.experience-section {
-    background: linear-gradient(135deg, #1a1a1a, #333);
-    padding: 100px 20px;
-    text-align: center;
-}
-
-.experience-card {
-    background-color: #333;
-    padding: 40px;
-    margin: 40px 0;
-    border-radius: 15px;
-    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.7);
-    text-align: left;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.experience-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.9);
-}
-
-.experience-card h3 {
-    color: #d4af37;
-    font-size: 2em;
-    margin-bottom: 20px;
-}
-
-.experience-card p {
-    font-size: 1.3em;
-    color: #ddd;
-    margin-bottom: 20px;
-}
-
-.experience-card ul {
-    list-style-type: none;
-    padding-left: 0;
-}
-
-.experience-card ul li {
-    font-size: 1.2em;
-    margin-bottom: 10px;
-    line-height: 1.6em;
-    color: #e0e0e0;
-}
-
-/* Skills Section */
-.skills-section {
-    background-color: #1a1a1a;
-    padding: 80px 0;
-}
-
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.skill-card {
-    background-color: #333;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.6);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.skill-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.7);
-}
-
-.skill-card h3 {
-    color: #d4af37;
-    font-size: 1.5em;
-}
-
-.skill-card ul {
-    list-style: none;
-    padding-left: 0;
-}
-
-.skill-card ul li {
-    font-size: 1.2em;
-    line-height: 2em;
-}
-
-/* Education Section */
-.education-section {
-    background-color: #1a1a1a;
-    padding: 100px 0;
-    text-align: center;
-}
-
-.education-container {
-    max-width: 900px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 40px; /* Increased gap between cards */
-}
-
-.education-card {
-    background-color: #333;
-    padding: 40px;
-    border-radius: 15px;
-    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.7);
-    text-align: left;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    position: relative;
-    overflow: hidden;
-}
-
-.education-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.9);
-}
-
-.education-card h3 {
-    color: #d4af37;
-    font-size: 2em;
-    margin-bottom: 15px;
-}
-
-.education-card p {
-    font-size: 1.2em;
-    color: #e0e0e0;
-}
-
-.education-date {
-    color: #d4af37;
-    font-style: italic;
-    font-size: 1.1em;
-    margin-bottom: 10px;
-}
-
-.education-card ul {
-    list-style-type: none;
-    padding-left: 0;
-    font-size: 1.1em;
-    color: #ddd;
-    margin-top: 15px;
-}
-
-.education-card ul li {
-    margin-bottom: 10px;
-}
-
-/* Footer Section */
-footer {
-    background-color: #333;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    font-size: 1em;
-    position: relative;
-}
-
-/* Responsive Design */
-@media screen and (max-width: 768px) {
-    .carousel-slide {
-        flex-direction: column;
-    }
-
-    .project-card, .carousel-slide img {
-        min-width: 100%;
-    }
-
-    .timeline-container.left .timeline-content,
-    .timeline-container.right .timeline-content {
-        width: 100%;
-        max-width: 90%;
-    }
-
-    .timeline-container.left .timeline-content::before,
-    .timeline-container.right .timeline-content::before {
-        display: none;
-    }
-
-    .timeline::before {
-        display: none;
-    }
-
-    .education-container {
-        padding: 0 20px;
-    }
-}
-
-/* General Styling */
-body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #0d0d0d;
-    color: #e0e0e0;
-    scroll-behavior: smooth;
-    text-align: center;
-}
-
-/* Navigation Bar */
-header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: linear-gradient(90deg, #ffbf00 0%, #d4af37 100%);
-    z-index: 1000;
-    padding: 10px 0;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
-}
-
-/* Add the image styling here */
-img {
-    max-width: 100%;  /* Ensures images never overflow their container */
-    height: auto;     /* Maintains aspect ratio */
-    object-fit: contain; /* Ensures the entire image is visible inside the container */
-    border: 5px solid #d4af37; /* Adds the yellow border */
-    margin: 10px; /* Adds spacing around images */
-    border-radius: 10px; /* Adds a slight curve to the image corners */
-    display: block; /* Removes unwanted space below images */
-}
-
-/* Section Titles Styling */
-h2 {
-    font-size: 3em;
-    color: #d4af37;
-    margin-bottom: 40px;
-    text-align: center;
-    position: relative;
-    display: inline-block;
-    text-transform: uppercase;
 }
