@@ -790,6 +790,7 @@ footer p a:hover {
     padding: 15px 30px;
     border-radius: 10px;
     transition: background-color 0.3s ease, transform 0.3s ease;
+    margin: 10px;  /* Added margin to create space between buttons */
 }
 
 .resume-button img {
