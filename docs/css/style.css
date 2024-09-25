@@ -71,14 +71,12 @@ nav ul li a:hover {
     pointer-events: none;
 }
 
-/* Upper content */
 .upper-content {
     z-index: 2;
     text-align: center;
     margin-bottom: 700px;
 }
 
-/* Lower content */
 .lower-content {
     z-index: 2;
     text-align: center;
@@ -110,24 +108,6 @@ nav ul li a:hover {
 
 .scroll-down:hover {
     background-color: #ffbf00;
-}
-
-/* Section Titles */
-h2 {
-    font-size: 3em;
-    color: #d4af37;
-    margin-bottom: 40px;
-    position: relative;
-    display: inline-block;
-}
-
-h2:after {
-    content: '';
-    display: block;
-    width: 50px;
-    height: 4px;
-    background-color: #d4af37;
-    margin: 10px auto;
 }
 
 /* About Me Section */
@@ -259,7 +239,7 @@ h2:after {
     color: #e0e0e0;
 }
 
-/* Awards & Recognition Section */
+/* Awards Section */
 .awards-section {
     background-color: #1a1a1a;
     padding: 60px 20px;
@@ -269,7 +249,7 @@ h2:after {
 .carousel-container {
     position: relative;
     width: 100%;
-    max-width: 600px;
+    max-width: 900px;
     margin: 0 auto;
     overflow: hidden;
     border-radius: 15px;
@@ -279,14 +259,17 @@ h2:after {
 .carousel-slide {
     display: flex;
     transition: transform 0.5s ease;
-    width: 100%;
+    width: 500%; /* 5 images in a row */
 }
 
 .carousel-slide img {
     width: 100%;
-    object-fit: cover;
-    border-radius: 15px;
-    height: 400px;
+    height: auto;
+    max-height: 300px;
+    object-fit: contain;
+    border-radius: 10px;
+    border: 5px solid #d4af37;
+    margin: 10px;
 }
 
 /* Experience Section */
@@ -302,7 +285,7 @@ h2:after {
     margin: 40px 0;
     border-radius: 15px;
     box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.7);
-    text-align: left; /* Align text to the left */
+    text-align: left;
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
@@ -327,7 +310,7 @@ h2:after {
 }
 
 .experience-card ul {
-    list-style-type: none; /* Remove bullet points */
+    list-style-type: none;
     padding-left: 0;
 }
 
@@ -335,7 +318,7 @@ h2:after {
     font-size: 1.2em;
     margin-bottom: 10px;
     line-height: 1.6em;
-    color: #e0e0e0; /* Text color for list items */
+    color: #e0e0e0;
 }
 
 /* Skills Section */
@@ -454,16 +437,12 @@ footer {
 
 /* Responsive Design */
 @media screen and (max-width: 768px) {
-    .about-container {
-        padding: 0 20px;
+    .carousel-slide {
+        flex-direction: column;
     }
 
-    .about-text p {
-        font-size: 1.2em;
-    }
-
-    .timeline-container {
-        justify-content: center;
+    .project-card, .carousel-slide img {
+        min-width: 100%;
     }
 
     .timeline-container.left .timeline-content,
