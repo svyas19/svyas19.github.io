@@ -657,40 +657,52 @@ footer {
 }
 
 
-/* Disclaimer Section Styling */
+
+
+/* Disclaimer Section */
 .disclaimer-section {
-    background-color: #fff; /* Match the background of other sections */
-    padding: 40px 20px;     /* Adjust padding for uniformity */
-    text-align: center;     /* Center align text like other sections */
-    color: #333;            /* Adjust the font color to match your site's theme */
+    background-color: #1a1a1a;
+    padding: 100px 20px;
+    color: #e0e0e0;
+    text-align: left;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
 }
 
 .disclaimer-section h2 {
-    font-size: 28px;        /* Match with other headings */
-    color: #333;            /* Same color as other headers */
-    margin-bottom: 20px;
-    text-transform: uppercase; /* Make it consistent with other headings */
-    border-bottom: 2px solid #ffbf00; /* Add border if used in other sections */
-    display: inline-block;
-    padding-bottom: 10px;
+    font-size: 2.5em;
+    color: #d4af37;
+    text-align: center;
+    margin-bottom: 30px;
 }
 
 .disclaimer-section p {
-    font-size: 16px;        /* Same as your body text */
-    color: #666;            /* Match text color with the rest of your site */
-    line-height: 1.6;
-    margin-bottom: 20px;    /* Space out paragraphs for readability */
+    font-size: 1.2em;
+    line-height: 1.7em;
+    margin-bottom: 20px;
 }
 
-/* Footer link styling */
+.disclaimer-section strong {
+    color: #d4af37; /* Highlight important sections */
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 1em;
+    position: relative;
+}
+
 footer p a {
-    color: #ffbf00;         /* Use a highlight color for the link */
+    color: #ffbf00;
     text-decoration: none;
 }
 
 footer p a:hover {
-    text-decoration: underline; /* Underline on hover for interactivity */
+    text-decoration: underline;
 }
-
-
 
