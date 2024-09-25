@@ -8,13 +8,7 @@ body {
     scroll-behavior: smooth;
     text-align: center;
 }
-/* General Section Styling for Consistency */
-section {
-    max-width: 1200px; /* Ensures all sections have the same width */
-    margin: 0 auto; /* Centers the content */
-    padding: 60px 20px; /* Consistent padding */
-    text-align: center; /* Center align text for headers */
-}
+
 
 /* Navigation Bar */
 header {
