@@ -633,14 +633,14 @@ footer {
 .blog-card h3 {
     font-size: 1.8em;
     margin-bottom: 10px;
-    color: #ffbf00;
+    color: #ffbf00; /* Changed to yellow */
 }
 
 .blog-card p {
     font-size: 1.2em;
     line-height: 1.6;
     margin-bottom: 10px;
-    color: #ffbf00;
+    color: #ffbf00; /* Changed to yellow */
 }
 
 .blog-link {
@@ -652,17 +652,4 @@ footer {
 
 .blog-link:hover {
     color: #ffbf00;
-}
-
-.image-center {
-    display: flex;
-    justify-content: center;
-}
-
-.image-center img {
-    max-width: 100%;  /* Ensure the image scales properly */
-    width: auto;
-    height: auto;
-    border-radius: 10px; /* Optional: to match your style */
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.6); /* Optional: Add shadow for a nice effect */
 }
