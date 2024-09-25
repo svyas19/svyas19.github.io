@@ -167,7 +167,7 @@ h2:after {
 
 /* Timeline Section */
 .timeline-section {
-    background-color: #1a1a1a;
+    background: linear-gradient(135deg, #1a1a1a, #333);
     padding: 100px 0;
     text-align: center;
     position: relative;
