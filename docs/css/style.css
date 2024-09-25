@@ -656,3 +656,22 @@ footer {
     color: #ffbf00; /* Keep yellow on hover */
 }
 
+
+.disclaimer-section {
+    background-color: #f4f4f4;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+.disclaimer-section h2 {
+    font-size: 24px;
+    color: #333;
+}
+
+.disclaimer-section p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+}
+
+
