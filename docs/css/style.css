@@ -596,6 +596,11 @@ footer {
         min-width: 100%; /* Full width on smaller screens */
     }
 }
+
+
+
+
+
 /* Projects Section */
 .projects-section {
     background-color: #1a1a1a;
@@ -603,43 +608,34 @@ footer {
     text-align: center;
 }
 
-.carousel-container {
-    position: relative;
-    width: 100%;
-    max-width: 900px;
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
     margin: 0 auto;
-    overflow: hidden;
-    border-radius: 15px;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
-}
-
-.carousel-slide {
-    display: flex;
-    transition: transform 0.5s ease;
-    width: 500%; /* 5 projects in a row */
 }
 
 .project-card {
     background-color: #333;
     color: #ddd;
     padding: 20px;
-    margin: 20px;
     border-radius: 10px;
     text-align: left;
-    min-width: 100%; /* Each project takes 100% of the width */
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
 }
 
 .project-card:hover {
-    transform: scale(1.05);
+    transform: translateY(-10px);
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.7);
 }
 
 .project-image {
     width: 100%;
-    height: 200px; /* Set a consistent height for project images */
-    object-fit: cover; /* Ensures the image covers the space without stretching */
+    height: 200px;
+    object-fit: cover;
     border-radius: 10px;
     margin-bottom: 15px;
 }
@@ -669,10 +665,7 @@ footer {
 
 /* Responsive Design */
 @media screen and (max-width: 768px) {
-    .carousel-slide {
-        flex-direction: column;
-    }
-    .project-card, .carousel-slide img {
-        min-width: 100%; /* Full width on smaller screens */
+    .projects-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
 }
