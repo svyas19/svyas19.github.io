@@ -259,6 +259,7 @@ h2:after {
     color: #e0e0e0;
 }
 
+
 /* Awards Section */
 .awards-section {
     background-color: #1a1a1a;
@@ -279,16 +280,16 @@ h2:after {
 .carousel-slide {
     display: flex;
     transition: transform 0.5s ease;
-    width: 500%; /* 5 images in a row */
+    width: 400%; /* Adjust this to the number of images (25% per image for 4 images) */
 }
 
 .carousel-slide img {
-    max-width: 100%;
-    height: auto;
-    object-fit: contain;  /* This ensures the full image is visible inside the container */
-    border: 5px solid #d4af37; /* Adds the yellow border around each image */
+    width: 100%;  /* Full width of the container */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain;  /* Ensure the image is fully visible inside the container */
+    border: 5px solid #d4af37; /* Yellow border */
     margin: 10px;
-    border-radius: 10px;
+    border-radius: 10px; /* Slightly rounded corners */
 }
 
 
