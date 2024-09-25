@@ -1,537 +1,364 @@
-/* General Styling */
-body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #0d0d0d;
-    color: #e0e0e0;
-    scroll-behavior: smooth;
-    text-align: center;
-}
-
-/* Navigation Bar */
-header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: linear-gradient(90deg, #e74c3c 0%, #e74c3c 100%);
-    z-index: 1000;
-    padding: 10px 0;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
-}
-
-nav ul li {
-    margin: 0 20px;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 10px 15px;
-    border-radius: 30px;
-    transition: background-color 0.3s ease;
-}
-
-nav ul li a:hover {
-    background-color: rgba(0, 0, 0, 0.2);
-}
-
-/* Title Section */
-.title-section {
-    height: 100vh;
-    background-image: url('../img/background-image.jpg');
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: #e74c3c;
-    padding: 0;
-}
-
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 1;
-    pointer-events: none;
-}
-
-/* Upper content */
-.upper-content {
-    z-index: 2;
-    text-align: center;
-    margin-bottom: 700px;
-}
-
-/* Lower content */
-.lower-content {
-    z-index: 2;
-    text-align: center;
-    margin-top: 250px;
-}
-
-.title-section h1 {
-    font-size: 3.5em;
-    margin: 0;
-}
-
-.title-section p {
-    font-size: 1.5em;
-    margin-top: 10px;
-}
-
-.scroll-down {
-    font-size: 1.2em;
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #e74c3c;
-    color: #000;
-    border-radius: 20px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-    z-index: 2;
-    position: relative;
-}
-
-.scroll-down:hover {
-    background-color: #e74c3c;
-}
-
-/* Section Titles */
-h2 {
-    font-size: 3em;
-    color: #e74c3c;
-    margin-bottom: 40px;
-    position: relative;
-    display: inline-block;
-}
-
-h2:after {
-    content: '';
-    display: block;
-    width: 50px;
-    height: 4px;
-    background-color: #e74c3c;
-    margin: 10px auto;
-}
-
-/* About Me Section */
-.about-section {
-    background-color: #1a1a1a;
-    padding: 100px 0;
-    text-align: center;
-}
-
-.about-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.about-pic {
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 40px;
-    border: 5px solid #e74c3c;
-    box-shadow: 0px 4px 20px rgba(212, 175, 55, 0.6);
-}
-
-.about-text p {
-    font-size: 1.4em;
-    margin-bottom: 20px;
-    color: #ddd;
-    max-width: 700px;
-    line-height: 1.7em;
-}
-
-/* Timeline Section */
-.timeline-section {
-    background-color: #1a1a1a;
-    padding: 100px 0;
-    text-align: center;
-    position: relative;
-}
-
-.timeline {
-    max-width: 900px;
-    margin: 0 auto;
-    position: relative;
-}
-
-.timeline::before {
-    content: '';
-    position: absolute;
-    width: 4px;
-    background-color: #e74c3c;
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.timeline-container {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    margin-bottom: 40px;
-    width: 100%;
-    position: relative;
-}
-
-.timeline-container.left {
-    justify-content: flex-end;
-}
-
-.timeline-container.right {
-    justify-content: flex-start;
-}
-
-.timeline-content {
-    background-color: #333;
-    padding: 20px;
-    border-radius: 10px;
-    position: relative;
-    width: 45%;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.7);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Flag Shape */
-.timeline-container.left .timeline-content::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    right: -20px;
-    transform: translateY(-50%);
-    width: 0;
-    height: 0;
-    border-left: 20px solid #333;
-    border-top: 20px solid transparent;
-    border-bottom: 20px solid transparent;
-}
-
-.timeline-container.right .timeline-content::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: -20px;
-    transform: translateY(-50%);
-    width: 0;
-    height: 0;
-    border-right: 20px solid #333;
-    border-top: 20px solid transparent;
-    border-bottom: 20px solid transparent;
-}
-
-.timeline-content:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.9);
-}
-
-.timeline-content h3 {
-    color: #e74c3c;
-    font-size: 1.8em;
-    margin-bottom: 10px;
-}
-
-.timeline-content p {
-    font-size: 1.1em;
-    color: #e0e0e0;
-}
-
-
-
-
-
-
-
-/* Awards & Recognition Section */
-.awards-section {
-    background-color: #1a1a1a;
-    padding: 60px 20px;
-    text-align: center;
-}
-
-.slideshow-container {
-    position: relative;
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto;
-    overflow: hidden;
-    border-radius: 15px;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
-}
-
-.award-pic {
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
-    border-radius: 15px;
-    display: none; /* Hide all images initially */
-}
-
-.award-pic.active {
-    display: block; /* Display the active image */
-    animation: fade 1s; /* Optional fade effect */
-}
-
-/* Fade animation for smooth transitions */
-@keyframes fade {
-    from {opacity: 0.4;}
-    to {opacity: 1;}
-}
-
-
-
-
-
-
-/* Experience Section */
-.experience-section {
-    background: linear-gradient(135deg, #1a1a1a, #333);
-    padding: 100px 20px;
-    text-align: center;
-}
-
-.experience-card {
-    background-color: #333;
-    padding: 40px;
-    margin: 40px 0;
-    border-radius: 15px;
-    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.7);
-    text-align: left; /* Align text to the left */
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.experience-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.9);
-}
-
-.experience-card h3 {
-    color: #e74c3c;
-    font-size: 2em;
-    margin-bottom: 20px;
-}
-
-.experience-card p {
-    font-size: 1.3em;
-    color: #ddd;
-    margin-bottom: 20px;
-}
-
-.experience-card ul {
-    list-style-type: none; /* Remove bullet points */
-    padding-left: 0;
-}
-
-.experience-card ul li {
-    font-size: 1.2em;
-    margin-bottom: 10px;
-    line-height: 1.6em;
-    color: #e0e0e0; /* Text color for list items */
-}
-
-/* Skills Section */
-.skills-section {
-    background-color: #1a1a1a;
-    padding: 80px 0;
-}
-
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.skill-card {
-    background-color: #333;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.6);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.skill-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.7);
-}
-
-.skill-card h3 {
-    color: #e74c3c;
-    font-size: 1.5em;
-}
-
-.skill-card ul {
-    list-style: none;
-    padding-left: 0;
-}
-
-.skill-card ul li {
-    font-size: 1.2em;
-    line-height: 2em;
-}
-
-/* Education Section */
-.education-section {
-    background-color: #1a1a1a;
-    padding: 100px 0;
-    text-align: center;
-}
-
-.education-container {
-    max-width: 900px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 40px; /* Increased gap between cards */
-}
-
-.education-card {
-    background-color: #333;
-    padding: 40px;
-    border-radius: 15px;
-    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.7);
-    text-align: left;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    position: relative;
-    overflow: hidden;
-}
-
-.education-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.9);
-}
-
-.education-card h3 {
-    color: #e74c3c;
-    font-size: 2em;
-    margin-bottom: 15px;
-}
-
-.education-card p {
-    font-size: 1.2em;
-    color: #e0e0e0;
-}
-
-.education-date {
-    color: #e74c3c;
-    font-style: italic;
-    font-size: 1.1em;
-    margin-bottom: 10px;
-}
-
-.education-card ul {
-    list-style-type: none;
-    padding-left: 0;
-    font-size: 1.1em;
-    color: #ddd;
-    margin-top: 15px;
-}
-
-.education-card ul li {
-    margin-bottom: 10px;
-}
-
-/* Footer Section */
-footer {
-    background-color: #333;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    font-size: 1em;
-    position: relative;
-}
-
-/* Responsive Design */
-@media screen and (max-width: 768px) {
-    .about-container {
-        padding: 0 20px;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shiv Vyas Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#timeline">Timeline</a></li>
+                <li><a href="#awards">Awards & Recognition</a></li>
+                <li><a href="#projects">Projects</a></li> <!-- Added Projects Link -->
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#education">Education</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+
+    <!-- Title Section -->
+    <section class="title-section">
+        <div class="overlay"></div>
+        <div class="upper-content">
+            <h1>Enter the Fourth Dimension</h1>
+        </div>
+        <div class="lower-content">
+            <p>Welcome to Shiv's Portfolio</p>
+            <a href="#about" class="scroll-down">Scroll Down</a>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="about-section">
+        <h2>About Me</h2>
+        <div class="about-container">
+            <img src="img/profile-photo.png" alt="Shiv Vyas" class="about-pic">
+            <div class="about-text">
+                <p>
+                    Hello World!
+                </p>
+                <p>
+                    I'm Shiv Vyas—IoT Engineer, Data Scientist, and (as Barney Stinson would say) wait for it... a start-up founder who discovered that designing affordable vehicle security systems can be so secure, they even lock out success! But every great journey has its plot twists, and mine is filled with algorithms and ambition.
+                </p>
+                <p>
+                    My passion lies in developing intelligent systems that make a real-world impact.
+                </p>
+                <p>
+                    Whether I'm crafting AI models or strategizing in a chess game, I love playing with algorithms.
+                </p>
+                <p>
+                    Ever wondered why we don't use light as a backup communication method in space for astronauts and rovers? Or how tweaks in human-machine interfaces could end pandemics or prevent future ones? These intriguing questions fuel my curiosity and drive my work.
+                </p>
+                <p>
+                    Fueled by tea and a love for Python, I am a firm believer of
+                </p>
+                <p>
+                    <strong>"Somewhere, something incredible is waiting to be known."</strong>
+                    <p>                                                 -Carl Sagan</p>
+                </p>
+                
+                
+                <p>
+                    If you're intrigued by cutting-edge technology, cosmic ideas, or just appreciate a good laugh at entrepreneurial adventures, I invite you to explore my portfolio where curiosity meets innovation.
+                </p>
+                <p>
+                    P.S. I'm a bad web developer, so if something looks different ... it's not a bug; it's a feature!
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Timeline Section -->
+    <section id="timeline" class="timeline-section">
+        <h2>Timeline</h2>
+        <div class="timeline">
+            <div class="timeline-container left">
+                <div class="timeline-content">
+                    <h3>Technical Architect, Johnson & Johnson (TCS)</h3>
+                    <p>Oct 2022 – Present | Raritan, NJ</p>
+                </div>
+            </div>
+            <div class="timeline-container right">
+                <div class="timeline-content">
+                    <h3>Research Assistant, Florida Institute of Technology</h3>
+                    <p>Jun 2021 – Feb 2022 | Melbourne, FL</p>
+                </div>
+            </div>
+            <div class="timeline-container left">
+                <div class="timeline-content">
+                    <h3>Data Engineer, Engage AI & Florida Institute of Technology</h3>
+                    <p>Dec 2020 – Jun 2021 | Melbourne, FL</p>
+                </div>
+            </div>
+            <div class="timeline-container right">
+                <div class="timeline-content">
+                    <h3>Business Analyst Intern, Renesas Electronics Americas</h3>
+                    <p>May 2020 – Aug 2020 | Palm Bay, FL</p>
+                </div>
+            </div>
+            <div class="timeline-container left">
+                <div class="timeline-content">
+                    <h3>Co-Founder, Scudo Systems LLP</h3>
+                    <p>Jan 2017 – Jul 2019 | Ahmedabad, IND</p>
+                </div>
+            </div>
+            <div class="timeline-container right">
+                <div class="timeline-content">
+                    <h3>Innovation Intern, L&T</h3>
+                    <p>Summer 2018 | Vadodara, IND</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Awards & Recognition Section -->
+    <section id="awards" class="awards-section">
+        <h2>Awards & Recognition</h2>
+        <div class="slideshow-container">
+            <img class="award-pic" src="img/award1.jpg" alt="Award 1">
+            <img class="award-pic" src="img/award2.jpg" alt="Award 2">
+            <img class="award-pic" src="img/award3.jpg" alt="Award 3">
+        </div>
+    </section>
+
+
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience-section">
+        <h2>Professional Experience</h2>
+
+        <div class="experience-card">
+            <h3>Johnson & Johnson (Tata Consultancy Services)</h3>
+            <p>Aug 2022 – Present | Raritan, NJ | IoT Engineer / Architect</p>
+            <ul>
+                <li>Developed an IoT solution for J&J’s warehouse, using ML and edge-based human detection algorithms. Improved space utilization by 35% and reduced inventory management time by 20%.</li>
+                <li>Implemented a GxP-compliant edge architecture, connecting 100+ medical instruments to J&J’s Wi-Fi. Enhanced data contextualization, reporting, workflow, and search capabilities across multiple sites.</li>
+                <li>Led the development of an automated video recording system using computer vision. Enabled QR code and gesture-triggered recording with speech-to-text subtitles, reducing manual editing by 70% and increasing portability.</li>
+            </ul>
+        </div>
+
+        <div class="experience-card">
+            <h3>Florida Institute of Technology | Research Assistant</h3>
+            <p>Jun 2021 – Feb 2022 | Melbourne, FL</p>
+            <ul>
+                <li>Applied machine learning to satellite imagery, modeling future glacial changes for NSF global climate policy.</li>
+                <li>Processed 150,000+ L&SAT-2 images using neural networks, converting them into actionable data.</li>
+            </ul>
+        </div>
+
+        <div class="experience-card">
+            <h3>Engage AI & Florida Institute of Technology | Data Engineer</h3>
+            <p>Dec 2020 – Jun 2021 | Melbourne, FL</p>
+            <ul>
+                <li>Built a platform using Python & Firebase to help nations achieve UN Sustainable Development Goals.</li>
+                <li>Scraped & compiled 1.5M+ data points from the UN, IMF, and World Bank, developing a UI for efficient data analysis.</li>
+            </ul>
+        </div>
+
+        <div class="experience-card">
+            <h3>Renesas Electronics Americas | Business Analyst Intern</h3>
+            <p>May 2020 – Aug 2020 | Palm Bay, FL</p>
+            <ul>
+                <li>Facilitated the integration of two company acquisitions into Renesas' digital ecosystem by leading comprehensive gap analysis, programming, and testing of the RORE platform. This integration resulted in a 40% reduction in order processing time and a 60% decrease in training cost.</li>
+            </ul>
+        </div>
+
+        <div class="experience-card">
+            <h3>Scudo Systems LLP | Co-Founder</h3>
+            <p>Jan 2017 – Jul 2019 | Ahmedabad, IND</p>
+            <ul>
+                <li>Designed an affordable vehicle security system under $80, securing Top-5 in 2017 Start-Up India Yatra.</li>
+                <li>Raised 1.2M INR in funding, growing market penetration by 20% and retaining 5% ownership after exiting.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+<section id="projects" class="projects-section">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+        <!-- Project 1 -->
+        <div class="project-card">
+            <img src="img/project1.jpg" alt="Project 1" class="project-image">
+            <h3>Deep-Fake Detection</h3>
+            <p>(Facial Recognition, Deep Learning, Open CV, MTCNN, FaceNet, ResNet, GoogLeNet)</p>
+            <a href="https://github.com/svyas19/DeepFake-Detection" target="_blank" class="github-link">View on GitHub</a>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card">
+            <img src="img/project2.jpg" alt="Project 2" class="project-image">
+            <h3>Natural Language Inferencing for 15 Languages</h3>
+            <p>(NLP, Transformers, LSTM, Bi-Directional LSTM, GRU, RNN, Fine-Tunned BERT)</p>
+            <a href="https://github.com/svyas19/Natural-Language-Inferencing-For-15-Languages" target="_blank" class="github-link">View on GitHub</a>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card">
+            <img src="img/project3.jpg" alt="Project 3" class="project-image">
+            <h3>Detection of Covid-19</h3>
+            <p>(Multi-Model Neural Network, CT Scan & X-Ray, Computer Vision)</p>
+            <a href="https://github.com/svyas19/Detection-of-COVID-19" target="_blank" class="github-link">View on GitHub</a>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-card">
+            <img src="img/project4.jpg" alt="Project 4" class="project-image">
+            <h3>Run Time Assurance For Cyber Manufacturing</h3>
+            <p>(G-Code Analysis, Shape Prediction, Time Series Modeling, Auto-Encoders, Isolation Forest, KNN, One-Class SVM)</p>
+            <a href="https://github.com/svyas19/Run-Time-Assurance-For-Cyber-Manufacturing" target="_blank" class="github-link">View on GitHub</a>
+        </div>
+
+        
+    </div>
+</section>
+
+
+    
+
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <h3>Programming</h3>
+                <ul>
+                    <li>Python</li>
+                    <li>C, C++</li>
+                    <li>Java</li>
+                    <li>HTML, CSS, JavaScript</li>
+                    <li>SQL</li>
+                    <li>Linux, Bash Scripting</li>
+                </ul>
+            </div>
+
+            <div class="skill-card">
+                <h3>Machine Learning</h3>
+                <ul>
+                    <li>Pandas, PyTorch, Keras, Polars</li>
+                    <li>LSTM, CNN, RNN</li>
+                    <li>Time-Series Modeling</li>
+                    <li>AutoML, Hyperopt</li>
+                </ul>
+            </div>
+
+            <div class="skill-card">
+                <h3>Analytics</h3>
+                <ul>
+                    <li>Matplotlib</li>
+                    <li>Plotly</li>
+                </ul>
+            </div>
+
+            <div class="skill-card">
+                <h3>Data Science</h3>
+                <ul>
+                    <li>Cleansing, Wrangling, Visualization, Modeling, Deploying, Interpretation</li>
+                </ul>
+            </div>
+
+            <div class="skill-card">
+                <h3>Cloud Computing</h3>
+                <ul>
+                    <li>Azure IoT Hub, IoT Edge, Databases</li>
+                    <li>Databricks</li>
+                </ul>
+            </div>
+
+            <div class="skill-card">
+                <h3>Miscellaneous</h3>
+                <ul>
+                    <li>Docker, Git, Kubernetes</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education-section">
+        <h2>Education</h2>
+        <div class="education-container">
+            <!-- M.S. Computer Science -->
+            <div class="education-card">
+                <h3>M.S. Computer Science</h3>
+                <p class="education-date">Graduated: May 2021</p>
+                <p>Florida Institute of Technology, Melbourne, Florida</p>
+                <p><strong>Cumulative GPA:</strong> 3.7</p>
+                <ul>
+                    <li><strong>Teaching Assistant:</strong> Programming in Python - taught Python programming & Linux to 100+ sophomores.</li>
+                    <li><strong>Semi-Automated Grading System:</strong> Reduced grading time by 60% & nearly eliminated human error by deploying automated grading scripts on the server; utilized Unix, Python & Bash.</li>
+                </ul>
+            </div>
+
+            <!-- B.E. Computer Engineering -->
+            <div class="education-card">
+                <h3>B.E. Computer Engineering</h3>
+                <p class="education-date">Graduated: July 2019</p>
+                <p>Gujarat Technological University</p>
+                <p><strong>Cumulative GPA:</strong> 3.6</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Shiv Vyas Portfolio</p>
+    </footer>
+
+
+    <script>
+        // Awards Slideshow
+        let awardsSlideIndex = 0;
+        const awardSlides = document.querySelectorAll('.award-pic');
+    
+        function showAwardSlides() {
+            // Hide all awards slides
+            awardSlides.forEach(slide => slide.classList.remove('active'));
+            
+            // Increment the slide index and wrap around if necessary
+            awardsSlideIndex = (awardsSlideIndex + 1) % awardSlides.length;
+            
+            // Show the current slide
+            awardSlides[awardsSlideIndex].classList.add('active');
+            
+            // Move to the next slide every 2 seconds
+            setTimeout(showAwardSlides, 2000);
+        }
+    
+        // Start the Awards slideshow
+        showAwardSlides();
+    </script>
+
+
+
+<script>
+    // Projects Carousel
+    let projectsSlideIndex = 0;
+    const projectSlides = document.querySelectorAll('.projects-section .project-card');
+    const totalProjectSlides = projectSlides.length;
+
+    function showProjectSlide(index) {
+        const slideWidth = projectSlides[0].clientWidth;
+        document.querySelector('.projects-section .carousel-slide').style.transform = `translateX(${-index * slideWidth}px)`;
     }
 
-    .about-text p {
-        font-size: 1.2em;
+    function nextProjectSlide() {
+        projectsSlideIndex = (projectsSlideIndex + 1) % totalProjectSlides;
+        showProjectSlide(projectsSlideIndex);
     }
 
-    .timeline-container {
-        justify-content: center;
-    }
-
-    .timeline-container.left .timeline-content,
-    .timeline-container.right .timeline-content {
-        width: 100%;
-        max-width: 90%;
-    }
-
-    .timeline-container.left .timeline-content::before,
-    .timeline-container.right .timeline-content::before {
-        display: none;
-    }
-
-    .timeline::before {
-        display: none;
-    }
-
-    .education-container {
-        padding: 0 20px;
-    }
-}
-
-/* Awards Section */
-.awards-section {
-    background-color: #1a1a1a;
-    padding: 60px 20px;
-    text-align: center;
-}
-
-.carousel-container {
-    position: relative;
-    width: 100%;
-    max-width: 900px;
-    margin: 0 auto;
-    overflow: hidden;
-    border-radius: 15px;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
-}
-
-.carousel-slide {
-    display: flex;
-    transition: transform 0.5s ease;
-    width: 500%; /* 5 images in a row */
-}
-
-.carousel-slide img {
-    width: 100%;
-    height: 300px; /* Set a consistent height */
-    object-fit: cover; /* Ensures the image covers the space without stretching */
-    border-radius: 10px;
-}
+    // Auto slide for Projects every 3 seconds
+    setInterval(nextProjectSlide, 3000);
+</script>
 
 
 
@@ -539,71 +366,8 @@ footer {
 
 
 
-/* Projects Section */
-.projects-section {
-    background-color: #1a1a1a;
-    padding: 80px 20px;
-    text-align: center;
-}
+    
 
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.project-card {
-    background-color: #333;
-    color: #ddd;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: left;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    overflow: hidden;
-}
-
-.project-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.7);
-}
-
-.project-image {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 10px;
-    margin-bottom: 15px;
-}
-
-.project-card h3 {
-    font-size: 1.8em;
-    margin-bottom: 10px;
-    color: #e74c3c;
-}
-
-.project-card p {
-    font-size: 1.2em;
-    line-height: 1.6;
-    margin-bottom: 10px;
-}
-
-.github-link {
-    font-size: 1.1em;
-    color: #e74c3c;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.github-link:hover {
-    color: #e74c3c;
-}
-
-/* Responsive Design */
-@media screen and (max-width: 768px) {
-    .projects-grid {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    }
-}
+    
+</body>
+</html>
