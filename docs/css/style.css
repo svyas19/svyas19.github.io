@@ -390,10 +390,8 @@ h2:after {
 
 /* Education Section */
 .education-section {
-    background-color: #1a1a1a;
-    padding: 80px 20px;
-    max-width: 1200px; /* Ensure consistent width */
-    margin: 0 auto; /* Center the section */
+    background: linear-gradient(135deg, #1a1a1a, #333);
+    padding: 100px 20px;
     text-align: center;
 }
 
