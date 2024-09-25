@@ -280,13 +280,13 @@ h2:after {
 .carousel-slide {
     display: flex;
     transition: transform 0.5s ease;
-    width: 400%; /* Adjust this to the number of images (25% per image for 4 images) */
+    width: 100%; /* No need to set a specific width as we want the images to flow naturally */
 }
 
 .carousel-slide img {
-    width: 100%;  /* Full width of the container */
-    height: auto; /* Maintain aspect ratio */
-    object-fit: contain;  /* Ensure the image is fully visible inside the container */
+    width: auto;  /* Maintain image aspect ratio */
+    height: 500px; /* Set a fixed height for the carousel images */
+    object-fit: contain;  /* Ensure the full image fits within the container */
     border: 5px solid #d4af37; /* Yellow border */
     margin: 10px;
     border-radius: 10px; /* Slightly rounded corners */
