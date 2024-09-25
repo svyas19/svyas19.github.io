@@ -349,10 +349,14 @@ h2:after {
 .skills-section {
     background-color: #1a1a1a;
     padding: 80px 20px;
-    max-width: 1200px; /* Added to ensure consistent width */
-    margin: 0 auto; /* Center the content */
+    max-width: 1200px; /* Ensure consistent width */
+    margin: 0 auto; /* Center the section */
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center-align content */
 }
+
 
 .skills-grid {
     display: grid;
@@ -394,10 +398,13 @@ h2:after {
 /* Education Section */
 .education-section {
     background-color: #1a1a1a;
-    padding: 100px 20px;
+    padding: 80px 20px; /* Match padding with Skills section */
     max-width: 1200px; /* Ensure same width as Skills section */
-    margin: 0 auto; /* Center the content */
+    margin: 0 auto; /* Center the section */
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center-align content */
 }
 
 .education-container {
