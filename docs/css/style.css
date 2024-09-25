@@ -283,14 +283,14 @@ h2:after {
 }
 
 .carousel-slide img {
-    width: 100%;
+    max-width: 100%;
     height: auto;
-    max-height: 300px;
-    object-fit: contain;
-    border-radius: 10px;
-    border: 5px solid #d4af37;
+    object-fit: contain;  /* This ensures the full image is visible inside the container */
+    border: 5px solid #d4af37; /* Adds the yellow border around each image */
     margin: 10px;
+    border-radius: 10px;
 }
+
 
 /* Experience Section */
 .experience-section {
@@ -483,4 +483,48 @@ footer {
     .education-container {
         padding: 0 20px;
     }
+}
+
+/* General Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0d0d0d;
+    color: #e0e0e0;
+    scroll-behavior: smooth;
+    text-align: center;
+}
+
+/* Navigation Bar */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: linear-gradient(90deg, #ffbf00 0%, #d4af37 100%);
+    z-index: 1000;
+    padding: 10px 0;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Add the image styling here */
+img {
+    max-width: 100%;  /* Ensures images never overflow their container */
+    height: auto;     /* Maintains aspect ratio */
+    object-fit: contain; /* Ensures the entire image is visible inside the container */
+    border: 5px solid #d4af37; /* Adds the yellow border */
+    margin: 10px; /* Adds spacing around images */
+    border-radius: 10px; /* Adds a slight curve to the image corners */
+    display: block; /* Removes unwanted space below images */
+}
+
+/* Section Titles Styling */
+h2 {
+    font-size: 3em;
+    color: #d4af37;
+    margin-bottom: 40px;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
 }
