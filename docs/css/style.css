@@ -347,10 +347,8 @@ h2:after {
 
 /* Skills Section */
 .skills-section {
-    background-color: #1a1a1a;
+    background: linear-gradient(135deg, #1a1a1a, #333);
     padding: 100px 20px;
-    
-    margin: 0 auto; /* Center the section */
     text-align: center;
 }
 
