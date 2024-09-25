@@ -9,6 +9,7 @@ body {
     text-align: center;
 }
 
+
 /* Navigation Bar */
 header {
     position: fixed;
@@ -26,7 +27,6 @@ nav ul {
     justify-content: center;
     margin: 0;
     padding: 0;
-    flex-wrap: wrap; /* For responsive behavior */
 }
 
 nav ul li {
@@ -58,7 +58,7 @@ nav ul li a:hover {
     justify-content: center;
     align-items: center;
     color: #d4af37;
-    padding: 0 20px;
+    padding: 0;
 }
 
 .overlay {
@@ -70,6 +70,20 @@ nav ul li a:hover {
     background: rgba(0, 0, 0, 0.5);
     z-index: 1;
     pointer-events: none;
+}
+
+/* Upper content */
+.upper-content {
+    z-index: 2;
+    text-align: center;
+    margin-bottom: 700px;
+}
+
+/* Lower content */
+.lower-content {
+    z-index: 2;
+    text-align: center;
+    margin-top: 250px;
 }
 
 .title-section h1 {
@@ -120,7 +134,7 @@ h2:after {
 /* About Me Section */
 .about-section {
     background-color: #1a1a1a;
-    padding: 100px 20px;
+    padding: 100px 0;
     text-align: center;
 }
 
@@ -154,7 +168,7 @@ h2:after {
 /* Timeline Section */
 .timeline-section {
     background-color: #1a1a1a;
-    padding: 100px 20px;
+    padding: 100px 0;
     text-align: center;
     position: relative;
 }
@@ -246,7 +260,7 @@ h2:after {
     color: #e0e0e0;
 }
 
-/* Success Stories Section */
+/* Awards & Recognition Section */
 .awards-section {
     background-color: #1a1a1a;
     padding: 60px 20px;
@@ -276,6 +290,7 @@ h2:after {
     animation: fade 1s; /* Optional fade effect */
 }
 
+/* Fade animation for smooth transitions */
 @keyframes fade {
     from {opacity: 0.4;}
     to {opacity: 1;}
@@ -294,7 +309,7 @@ h2:after {
     margin: 40px 0;
     border-radius: 15px;
     box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.7);
-    text-align: left;
+    text-align: left; /* Align text to the left */
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
@@ -319,7 +334,7 @@ h2:after {
 }
 
 .experience-card ul {
-    list-style-type: none;
+    list-style-type: none; /* Remove bullet points */
     padding-left: 0;
 }
 
@@ -327,23 +342,20 @@ h2:after {
     font-size: 1.2em;
     margin-bottom: 10px;
     line-height: 1.6em;
-    color: #e0e0e0;
+    color: #e0e0e0; /* Text color for list items */
 }
 
 /* Skills Section */
 .skills-section {
-    background-color: #1a1a1a;
-    padding: 80px 20px;
+    background: linear-gradient(135deg, #1a1a1a, #333);
+    padding: 100px 20px;
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Ensure responsive grid */
+    gap: 30px; /* Space between grid items */
     max-width: 900px;
     margin: 0 auto;
 }
@@ -378,14 +390,9 @@ h2:after {
 
 /* Education Section */
 .education-section {
-    background-color: #1a1a1a;
-    padding: 80px 20px;
-    max-width: 1200px;
-    margin: 0 auto;
+    background: linear-gradient(135deg, #1a1a1a, #333);
+    padding: 100px 20px;
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .education-container {
@@ -393,7 +400,7 @@ h2:after {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 40px; /* Space between education items */
 }
 
 .education-card {
@@ -439,6 +446,267 @@ h2:after {
 .education-card ul li {
     margin-bottom: 10px;
 }
+
+
+/* Footer Section for entire web page */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 1em;
+    position: relative;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .about-container {
+        padding: 0 20px;
+    }
+
+    .about-text p {
+        font-size: 1.2em;
+    }
+
+    .timeline-container {
+        justify-content: center;
+    }
+
+    .timeline-container.left .timeline-content,
+    .timeline-container.right .timeline-content {
+        width: 100%;
+        max-width: 90%;
+    }
+
+    .timeline-container.left .timeline-content::before,
+    .timeline-container.right .timeline-content::before {
+        display: none;
+    }
+
+    .timeline::before {
+        display: none;
+    }
+
+    .education-container {
+        padding: 0 20px;
+    }
+}
+
+/* Awards Section */
+.awards-section {
+    background-color: #1a1a1a;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.carousel-slide {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 500%; /* 5 images in a row */
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 300px; /* Set a consistent height */
+    object-fit: cover; /* Ensures the image covers the space without stretching */
+    border-radius: 10px;
+}
+
+/* Projects Section */
+.projects-section {
+    background-color: #1a1a1a;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project-card {
+    background-color: #333;
+    color: #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.7);
+}
+
+.project-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.project-card h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #d4af37;
+}
+
+.project-card p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.github-link {
+    font-size: 1.1em;
+    color: #d4af37;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.github-link:hover {
+    color: #ffbf00;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+/* Blog Section */
+.blog-section {
+    background-color: #1a1a1a;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.blogs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.blog-card {
+    background-color: #333;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    text-align: left;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.7);
+}
+
+.blog-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* Make the title and description text yellow */
+.blog-card h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #ffbf00; /* Yellow */
+}
+
+.blog-card p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    color: #ffbf00; /* Yellow */
+}
+
+/* Make the "Read More" link yellow */
+.blog-link {
+    font-size: 1.1em;
+    color: #ffbf00; /* Yellow */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.blog-link:hover {
+    color: #ffbf00; /* Keep yellow on hover */
+}
+
+
+
+/* Disclaimer Section */
+.disclaimer-section {
+    background-color: #1a1a1a;
+    padding: 80px 20px;
+    color: #e0e0e0;
+    text-align: center; /* Ensures text is center-aligned */
+}
+
+.disclaimer-section h2 {
+    font-size: 2.5em;
+    color: #d4af37;
+    margin-bottom: 40px;
+}
+
+.disclaimer-section p {
+    font-size: 1.3em;
+    margin-bottom: 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left; /* Text within the paragraph remains left-aligned for readability */
+    line-height: 1.8em; /* Adjusted for better readability */
+}
+
+.disclaimer-section strong {
+    color: #d4af37; /* Keeps the headings bold and in gold color */
+}
+
+
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 1em;
+    position: relative;
+}
+
+footer p a {
+    color: #ffbf00;
+    text-decoration: none;
+}
+
+footer p a:hover {
+    text-decoration: underline;
+}
+
+
 
 /* Contact Section */
 .contact-section {
@@ -531,46 +799,4 @@ h2:after {
 .resume-button:hover {
     background-color: #d4af37;
     transform: translateY(-5px);
-}
-
-/* Footer Section */
-footer {
-    background-color: #333;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    font-size: 1em;
-    position: relative;
-}
-
-/* Responsive Design */
-@media screen and (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        padding: 20px;
-    }
-
-    .timeline-container {
-        justify-content: center;
-    }
-
-    .timeline-content {
-        width: 100%;
-    }
-
-    .skills-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .education-container {
-        padding: 0 20px;
-    }
-
-    .about-container {
-        padding: 0 20px;
-    }
-
-    .projects-grid {
-        grid-template-columns: 1fr;
-    }
 }
