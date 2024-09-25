@@ -730,7 +730,7 @@ footer p a:hover {
 }
 
 .contact-container {
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
     padding: 20px;
 }
@@ -743,11 +743,11 @@ footer p a:hover {
 .contact-links {
     display: flex;
     justify-content: center;
-    gap: 20px; /* Adjusted gap for even spacing */
+    gap: 40px;
     margin-bottom: 30px;
 }
 
-.contact-links a {
+.contact-link {
     text-decoration: none;
     font-size: 1.2em;
     color: #fff;
@@ -760,13 +760,12 @@ footer p a:hover {
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.contact-links a img {
-    width: 40px;  /* Smaller icon size */
-    height: 40px;
-    object-fit: contain; /* Make sure the icons maintain their aspect ratio */
+.contact-link img {
+    width: 30px;
+    height: 30px;
 }
 
-.contact-links a:hover {
+.contact-link:hover {
     background-color: #d4af37;
     transform: translateY(-5px);
 }
