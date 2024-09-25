@@ -1,3 +1,4 @@
+
 /* General Styling */
 body {
     font-family: 'Poppins', sans-serif;
@@ -71,12 +72,14 @@ nav ul li a:hover {
     pointer-events: none;
 }
 
+/* Upper content */
 .upper-content {
     z-index: 2;
     text-align: center;
     margin-bottom: 700px;
 }
 
+/* Lower content */
 .lower-content {
     z-index: 2;
     text-align: center;
@@ -110,15 +113,13 @@ nav ul li a:hover {
     background-color: #ffbf00;
 }
 
-/* Section Titles Styling */
+/* Section Titles */
 h2 {
     font-size: 3em;
     color: #d4af37;
     margin-bottom: 40px;
-    text-align: center;
     position: relative;
     display: inline-block;
-    text-transform: uppercase;
 }
 
 h2:after {
@@ -259,34 +260,34 @@ h2:after {
     color: #e0e0e0;
 }
 
-/* Awards Section */
+/* Awards & Recognition Section */
 .awards-section {
     background-color: #1a1a1a;
     padding: 60px 20px;
     text-align: center;
 }
 
-/* Slideshow container */
-.slideshow-container {
-    max-width: 900px;
+.carousel-container {
     position: relative;
-    margin: auto;
-    border-radius: 10px;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 15px;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
 }
 
-/* Hide all slides by default */
-.mySlides {
-    display: none;
+.carousel-slide {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 100%;
 }
 
-img {
-    width: 100%; /* Scale to container width */
-    height: auto; /* Maintain aspect ratio */
-    object-fit: contain;  /* Ensures the entire image is visible inside the container */
-    border: 5px solid #d4af37; /* Adds the yellow border */
-    border-radius: 10px;
-    display: block; /* Removes unwanted space below images */
+.carousel-slide img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    height: 400px;
 }
 
 /* Experience Section */
@@ -302,7 +303,7 @@ img {
     margin: 40px 0;
     border-radius: 15px;
     box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.7);
-    text-align: left;
+    text-align: left; /* Align text to the left */
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
@@ -327,7 +328,7 @@ img {
 }
 
 .experience-card ul {
-    list-style-type: none;
+    list-style-type: none; /* Remove bullet points */
     padding-left: 0;
 }
 
@@ -335,7 +336,7 @@ img {
     font-size: 1.2em;
     margin-bottom: 10px;
     line-height: 1.6em;
-    color: #e0e0e0;
+    color: #e0e0e0; /* Text color for list items */
 }
 
 /* Skills Section */
@@ -454,8 +455,16 @@ footer {
 
 /* Responsive Design */
 @media screen and (max-width: 768px) {
-    .slideshow-container {
-        max-width: 100%;
+    .about-container {
+        padding: 0 20px;
+    }
+
+    .about-text p {
+        font-size: 1.2em;
+    }
+
+    .timeline-container {
+        justify-content: center;
     }
 
     .timeline-container.left .timeline-content,
