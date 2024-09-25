@@ -120,14 +120,13 @@
     <!-- Awards & Recognition Section -->
     <section id="awards" class="awards-section">
         <h2>Awards & Recognition</h2>
-        <div class="carousel-container">
-            <div class="carousel-slide">
-                <img src="img/award1.jpg" alt="Award 1" class="award-pic">
-                <img src="img/award2.jpg" alt="Award 2" class="award-pic">
-                <img src="img/award3.jpg" alt="Award 3" class="award-pic">
-            </div>
+        <div class="slideshow-container">
+            <img class="award-pic" src="img/award1.jpg" alt="Award 1">
+            <img class="award-pic" src="img/award2.jpg" alt="Award 2">
+            <img class="award-pic" src="img/award3.jpg" alt="Award 3">
         </div>
     </section>
+
 
 
     <!-- Experience Section -->
@@ -319,44 +318,59 @@
         <p>&copy; 2024 Shiv Vyas Portfolio</p>
     </footer>
 
-    <!-- JS for Awards and Projects Carousels -->
+
     <script>
-        // Awards Carousel
+        // Awards Slideshow
         let awardsSlideIndex = 0;
-        const awardsSlides = document.querySelectorAll('.awards-section .carousel-slide img');
-        const totalAwardsSlides = awardsSlides.length;
-
-        function showAwardsSlide(index) {
-            const slideWidth = awardsSlides[0].clientWidth;
-            document.querySelector('.awards-section .carousel-slide').style.transform = `translateX(${-index * slideWidth}px)`;
+        const awardSlides = document.querySelectorAll('.award-pic');
+    
+        function showAwardSlides() {
+            // Hide all awards slides
+            awardSlides.forEach(slide => slide.classList.remove('active'));
+            
+            // Increment the slide index and wrap around if necessary
+            awardsSlideIndex = (awardsSlideIndex + 1) % awardSlides.length;
+            
+            // Show the current slide
+            awardSlides[awardsSlideIndex].classList.add('active');
+            
+            // Move to the next slide every 2 seconds
+            setTimeout(showAwardSlides, 2000);
         }
-
-        function nextAwardsSlide() {
-            awardsSlideIndex = (awardsSlideIndex + 1) % totalAwardsSlides;
-            showAwardsSlide(awardsSlideIndex);
-        }
-
-        // Auto slide for Awards every 2 seconds
-        setInterval(nextAwardsSlide, 2000);
-
-        // Projects Carousel
-        let projectsSlideIndex = 0;
-        const projectSlides = document.querySelectorAll('.projects-section .project-card');
-        const totalProjectSlides = projectSlides.length;
-
-        function showProjectSlide(index) {
-            const slideWidth = projectSlides[0].clientWidth;
-            document.querySelector('.projects-section .carousel-slide').style.transform = `translateX(${-index * slideWidth}px)`;
-        }
-
-        function nextProjectSlide() {
-            projectsSlideIndex = (projectsSlideIndex + 1) % totalProjectSlides;
-            showProjectSlide(projectsSlideIndex);
-        }
-
-        // Auto slide for Projects every 3 seconds
-        setInterval(nextProjectSlide, 3000);
+    
+        // Start the Awards slideshow
+        showAwardSlides();
     </script>
+
+
+
+<script>
+    // Projects Carousel
+    let projectsSlideIndex = 0;
+    const projectSlides = document.querySelectorAll('.projects-section .project-card');
+    const totalProjectSlides = projectSlides.length;
+
+    function showProjectSlide(index) {
+        const slideWidth = projectSlides[0].clientWidth;
+        document.querySelector('.projects-section .carousel-slide').style.transform = `translateX(${-index * slideWidth}px)`;
+    }
+
+    function nextProjectSlide() {
+        projectsSlideIndex = (projectsSlideIndex + 1) % totalProjectSlides;
+        showProjectSlide(projectsSlideIndex);
+    }
+
+    // Auto slide for Projects every 3 seconds
+    setInterval(nextProjectSlide, 3000);
+</script>
+
+
+
+
+
+
+
+    
 
     
 </body>
