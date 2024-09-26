@@ -421,9 +421,18 @@
     <script>
         function toggleMenu() {
             const navbar = document.getElementById("navbar");
-            navbar.classList.toggle("show"); // Toggle the 'show' class on click
+            navbar.classList.toggle("show");
         }
+    
+        // Automatically close menu when a link is clicked
+        document.querySelectorAll('#navbar a').forEach(link => {
+            link.addEventListener('click', function () {
+                const navbar = document.getElementById("navbar");
+                navbar.classList.remove("show"); // Close the menu
+            });
+        });
     </script>
+    
     
     
 </body>

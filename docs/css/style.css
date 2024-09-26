@@ -110,6 +110,67 @@ nav ul li a:hover {
     transform: scale(1.1);
 }
 
+/* Responsive Images and Tiles for Mobile Devices */
+@media screen and (max-width: 768px) {
+    /* Projects Section */
+    .projects-grid {
+        grid-template-columns: 1fr; /* Stack project cards on mobile */
+        padding: 20px;
+    }
+
+    .project-card {
+        width: 100%; /* Full width on mobile */
+        margin-bottom: 20px;
+    }
+
+    .project-image {
+        width: 100%;
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    /* Awards Section */
+    .slideshow-container {
+        width: 100%; /* Full width on mobile */
+    }
+
+    .award-pic {
+        width: 100%;
+        height: auto; /* Keep aspect ratio */
+    }
+
+    /* Blog Section */
+    .blogs-grid {
+        grid-template-columns: 1fr; /* Stack blog cards on mobile */
+        padding: 20px;
+    }
+
+    .blog-card {
+        width: 100%; /* Full width for blog cards */
+        margin-bottom: 20px;
+    }
+
+    .blog-image {
+        width: 100%;
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    /* Ensure other sections like About, Skills, etc., are also responsive */
+    .about-container, .skills-grid, .education-container {
+        padding: 20px;
+        flex-direction: column; /* Stack content on mobile */
+    }
+
+    .about-pic {
+        width: 150px;
+        height: 150px; /* Reduce size on mobile */
+    }
+
+    /* Adjust any other necessary section for mobile */
+    .education-card, .skill-card {
+        width: 100%; /* Full width cards */
+    }
+}
+
 /* Title Section */
 .title-section {
     height: 100vh;
@@ -161,24 +222,6 @@ nav ul li a:hover {
 
 .scroll-down:hover {
     background-color: #ffbf00;
-}
-
-/* Section Titles */
-h2 {
-    font-size: 3em;
-    color: #d4af37;
-    margin-bottom: 40px;
-    position: relative;
-    display: inline-block;
-}
-
-h2:after {
-    content: '';
-    display: block;
-    width: 50px;
-    height: 4px;
-    background-color: #d4af37;
-    margin: 10px auto;
 }
 
 /* About Me Section */
@@ -281,4 +324,204 @@ h2:after {
 .timeline-content p {
     font-size: 1.1em;
     color: #e0e0e0;
+}
+
+/* Projects Section */
+.projects-section {
+    background-color: #1a1a1a;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project-card {
+    background-color: #333;
+    color: #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.7);
+}
+
+.project-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* Awards Section */
+.awards-section {
+    background-color: #1a1a1a;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.slideshow-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.award-pic {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 15px;
+    display: none; /* Hide all images initially */
+}
+
+.award-pic.active {
+    display: block; /* Display the active image */
+    animation: fade 1s; /* Optional fade effect */
+}
+
+/* Fade animation for smooth transitions */
+@keyframes fade {
+    from {opacity: 0.4;}
+    to {opacity: 1;}
+}
+
+/* Blog Section */
+.blog-section {
+    background-color: #1a1a1a;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.blogs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.blog-card {
+    background-color: #333;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    text-align: left;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.7);
+}
+
+.blog-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* Footer Section */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 1em;
+    position: relative;
+}
+
+footer p a {
+    color: #ffbf00;
+    text-decoration: none;
+}
+
+footer p a:hover {
+    text-decoration: underline;
+}
+
+/* Contact Section */
+.contact-section {
+    background-color: #1a1a1a;
+    padding: 80px 20px;
+    color: #e0e0e0;
+    text-align: center;
+}
+
+.contact-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+.contact-link {
+    text-decoration: none;
+    font-size: 1.2em;
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #333;
+    padding: 10px 15px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-link img {
+    width: 30px;
+    height: 30px;
+}
+
+.contact-link:hover {
+    background-color: #d4af37;
+    transform: translateY(-5px);
+}
+
+.resume-container {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.resume-button {
+    text-decoration: none;
+    font-size: 1.5em;
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #333;
+    padding: 15px 30px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.resume-button:hover {
+    background-color: #d4af37;
+    transform: translateY(-5px);
 }
