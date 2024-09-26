@@ -9,7 +9,7 @@ body {
     text-align: center;
 }
 
-/* Fixed Navigation Bar */
+/* Navigation */
 nav {
     position: fixed;
     top: 0;
@@ -20,7 +20,6 @@ nav {
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
 }
 
-/* Navigation Menu */
 nav ul {
     display: flex;
     justify-content: center;
@@ -46,7 +45,7 @@ nav ul li a:hover {
     background-color: rgba(0, 0, 0, 0.2);
 }
 
-/* Hamburger Icon */
+/* Hamburger Icon for Mobile */
 .menu-icon {
     display: none;
     font-size: 2em;
@@ -55,7 +54,7 @@ nav ul li a:hover {
     padding: 10px;
 }
 
-/* Mobile / Tablet View (Up to 768px) */
+/* Mobile/Tablet Styling (max-width: 768px) */
 @media screen and (max-width: 768px) {
     .menu-icon {
         display: block;
@@ -94,12 +93,11 @@ nav ul li a:hover {
         gap: 20px;
     }
 
-    /* Fix for Education and Experience Cards on Mobile */
+    /* Mobile fixes for Education and Experience Cards */
     .education-container, .experience-card {
         padding: 20px;
     }
 
-    /* Contact Section for Mobile */
     .resume-container {
         margin-top: 20px;
     }
@@ -109,7 +107,7 @@ nav ul li a:hover {
     }
 }
 
-/* Larger Screens */
+/* Larger Screen Styling */
 @media screen and (min-width: 769px) {
     #navbar {
         display: flex;
@@ -118,13 +116,12 @@ nav ul li a:hover {
 
     .skills-grid {
         display: grid;
-        grid-template-columns: repeat(3, 1fr); /* Three columns for Skills */
+        grid-template-columns: repeat(3, 1fr);
         gap: 30px;
         max-width: 1000px;
         margin: 0 auto;
     }
 
-    /* Education & Experience */
     .education-container {
         display: flex;
         justify-content: space-between;
@@ -258,7 +255,7 @@ nav ul li a:hover {
     color: #e0e0e0;
 }
 
-/* About Me Section */
+/* About Section */
 .about-section {
     background-color: #1a1a1a;
     padding: 100px 0;
@@ -290,59 +287,6 @@ nav ul li a:hover {
     color: #ddd;
     max-width: 700px;
     line-height: 1.7em;
-}
-
-/* Title Section */
-.title-section {
-    height: 100vh;
-    background-image: url('../img/background-image.jpg');
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: #d4af37;
-    padding: 0;
-}
-
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 1;
-    pointer-events: none;
-}
-
-.title-section h1 {
-    font-size: 3.5em;
-    margin: 0;
-}
-
-.title-section p {
-    font-size: 1.5em;
-    margin-top: 10px;
-}
-
-.scroll-down {
-    font-size: 1.2em;
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #d4af37;
-    color: #000;
-    border-radius: 20px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-    z-index: 2;
-    position: relative;
-}
-
-.scroll-down:hover {
-    background-color: #ffbf00;
 }
 
 /* Projects Section */
@@ -554,6 +498,7 @@ nav ul li a:hover {
     line-height: 1.8em;
 }
 
+/* Footer */
 footer {
     background-color: #333;
     color: white;
