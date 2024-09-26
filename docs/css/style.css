@@ -806,3 +806,26 @@ footer p a:hover {
     background-color: #d4af37;
     transform: translateY(-5px);
 }
+
+
+
+/* Responsive Navigation Bar for Mobile Devices */
+@media screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Stack the menu items vertically */
+        align-items: center; /* Center the menu items */
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Increase spacing between items */
+    }
+
+    nav ul li a {
+        padding: 10px 30px; /* Increase padding for better touchability */
+        font-size: 1.2em; /* Adjust font size for readability */
+    }
+
+    header {
+        padding: 15px 0; /* Adjust header padding */
+    }
+}
