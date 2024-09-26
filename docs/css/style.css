@@ -46,7 +46,7 @@ nav ul li a:hover {
     background-color: rgba(0, 0, 0, 0.2);
 }
 
-/* Hamburger Icon - Hidden by default on larger screens */
+/* Hamburger Icon */
 .menu-icon {
     display: none;
     font-size: 2em;
@@ -55,9 +55,8 @@ nav ul li a:hover {
     padding: 10px;
 }
 
-/* Responsive Styles for Mobile Devices */
+/* Mobile / Tablet View (Up to 768px) */
 @media screen and (max-width: 768px) {
-    /* Show hamburger icon for mobile and tablet screens */
     .menu-icon {
         display: block;
         position: absolute;
@@ -65,70 +64,67 @@ nav ul li a:hover {
         right: 20px;
     }
 
-    /* Hide navigation menu by default on mobile and tablet */
     #navbar {
         display: none;
         flex-direction: column;
         align-items: center;
         background-color: rgba(0, 0, 0, 0.9);
         position: absolute;
-        top: 60px; /* Below the header */
+        top: 60px;
         left: 0;
         width: 100%;
     }
 
-    /* Adjust menu items for mobile/tablet */
     #navbar li {
         margin: 15px 0;
     }
 
     #navbar li a {
-        padding: 15px 30px; /* Increase padding for better touch targets */
-        font-size: 1.2em; /* Slightly larger font for readability */
+        padding: 15px 30px;
+        font-size: 1.2em;
     }
 
-    /* Show the menu when the "show" class is added */
     #navbar.show {
         display: flex;
     }
 
-    /* Stack skill cards on mobile */
+    /* Skills Section for Mobile */
     .skills-grid {
         grid-template-columns: 1fr;
         gap: 20px;
     }
 
-    /* Stack education items on mobile */
-    .education-container {
-        flex-direction: column;
+    /* Fix for Education and Experience Cards on Mobile */
+    .education-container, .experience-card {
         padding: 20px;
     }
 
-    /* Stack experience cards on mobile */
-    .experience-card {
-        width: 100%;
-        padding: 20px;
-        margin-bottom: 20px;
+    /* Contact Section for Mobile */
+    .resume-container {
+        margin-top: 20px;
+    }
+
+    .resume-button {
+        width: 80%;
     }
 }
 
-/* Responsive Styles for Larger Screens */
+/* Larger Screens */
 @media screen and (min-width: 769px) {
     #navbar {
         display: flex;
         justify-content: center;
     }
 
-    /* Skills Section */
     .skills-grid {
         display: grid;
-        grid-template-columns: repeat(2, 1fr); /* Two columns for larger screens */
+        grid-template-columns: repeat(3, 1fr); /* Three columns for Skills */
         gap: 30px;
         max-width: 1000px;
         margin: 0 auto;
     }
 
-    /* Education Section */
+    /* Education & Experience */
     .education-container {
         display: flex;
         justify-content: space-between;
@@ -137,7 +133,6 @@ nav ul li a:hover {
         padding: 40px 0;
     }
 
-    /* Experience Section */
     .experience-card {
         max-width: 800px;
         margin: 40px auto;
@@ -411,15 +406,14 @@ nav ul li a:hover {
     height: 400px;
     object-fit: cover;
     border-radius: 15px;
-    display: none; /* Hide all images initially */
+    display: none;
 }
 
 .award-pic.active {
-    display: block; /* Display the active image */
-    animation: fade 1s; /* Optional fade effect */
+    display: block;
+    animation: fade 1s;
 }
 
-/* Fade animation for smooth transitions */
 @keyframes fade {
     from {opacity: 0.4;}
     to {opacity: 1;}
@@ -462,25 +456,6 @@ nav ul li a:hover {
     object-fit: cover;
     border-radius: 10px;
     margin-bottom: 15px;
-}
-
-/* Footer Section */
-footer {
-    background-color: #333;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    font-size: 1em;
-    position: relative;
-}
-
-footer p a {
-    color: #ffbf00;
-    text-decoration: none;
-}
-
-footer p a:hover {
-    text-decoration: underline;
 }
 
 /* Contact Section */
@@ -545,7 +520,54 @@ footer p a:hover {
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
+.resume-button img {
+    width: 24px;
+    height: 24px;
+}
+
 .resume-button:hover {
     background-color: #d4af37;
     transform: translateY(-5px);
+}
+
+/* Disclaimer Section */
+.disclaimer-section {
+    background-color: #1a1a1a;
+    padding: 80px 20px;
+    color: #e0e0e0;
+    text-align: center;
+}
+
+.disclaimer-section h2 {
+    font-size: 2.5em;
+    color: #d4af37;
+    margin-bottom: 40px;
+}
+
+.disclaimer-section p {
+    font-size: 1.3em;
+    margin-bottom: 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    line-height: 1.8em;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 1em;
+    position: relative;
+}
+
+footer p a {
+    color: #ffbf00;
+    text-decoration: none;
+}
+
+footer p a:hover {
+    text-decoration: underline;
 }
