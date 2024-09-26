@@ -223,7 +223,7 @@ nav ul li a:hover {
 }
 
 .timeline-content h3 {
-    color: #d4af37;
+    color: #ffbf00;  /* Changed to yellow */
     font-size: 1.8em;
     margin-bottom: 10px;
 }
@@ -257,7 +257,7 @@ nav ul li a:hover {
 .skill-card h3 {
     font-size: 1.8em;
     margin-bottom: 10px;
-    color: #d4af37;
+    color: #ffbf00;  /* Changed to yellow */
 }
 
 .skill-card ul {
@@ -297,7 +297,7 @@ nav ul li a:hover {
 .education-card h3 {
     font-size: 1.8em;
     margin-bottom: 10px;
-    color: #d4af37;
+    color: #ffbf00;  /* Changed to yellow */
 }
 
 .education-card p {
@@ -327,7 +327,7 @@ nav ul li a:hover {
 }
 
 .experience-card h3 {
-    color: #d4af37;
+    color: #ffbf00;  /* Changed to yellow */
     font-size: 2em;
     margin-bottom: 20px;
 }
@@ -579,7 +579,7 @@ nav ul li a:hover {
 
 .disclaimer-section h2 {
     font-size: 2.5em;
-    color: #d4af37;
+    color: #ffbf00;  /* Changed to yellow */
     margin-bottom: 40px;
 }
 
