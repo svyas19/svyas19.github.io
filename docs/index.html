@@ -10,7 +10,8 @@
     <!-- Navigation Bar -->
     <header>
         <nav>
-            <ul>
+            <div class="menu-icon" onclick="toggleMenu()">&#9776;</div> <!-- Hamburger Icon -->
+            <ul id="navbar">
                 <li><a href="#about">About Me</a></li>
                 <li><a href="#timeline">Timeline</a></li>
                 <li><a href="#awards">Success Stories</a></li>
@@ -24,6 +25,7 @@
             </ul>
         </nav>
     </header>
+
 
     
     <!-- Title Section -->
@@ -414,5 +416,12 @@
         // Start the Awards slideshow
         showAwardSlides();
     </script>
+    <script>
+        function toggleMenu() {
+            const navbar = document.getElementById("navbar");
+            navbar.classList.toggle("show"); // Toggle the 'show' class on click
+        }
+    </script>
+    
 </body>
 </html>
