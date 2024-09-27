@@ -444,8 +444,9 @@
         function checkAutoScroll() {
             const aboutInView = isSectionInView("#about");
             const contactInView = isSectionInView("#contact");
+            const awardInView = isSectionInView("#awards");
     
-            if (aboutInView || contactInView) {
+            if (aboutInView || contactInView || awardInView ) {
                 autoScrollEnabled = false; // Disable auto-scroll if About or Contact is in view
             } else {
                 autoScrollEnabled = true; // Enable auto-scroll for other sections
