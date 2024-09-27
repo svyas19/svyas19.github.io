@@ -443,8 +443,12 @@
                 autoScrollEnabled = false;
                 // Do not allow scrolling past the Awards section
                 window.scrollTo(0, document.querySelector("#awards").offsetTop);
+    
+                // Specifically prevent scrolling in Chrome by listening to scroll events
+                document.body.style.overflow = 'hidden'; // Disable scroll
             } else {
                 autoScrollEnabled = true; // Enable auto-scroll for other sections
+                document.body.style.overflow = ''; // Re-enable scroll for other sections
             }
         }
     
@@ -454,6 +458,7 @@
         // Start the slideshow for the awards section
         showAwardSlides();
     </script>
+    
     
     
     
