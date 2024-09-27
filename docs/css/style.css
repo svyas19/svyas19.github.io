@@ -395,10 +395,10 @@ nav ul li a:hover {
 
 
 
-/* About Me Section (Responsive & Centered Title) */
+/* About Me Section (Reverted Text Size, Enhanced Quote) */
 .about-section {
-    background: linear-gradient(135deg, #2a2a2a, #000); /* Gradient background */
-    padding: 40px 20px;
+    background: linear-gradient(135deg, #2a2a2a, #000);
+    padding: 60px 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -412,15 +412,14 @@ nav ul li a:hover {
 .about-section h2 {
     font-size: 3em;
     color: #ffbf00;
-    margin-bottom: 40px; /* Space between title and content */
-    position: relative;
+    margin-bottom: 40px;
     text-align: center;
 }
 
 .about-section h2:after {
     content: '';
     display: block;
-    width: 50px;
+    width: 60px;
     height: 4px;
     background-color: #ffbf00;
     margin: 10px auto;
@@ -429,11 +428,11 @@ nav ul li a:hover {
 /* Container for Image and Text */
 .about-container {
     display: flex;
-    justify-content: space-between; /* Space out the image and text */
+    justify-content: space-between;
     align-items: center;
-    max-width: 1100px; /* Limit width to keep things compact */
+    max-width: 1100px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 30px;
     background-color: #2a2a2a;
     border-radius: 15px;
     box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.7);
@@ -448,7 +447,7 @@ nav ul li a:hover {
     border: 6px solid #ffbf00;
     box-shadow: 0px 8px 20px rgba(212, 175, 55, 0.6);
     transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
-    margin-right: 40px; /* Space between image and text */
+    margin-right: 50px;
 }
 
 .about-pic:hover {
@@ -460,37 +459,84 @@ nav ul li a:hover {
 .about-text {
     flex: 1;
     color: #f1f1f1;
-    font-size: 1.4em;
+    font-size: 1.2em;
     line-height: 1.6em;
     max-width: 700px;
-    text-align: center; /* Left-align the text */
+    text-align: left;
 }
 
-/* Emphasized Text */
+/* Subheadings */
+.about-text h3 {
+    color: #ffbf00;
+    font-size: 1.5em;
+    margin-top: 20px;
+}
+
+/* Lists */
+.about-text ul {
+    margin-left: 20px;
+    list-style: disc;
+}
+
+/* Quote Styling */
+.about-text em {
+    font-size: 1.4em;
+    color: #ffbf00;
+    display: block;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Carl Sagan's Name on Right */
+.about-text .quote-author {
+    text-align: right;
+    margin-top: -10px;
+    font-size: 1.2em;
+    color: #f1f1f1;
+    margin-right: 10px;
+}
+
+/* Highlighted Text */
 .about-text strong {
     color: #ffbf00;
     font-weight: bold;
 }
 
-/* Responsive Design for Larger Screens */
+/* Links */
+.about-text a {
+    color: #ffbf00;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.about-text a:hover {
+    color: #fff;
+}
+
+/* Responsive Design for Smaller Screens */
 @media screen and (max-width: 768px) {
     .about-container {
-        flex-direction: column; /* Stack image and text for mobile screens */
+        flex-direction: column;
         text-align: center;
     }
 
     .about-pic {
-        margin-right: 0; /* Remove the margin when stacked */
-        margin-bottom: 20px; /* Add space below the image */
+        margin-right: 0;
+        margin-bottom: 20px;
         width: 180px;
-        height: 180px; /* Adjust image size for smaller screens */
+        height: 180px;
     }
 
     .about-text {
-        text-align: center; /* Center text for mobile */
-        font-size: 1em; /* Reduce text size for mobile */
+        text-align: center;
+        font-size: 1em;
+    }
+    
+    .about-text .quote-author {
+        text-align: center;
     }
 }
+
 
 
 
