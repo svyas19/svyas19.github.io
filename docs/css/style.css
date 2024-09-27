@@ -395,10 +395,10 @@ nav ul li a:hover {
 
 
 
-/* About Me Section (Reverted Text Size, Enhanced Quote) */
+/* About Me Section (Reduced Padding & Balanced Layout) */
 .about-section {
     background: linear-gradient(135deg, #2a2a2a, #000);
-    padding: 60px 20px;
+    padding: 40px 20px; /* Reduced padding */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -410,17 +410,17 @@ nav ul li a:hover {
 
 /* About Me Title */
 .about-section h2 {
-    font-size: 3em;
+    font-size: 2.5em; /* Reduced font size */
     color: #ffbf00;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     text-align: center;
 }
 
 .about-section h2:after {
     content: '';
     display: block;
-    width: 60px;
-    height: 4px;
+    width: 50px; /* Slightly reduced width */
+    height: 3px;
     background-color: #ffbf00;
     margin: 10px auto;
 }
@@ -430,9 +430,9 @@ nav ul li a:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1100px;
+    max-width: 1000px; /* Reduced max-width */
     margin: 0 auto;
-    padding: 30px;
+    padding: 20px; /* Reduced padding */
     background-color: #2a2a2a;
     border-radius: 15px;
     box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.7);
@@ -440,14 +440,14 @@ nav ul li a:hover {
 
 /* Profile Picture */
 .about-pic {
-    width: 240px;
-    height: 240px;
+    width: 220px; /* Slightly reduced width */
+    height: 220px;
     border-radius: 50%;
     object-fit: cover;
     border: 6px solid #ffbf00;
     box-shadow: 0px 8px 20px rgba(212, 175, 55, 0.6);
     transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
-    margin-right: 50px;
+    margin-right: 40px; /* Reduced margin */
 }
 
 .about-pic:hover {
@@ -459,16 +459,16 @@ nav ul li a:hover {
 .about-text {
     flex: 1;
     color: #f1f1f1;
-    font-size: 1.2em;
-    line-height: 1.6em;
-    max-width: 700px;
+    font-size: 1.1em; /* Slightly reduced font size */
+    line-height: 1.5em;
+    max-width: 650px; /* Reduced text container width */
     text-align: left;
 }
 
 /* Subheadings */
 .about-text h3 {
     color: #ffbf00;
-    font-size: 1.5em;
+    font-size: 1.4em; /* Reduced subheading size */
     margin-top: 20px;
 }
 
@@ -480,7 +480,7 @@ nav ul li a:hover {
 
 /* Quote Styling */
 .about-text em {
-    font-size: 1.4em;
+    font-size: 1.3em; /* Reduced quote font size */
     color: #ffbf00;
     display: block;
     margin-bottom: 10px;
@@ -491,7 +491,7 @@ nav ul li a:hover {
 .about-text .quote-author {
     text-align: right;
     margin-top: -10px;
-    font-size: 1.2em;
+    font-size: 1.1em; /* Reduced font size */
     color: #f1f1f1;
     margin-right: 10px;
 }
@@ -523,19 +523,20 @@ nav ul li a:hover {
     .about-pic {
         margin-right: 0;
         margin-bottom: 20px;
-        width: 180px;
+        width: 180px; /* Smaller profile picture on mobile */
         height: 180px;
     }
 
     .about-text {
         text-align: center;
-        font-size: 1em;
+        font-size: 1em; /* Slightly reduced text size on mobile */
     }
     
     .about-text .quote-author {
         text-align: center;
     }
 }
+
 
 
 
