@@ -382,78 +382,117 @@ nav ul li a:hover {
     color: #e0e0e0;
 }
 
-/* About Me Section */
+
+
+
+
+/* About Me Section (Hero Style) */
 .about-section {
-    background-color: #1a1a1a;
-    padding: 100px 20px;
+    background: linear-gradient(135deg, #2a2a2a, #000); /* Gradient background for depth */
+    padding: 150px 20px; /* Give extra height for a hero effect */
     text-align: center;
+    color: #f1f1f1;
 }
 
 .about-container {
-    display: flex; /* Flexbox for horizontal layout */
-    justify-content: center;
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
     align-items: center;
-    flex-direction: row;
+    justify-content: center;
     max-width: 1200px;
     margin: 0 auto;
-    text-align: left; /* Align text to the left */
-    gap: 50px; /* Space between image and text */
-    background-color: #2a2a2a; /* Add a subtle background to make the section stand out */
-    border-radius: 15px; /* Smooth rounded corners */
-    padding: 40px; /* Padding inside the container */
-    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.7); /* Add shadow to elevate the section */
+    text-align: center;
+    gap: 40px;
 }
 
 .about-pic {
-    width: 300px; /* Make the image larger */
+    width: 300px;
     height: 300px;
-    border-radius: 50%; /* Circular image */
+    border-radius: 50%;
     object-fit: cover;
-    border: 5px solid #d4af37; /* Gold border to match the theme */
-    box-shadow: 0px 8px 20px rgba(212, 175, 55, 0.7); /* Enhanced shadow around the image */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add hover effect */
+    border: 8px solid #ffbf00; /* Gold border for emphasis */
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.5);
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
 }
 
 .about-pic:hover {
-    transform: scale(1.05); /* Slight zoom effect on hover */
-    box-shadow: 0px 12px 30px rgba(212, 175, 55, 0.9); /* Increase shadow on hover */
+    transform: scale(1.1); /* Subtle zoom on hover */
+    box-shadow: 0px 12px 40px rgba(0, 0, 0, 0.7); /* Enhanced shadow on hover */
 }
 
 .about-text {
-    color: #f1f1f1; /* Slightly lighter text for readability */
-    font-size: 1.6em;
-    line-height: 1.8em;
-    max-width: 700px;
-}
-
-.about-text p {
-    margin-bottom: 20px; /* Space between paragraphs */
+    font-size: 2em; /* Larger, more engaging font size */
+    line-height: 1.5;
+    max-width: 900px;
+    font-weight: 400;
 }
 
 .about-text strong {
-    color: #ffbf00; /* Highlight important text in theme yellow */
+    color: #ffbf00; /* Highlight key text in theme color */
 }
 
-/* Mobile Responsiveness */
-@media screen and (max-width: 768px) {
-    .about-container {
-        flex-direction: column; /* Stack image and text vertically on smaller screens */
-        text-align: center; /* Center-align content for mobile */
-        padding: 20px;
-        gap: 20px; /* Reduce gap between image and text */
-    }
+.typewriter {
+    border-right: 3px solid #ffbf00;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    animation: typing 3.5s steps(30, end), blink-caret 0.75s step-end infinite;
+}
 
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: #ffbf00; }
+}
+
+/* Skills & Icons Section */
+.about-icons {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.about-icons .icon {
+    font-size: 2.5em;
+    color: #ffbf00; /* Match the theme color */
+    transition: transform 0.3s ease-in-out;
+}
+
+.about-icons .icon:hover {
+    transform: scale(1.2); /* Interactive hover effect */
+}
+
+/* Responsive Design for Mobile */
+@media screen and (max-width: 768px) {
     .about-pic {
-        margin-right: 0;
-        width: 200px; /* Smaller image size for mobile */
+        width: 200px;
         height: 200px;
-        margin-bottom: 20px;
     }
 
     .about-text {
-        font-size: 1.3em; /* Reduce font size for mobile */
+        font-size: 1.6em;
+    }
+
+    .about-icons .icon {
+        font-size: 2em;
     }
 }
+
+
+
+
+
+
+
+
+
+
 
 
 
