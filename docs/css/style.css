@@ -98,12 +98,24 @@ nav ul li a:hover {
         padding: 20px;
     }
 
-    .resume-container {
-        margin-top: 20px;
+    /* Contact Section for Mobile */
+    .contact-container {
+        display: block;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .contact-links {
+        flex-direction: column;
+        align-items: center;
     }
 
     .resume-button {
-        width: 80%;
+        width: 100%;
+    }
+
+    .resume-container {
+        margin-top: 20px;
     }
 }
 
