@@ -385,24 +385,26 @@ nav ul li a:hover {
 
 
 
-
 /* About Me Section (Hero Style) */
 .about-section {
     background: linear-gradient(135deg, #2a2a2a, #000); /* Gradient background for depth */
-    padding: 150px 20px; /* Give extra height for a hero effect */
+    padding: 100px 20px; /* Adequate padding for spacing */
     text-align: center;
     color: #f1f1f1;
 }
 
 .about-container {
-    display: flex;
-    flex-direction: column; /* Stack content vertically */
-    align-items: center;
+    display: flex; /* Flexbox for side-by-side layout */
     justify-content: center;
+    align-items: center;
+    flex-direction: row;
     max-width: 1200px;
     margin: 0 auto;
-    text-align: center;
-    gap: 40px;
+    gap: 50px; /* Space between image and text */
+    background-color: #2a2a2a; /* Subtle background for better readability */
+    border-radius: 15px; /* Rounded corners */
+    padding: 40px; /* Inner padding */
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.7); /* Drop shadow for depth */
 }
 
 .about-pic {
@@ -411,78 +413,59 @@ nav ul li a:hover {
     border-radius: 50%;
     object-fit: cover;
     border: 8px solid #ffbf00; /* Gold border for emphasis */
-    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.5); /* Subtle shadow */
     transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
 }
 
 .about-pic:hover {
-    transform: scale(1.1); /* Subtle zoom on hover */
+    transform: scale(1.1); /* Slight zoom on hover */
     box-shadow: 0px 12px 40px rgba(0, 0, 0, 0.7); /* Enhanced shadow on hover */
 }
 
 .about-text {
-    font-size: 2em; /* Larger, more engaging font size */
-    line-height: 1.5;
-    max-width: 900px;
-    font-weight: 400;
+    color: #f1f1f1; /* Lighter text for readability */
+    font-size: 1.6em; /* Larger font size for better visual impact */
+    line-height: 1.8em; /* Improve readability */
+    max-width: 800px;
+    text-align: left;
 }
 
+/* Styling for quotes */
 .about-text strong {
-    color: #ffbf00; /* Highlight key text in theme color */
+    color: #ffbf00; /* Highlighted color matching theme */
+    font-weight: 700; /* Strong emphasis */
 }
 
-.typewriter {
-    border-right: 3px solid #ffbf00;
-    white-space: nowrap;
-    overflow: hidden;
-    display: inline-block;
-    animation: typing 3.5s steps(30, end), blink-caret 0.75s step-end infinite;
+/* Styling for the "P.S." */
+.about-text p:last-child {
+    color: #ffbf00; /* Highlighting the P.S. statement */
+    font-style: italic;
 }
 
-@keyframes typing {
-    from { width: 0; }
-    to { width: 100%; }
-}
-
-@keyframes blink-caret {
-    from, to { border-color: transparent; }
-    50% { border-color: #ffbf00; }
-}
-
-/* Skills & Icons Section */
-.about-icons {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    flex-wrap: wrap;
-    margin-top: 30px;
-}
-
-.about-icons .icon {
-    font-size: 2.5em;
-    color: #ffbf00; /* Match the theme color */
-    transition: transform 0.3s ease-in-out;
-}
-
-.about-icons .icon:hover {
-    transform: scale(1.2); /* Interactive hover effect */
-}
-
-/* Responsive Design for Mobile */
+/* Mobile Responsiveness */
 @media screen and (max-width: 768px) {
+    .about-container {
+        flex-direction: column; /* Stack image and text vertically on smaller screens */
+        text-align: center; /* Center-align content for mobile */
+        padding: 20px;
+        gap: 20px; /* Reduce gap between image and text */
+    }
+
     .about-pic {
-        width: 200px;
+        margin-right: 0;
+        width: 200px; /* Smaller image size for mobile */
         height: 200px;
+        margin-bottom: 20px;
     }
 
     .about-text {
-        font-size: 1.6em;
-    }
-
-    .about-icons .icon {
-        font-size: 2em;
+        font-size: 1.3em; /* Adjust text size for mobile */
     }
 }
+
+
+
+
 
 
 
