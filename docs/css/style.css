@@ -586,9 +586,11 @@ nav ul li a:hover {
     transform: translateY(-5px);
 }
 
+/* Resume Button Styling */
 .resume-container {
     margin-top: 40px;
     text-align: center;
+    padding: 0 20px; /* Add padding to keep the button away from the edges */
 }
 
 .resume-button {
@@ -602,6 +604,9 @@ nav ul li a:hover {
     padding: 15px 30px;
     border-radius: 10px;
     transition: background-color 0.3s ease, transform 0.3s ease;
+    max-width: 100%; /* Make sure the button doesn't overflow */
+    box-sizing: border-box; /* Ensure padding is included in width */
+    word-wrap: break-word; /* Ensure text doesn't overflow the button */
 }
 
 .resume-button img {
@@ -613,6 +618,16 @@ nav ul li a:hover {
     background-color: #d4af37;
     transform: translateY(-5px);
 }
+
+/* Responsive Design for Mobile Devices */
+@media screen and (max-width: 768px) {
+    .resume-button {
+        font-size: 1.2em; /* Reduce font size on smaller screens */
+        padding: 10px 20px; /* Adjust padding to fit smaller screens */
+        width: 100%; /* Ensure the button takes up full width on mobile */
+    }
+}
+
 
 /* Disclaimer Section */
 .disclaimer-section {
