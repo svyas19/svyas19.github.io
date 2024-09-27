@@ -385,83 +385,77 @@ nav ul li a:hover {
 
 
 
-/* About Me Section (Hero Style) */
+/* About Me Section (Reduced Text Size and Image Adjustment) */
 .about-section {
-    background: linear-gradient(135deg, #2a2a2a, #000); /* Gradient background for depth */
-    padding: 100px 20px; /* Adequate padding for spacing */
+    background: linear-gradient(135deg, #2a2a2a, #000); /* Gradient background */
+    padding: 100px 20px; /* Adequate padding */
     text-align: center;
     color: #f1f1f1;
 }
 
 .about-container {
-    display: flex; /* Flexbox for side-by-side layout */
+    display: flex; /* Flexbox for layout */
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    max-width: 1200px;
+    max-width: 1100px;
     margin: 0 auto;
-    gap: 50px; /* Space between image and text */
-    background-color: #2a2a2a; /* Subtle background for better readability */
-    border-radius: 15px; /* Rounded corners */
-    padding: 40px; /* Inner padding */
-    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.7); /* Drop shadow for depth */
+    gap: 40px; /* Reduced gap */
+    background-color: #2a2a2a;
+    border-radius: 15px;
+    padding: 30px; /* Slightly reduced padding */
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.7);
 }
 
 .about-pic {
-    width: 300px;
-    height: 300px;
+    width: 240px; /* Reduce the size of the image */
+    height: 240px;
     border-radius: 50%;
     object-fit: cover;
-    border: 8px solid #ffbf00; /* Gold border for emphasis */
-    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+    border: 6px solid #ffbf00; /* Slightly smaller border */
+    box-shadow: 0px 8px 20px rgba(212, 175, 55, 0.6); /* Softened shadow */
     transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
 }
 
 .about-pic:hover {
-    transform: scale(1.1); /* Slight zoom on hover */
-    box-shadow: 0px 12px 40px rgba(0, 0, 0, 0.7); /* Enhanced shadow on hover */
+    transform: scale(1.05); /* Slight hover zoom */
+    box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.8);
 }
 
 .about-text {
-    color: #f1f1f1; /* Lighter text for readability */
-    font-size: 1.6em; /* Larger font size for better visual impact */
-    line-height: 1.8em; /* Improve readability */
-    max-width: 800px;
+    color: #f1f1f1;
+    font-size: 1.4em; /* Reduced text size */
+    line-height: 1.6em;
+    max-width: 700px;
     text-align: left;
 }
 
-/* Styling for quotes */
+/* Styling for strong emphasis */
 .about-text strong {
-    color: #ffbf00; /* Highlighted color matching theme */
-    font-weight: 700; /* Strong emphasis */
+    color: #ffbf00;
+    font-weight: bold;
 }
 
-/* Styling for the "P.S." */
-.about-text p:last-child {
-    color: #ffbf00; /* Highlighting the P.S. statement */
-    font-style: italic;
-}
-
-/* Mobile Responsiveness */
+/* Responsive Design for Mobile */
 @media screen and (max-width: 768px) {
     .about-container {
-        flex-direction: column; /* Stack image and text vertically on smaller screens */
-        text-align: center; /* Center-align content for mobile */
+        flex-direction: column; /* Stack image and text */
+        text-align: center;
         padding: 20px;
-        gap: 20px; /* Reduce gap between image and text */
     }
 
     .about-pic {
         margin-right: 0;
-        width: 200px; /* Smaller image size for mobile */
-        height: 200px;
+        width: 180px; /* Reduce image size for mobile */
+        height: 180px;
         margin-bottom: 20px;
     }
 
     .about-text {
-        font-size: 1.3em; /* Adjust text size for mobile */
+        font-size: 1.2em; /* Reduce font size for mobile */
     }
 }
+
 
 
 
