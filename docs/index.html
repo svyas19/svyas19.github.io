@@ -440,21 +440,7 @@
             return (rect.top >= 0 && rect.bottom <= window.innerHeight);
         }
     
-        // Function to control auto-scrolling when sections are in view
-        function checkAutoScroll() {
-            const awardsInView = isSectionInView("#awards");
-            const aboutInView = isSectionInView("#about");
-            const contactInView = isSectionInView("#contact");
-    
-            // Disable auto-scrolling and page movement if specific sections are in view
-            if (awardsInView || aboutInView || contactInView) {
-                // Disable page scroll
-                document.body.style.overflow = 'hidden'; // Prevent scrolling
-            } else {
-                // Enable scrolling when not in the blocked sections
-                document.body.style.overflow = 'auto'; // Re-enable scroll
-            }
-        }
+        
     
         // Add an event listener to check for scrolling
         window.addEventListener('scroll', checkAutoScroll);
