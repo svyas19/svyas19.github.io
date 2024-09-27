@@ -406,7 +406,7 @@
 
     <script>
         let awardsSlideIndex = 0;
-        let autoScrollEnabled = false; // Disable auto-scrolling initially
+        let autoScrollEnabled = true; // Disable auto-scrolling initially
         const awardSlides = document.querySelectorAll('.award-pic');
         const dots = document.querySelectorAll('.dot');
     
@@ -427,7 +427,7 @@
             setTimeout(showAwardSlides, 3000);
         }
     
-        // Function to check if the Awards section is in view
+        // Function to check if a section is fully in view
         function isSectionInView(sectionId) {
             const section = document.querySelector(sectionId);
             const rect = section.getBoundingClientRect();
@@ -437,18 +437,16 @@
         // Function to control auto-scrolling when sections are in view
         function checkAutoScroll() {
             const awardsInView = isSectionInView("#awards");
+            const aboutInView = isSectionInView("#about");
+            const contactInView = isSectionInView("#contact");
     
-            // Disable auto-scrolling completely if the Awards section is in view
-            if (awardsInView) {
-                autoScrollEnabled = false;
-                // Do not allow scrolling past the Awards section
-                window.scrollTo(0, document.querySelector("#awards").offsetTop);
-    
-                // Specifically prevent scrolling in Chrome by listening to scroll events
-                document.body.style.overflow = 'hidden'; // Disable scroll
+            // Disable auto-scrolling and page movement if specific sections are in view
+            if (awardsInView || aboutInView || contactInView) {
+                // Disable page scroll
+                document.body.style.overflow = 'hidden'; // Prevent scrolling
             } else {
-                autoScrollEnabled = true; // Enable auto-scroll for other sections
-                document.body.style.overflow = ''; // Re-enable scroll for other sections
+                // Enable scrolling when not in the blocked sections
+                document.body.style.overflow = 'auto'; // Re-enable scroll
             }
         }
     
@@ -458,6 +456,7 @@
         // Start the slideshow for the awards section
         showAwardSlides();
     </script>
+    
     
     
     
