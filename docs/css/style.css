@@ -393,10 +393,10 @@ nav ul li a:hover {
     display: flex; /* Flexbox to align the image and text side by side */
     justify-content: center;
     align-items: center;
-    flex-direction: row; /* Ensure content flows horizontally */
-    max-width: 1200px; /* Limit the maximum width for large screens */
+    flex-direction: row; /* Ensure the profile photo and text are aligned horizontally */
+    max-width: 1200px;
     margin: 0 auto;
-    text-align: left; /* Align the text to the left */
+    text-align: left; /* Align text to the left */
 }
 
 .about-pic {
@@ -404,14 +404,14 @@ nav ul li a:hover {
     height: 250px;
     border-radius: 50%;
     object-fit: cover;
-    margin-right: 40px; /* Space between image and text */
+    margin-right: 40px; /* Add space between the image and text */
     border: 5px solid #d4af37;
     box-shadow: 0px 4px 20px rgba(212, 175, 55, 0.6);
 }
 
 .about-text {
-    font-size: 1.4em;
     color: #ddd;
+    font-size: 1.4em;
     line-height: 1.7em;
     max-width: 700px;
 }
@@ -419,8 +419,8 @@ nav ul li a:hover {
 /* Mobile Responsiveness */
 @media screen and (max-width: 768px) {
     .about-container {
-        flex-direction: column; /* Stack image and text vertically on small screens */
-        text-align: center; /* Center align the text for mobile */
+        flex-direction: column; /* Stack image and text vertically on smaller screens */
+        text-align: center; /* Center-align content for mobile */
     }
 
     .about-pic {
@@ -429,7 +429,7 @@ nav ul li a:hover {
     }
 
     .about-text {
-        font-size: 1.2em; /* Reduce text size for smaller screens */
+        font-size: 1.2em; /* Adjust text size for smaller screens */
     }
 }
 
