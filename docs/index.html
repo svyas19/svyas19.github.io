@@ -406,7 +406,7 @@
 
     <script>
         let awardsSlideIndex = 0;
-        let autoScrollEnabled = true; // Flag to control auto-scrolling behavior
+        let autoScrollEnabled = false; // Disable auto-scrolling initially
         const awardSlides = document.querySelectorAll('.award-pic');
         const dots = document.querySelectorAll('.dot');
     
@@ -427,22 +427,22 @@
             setTimeout(showAwardSlides, 3000);
         }
     
-        // Function to check if a section is in view
+        // Function to check if the Awards section is in view
         function isSectionInView(sectionId) {
             const section = document.querySelector(sectionId);
             const rect = section.getBoundingClientRect();
             return (rect.top >= 0 && rect.bottom <= window.innerHeight);
         }
     
-        // Function to control the auto-scrolling behavior based on visible sections
+        // Function to control auto-scrolling when sections are in view
         function checkAutoScroll() {
             const awardsInView = isSectionInView("#awards");
-            const aboutInView = isSectionInView("#about");
-            const contactInView = isSectionInView("#contact");
     
-            // Disable auto-scroll if the Awards section, About Me, or Contact Me sections are in view
-            if (awardsInView || aboutInView || contactInView) {
-                autoScrollEnabled = false; // Stop auto-scrolling completely
+            // Disable auto-scrolling completely if the Awards section is in view
+            if (awardsInView) {
+                autoScrollEnabled = false;
+                // Do not allow scrolling past the Awards section
+                window.scrollTo(0, document.querySelector("#awards").offsetTop);
             } else {
                 autoScrollEnabled = true; // Enable auto-scroll for other sections
             }
@@ -454,6 +454,7 @@
         // Start the slideshow for the awards section
         showAwardSlides();
     </script>
+    
     
     
     
