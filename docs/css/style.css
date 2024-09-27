@@ -713,3 +713,20 @@ footer p a:hover {
 .active-dot {
     background-color: #ffbf00;  /* Yellow active dot */
 }
+
+@media screen and (max-width: 768px) {
+    .slideshow-container {
+        max-width: 100%;  /* Full width on mobile */
+        height: auto;     /* Adjust height for smaller screens */
+    }
+
+    .award-pic {
+        height: auto;  /* Let the height adjust naturally for mobile screens */
+    }
+
+    .dot {
+        width: 10px;
+        height: 10px;
+    }
+}
+

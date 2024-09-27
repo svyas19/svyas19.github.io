@@ -397,20 +397,22 @@
     </footer>
 
     <script>
-        // Awards Slideshow
         let awardsSlideIndex = 0;
         const awardSlides = document.querySelectorAll('.award-pic');
+        const dots = document.querySelectorAll('.dot');
     
         function showAwardSlides() {
-            // Hide all awards slides
+            // Hide all award slides and deactivate all dots
             awardSlides.forEach(slide => slide.classList.remove('active'));
-            
+            dots.forEach(dot => dot.classList.remove('active-dot'));
+    
             // Increment the slide index and wrap around if necessary
             awardsSlideIndex = (awardsSlideIndex + 1) % awardSlides.length;
-            
-            // Show the current slide
+    
+            // Show the current slide and activate the corresponding dot
             awardSlides[awardsSlideIndex].classList.add('active');
-            
+            dots[awardsSlideIndex].classList.add('active-dot');
+    
             // Move to the next slide every 2 seconds
             setTimeout(showAwardSlides, 2000);
         }
@@ -418,6 +420,7 @@
         // Start the Awards slideshow
         showAwardSlides();
     </script>
+    
     <script>
         function toggleMenu() {
             const navbar = document.getElementById("navbar");
