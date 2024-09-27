@@ -385,76 +385,80 @@ nav ul li a:hover {
 
 
 
-/* About Me Section (Reduced Text Size and Image Adjustment) */
+
+/* About Me Section (Responsive & Flexible) */
 .about-section {
-    background: linear-gradient(135deg, #2a2a2a, #000); /* Gradient background */
-    padding: 100px 20px; /* Adequate padding */
+    background: linear-gradient(135deg, #2a2a2a, #000); /* Gradient background for depth */
+    padding: 80px 20px;
     text-align: center;
     color: #f1f1f1;
 }
 
 .about-container {
-    display: flex; /* Flexbox for layout */
-    justify-content: center;
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    justify-content: space-between; /* Make better use of available space */
     align-items: center;
-    flex-direction: row;
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 0 auto;
-    gap: 40px; /* Reduced gap */
-    background-color: #2a2a2a;
+    padding: 20px;
+    background-color: #2a2a2a; /* Subtle background for readability */
     border-radius: 15px;
-    padding: 30px; /* Slightly reduced padding */
     box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.7);
 }
 
 .about-pic {
-    width: 240px; /* Reduce the size of the image */
-    height: 240px;
+    width: 25%; /* Set to a percentage for flexibility */
+    max-width: 300px;
+    min-width: 150px;
+    height: auto;
     border-radius: 50%;
     object-fit: cover;
-    border: 6px solid #ffbf00; /* Slightly smaller border */
-    box-shadow: 0px 8px 20px rgba(212, 175, 55, 0.6); /* Softened shadow */
+    border: 6px solid #ffbf00; /* Gold border */
+    box-shadow: 0px 8px 20px rgba(212, 175, 55, 0.6); /* Subtle shadow */
     transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
 }
 
 .about-pic:hover {
-    transform: scale(1.05); /* Slight hover zoom */
-    box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.8);
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.8); /* Shadow on hover */
 }
 
 .about-text {
+    flex: 1; /* Take remaining space */
     color: #f1f1f1;
-    font-size: 1.4em; /* Reduced text size */
+    font-size: 1.4em;
     line-height: 1.6em;
-    max-width: 700px;
+    padding-left: 30px;
+    min-width: 300px; /* Ensure readability on smaller screens */
     text-align: left;
 }
 
-/* Styling for strong emphasis */
+/* Text emphasis styling */
 .about-text strong {
     color: #ffbf00;
     font-weight: bold;
 }
 
-/* Responsive Design for Mobile */
+/* Responsive Design for Smaller Screens */
 @media screen and (max-width: 768px) {
     .about-container {
-        flex-direction: column; /* Stack image and text */
-        text-align: center;
+        flex-direction: column; /* Stack content vertically */
         padding: 20px;
+        text-align: center;
     }
 
     .about-pic {
-        margin-right: 0;
-        width: 180px; /* Reduce image size for mobile */
-        height: 180px;
-        margin-bottom: 20px;
+        width: 50%; /* Adjust image size for smaller screens */
+        margin: 0 auto 20px; /* Center the image */
     }
 
     .about-text {
-        font-size: 1.2em; /* Reduce font size for mobile */
+        padding-left: 0;
+        font-size: 1.2em; /* Reduce font size for readability on smaller screens */
     }
 }
+
 
 
 
