@@ -714,6 +714,7 @@ footer p a:hover {
     background-color: #ffbf00;  /* Yellow active dot */
 }
 
+
 @media screen and (max-width: 768px) {
     .slideshow-container {
         max-width: 100%;  /* Full width on mobile */
