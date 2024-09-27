@@ -427,36 +427,34 @@
             setTimeout(showAwardSlides, 3000);
         }
     
-        // Function to check if a section is fully or partially in view
+        // Function to check if a section is in view
         function isSectionInView(sectionId) {
             const section = document.querySelector(sectionId);
             const rect = section.getBoundingClientRect();
-            const fullyInView = (rect.top >= 0 && rect.bottom <= window.innerHeight);
-            const partiallyInView = (rect.top < window.innerHeight && rect.bottom > 0);
-    
-            // Return true if the section is fully or partially in view
-            return fullyInView || partiallyInView;
+            return (rect.top >= 0 && rect.bottom <= window.innerHeight);
         }
     
         // Function to control the auto-scrolling behavior based on visible sections
         function checkAutoScroll() {
+            const awardsInView = isSectionInView("#awards");
             const aboutInView = isSectionInView("#about");
             const contactInView = isSectionInView("#contact");
     
-            // Disable auto-scroll if About or Contact section is in view
-            if (aboutInView || contactInView) {
-                autoScrollEnabled = false;
+            // Disable auto-scroll if the Awards section, About Me, or Contact Me sections are in view
+            if (awardsInView || aboutInView || contactInView) {
+                autoScrollEnabled = false; // Stop auto-scrolling completely
             } else {
-                autoScrollEnabled = true;
+                autoScrollEnabled = true; // Enable auto-scroll for other sections
             }
         }
     
         // Add an event listener to check for scrolling
         window.addEventListener('scroll', checkAutoScroll);
     
-        // Start the Awards slideshow
+        // Start the slideshow for the awards section
         showAwardSlides();
     </script>
+    
     
     
     
