@@ -405,26 +405,27 @@ nav ul li a:hover {
 /* Container for Image and Text */
 .about-container {
     display: flex;
-    justify-content: space-around; /* Space out the image and text */
+    flex-direction: column; /* Stack content vertically for better alignment */
+    justify-content: center;
     align-items: center;
-    max-width: 1100px; /* Limit the width to avoid excessive stretching */
+    max-width: 900px; /* Limit width for a more compact look */
     margin: 0 auto;
     padding: 20px;
     background-color: #2a2a2a;
     border-radius: 15px;
     box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.7);
-    flex-wrap: wrap; /* Allow wrapping on smaller screens */
 }
 
 /* Profile Picture */
 .about-pic {
-    width: 240px; /* Fixed width for better control */
-    height: 240px; /* Fixed height */
+    width: 220px; /* Fixed width */
+    height: 220px; /* Fixed height */
     border-radius: 50%;
     object-fit: cover;
-    border: 6px solid #ffbf00; /* Gold border */
+    border: 5px solid #ffbf00;
     box-shadow: 0px 8px 20px rgba(212, 175, 55, 0.6); /* Subtle shadow */
     transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+    margin-bottom: 20px; /* Add space between the image and text */
 }
 
 .about-pic:hover {
@@ -434,14 +435,11 @@ nav ul li a:hover {
 
 /* About Me Text */
 .about-text {
-    flex: 1; /* Allow text to take remaining space */
     color: #f1f1f1;
     font-size: 1.2em;
     line-height: 1.6em;
-    text-align: left;
-    max-width: 600px;
-    padding-left: 20px; /* Add spacing between image and text */
-    min-width: 300px; /* Ensure readability on smaller screens */
+    max-width: 700px;
+    text-align: center; /* Center text for a more balanced look */
 }
 
 /* Text emphasis styling */
@@ -450,26 +448,40 @@ nav ul li a:hover {
     font-weight: bold;
 }
 
+/* Responsive Design for Larger Screens */
+@media screen and (min-width: 768px) {
+    .about-container {
+        flex-direction: row; /* Align items in a row on larger screens */
+        text-align: left; /* Left-align text on larger screens */
+    }
+
+    .about-pic {
+        margin-right: 30px; /* Add space between image and text */
+        margin-bottom: 0; /* Remove bottom margin on larger screens */
+    }
+
+    .about-text {
+        text-align: left; /* Left-align text for desktop */
+    }
+}
+
 /* Responsive Design for Smaller Screens */
 @media screen and (max-width: 768px) {
     .about-container {
-        flex-direction: column; /* Stack image and text vertically on smaller screens */
-        padding: 20px;
-        text-align: center;
+        flex-direction: column; /* Stack image and text for smaller screens */
+        text-align: center; /* Center content for mobile */
     }
 
     .about-pic {
         width: 180px; /* Adjust image size for mobile */
         height: 180px;
-        margin-bottom: 20px;
     }
 
     .about-text {
-        padding-left: 0;
-        font-size: 1em; /* Reduce text size for smaller screens */
-        line-height: 1.4em;
+        font-size: 1em; /* Reduce text size for mobile */
     }
 }
+
 
 
 
