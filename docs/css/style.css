@@ -460,10 +460,10 @@ nav ul li a:hover {
 .about-text {
     flex: 1;
     color: #f1f1f1;
-    font-size: 1.2em;
+    font-size: 1.4em;
     line-height: 1.6em;
     max-width: 700px;
-    text-align: left; /* Left-align the text */
+    text-align: center; /* Left-align the text */
 }
 
 /* Emphasized Text */
