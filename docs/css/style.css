@@ -694,7 +694,7 @@ footer p a:hover {
     to {opacity: 1;}
 }
 
-/* Slideshow Navigation Dots */
+/* Slideshow Navigation Dots (Optional) */
 .dot-container {
     text-align: center;
     margin-top: 10px;
@@ -713,7 +713,6 @@ footer p a:hover {
 .active-dot {
     background-color: #ffbf00;  /* Yellow active dot */
 }
-
 
 
 /* Mobile Optimization */
