@@ -104,15 +104,22 @@
         </div>
     </section>
 
-    <!-- Awards & Recognition Section -->
     <section id="awards" class="awards-section">
         <h2>Proof I Actually Do Stuff</h2>
         <div class="slideshow-container">
-            <img class="award-pic" src="img/award1.jpg" alt="Award 1">
+            <img class="award-pic active" src="img/award1.jpg" alt="Award 1">
             <img class="award-pic" src="img/award2.jpg" alt="Award 2">
             <img class="award-pic" src="img/award3.jpg" alt="Award 3">
         </div>
+    
+        <!-- Navigation Dots -->
+        <div class="dot-container">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
     </section>
+    
 
     
 
@@ -413,13 +420,14 @@
             awardSlides[awardsSlideIndex].classList.add('active');
             dots[awardsSlideIndex].classList.add('active-dot');
     
-            // Move to the next slide every 2 seconds
-            setTimeout(showAwardSlides, 2000);
+            // Move to the next slide every 3 seconds
+            setTimeout(showAwardSlides, 3000);  // Adjust the time interval if needed
         }
     
-        // Start the Awards slideshow
+        // Start the slideshow
         showAwardSlides();
     </script>
+    
     
     <script>
         function toggleMenu() {

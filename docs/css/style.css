@@ -680,12 +680,12 @@ footer p a:hover {
     height: 400px;
     object-fit: cover;
     border-radius: 15px;
-    display: none;  /* Hide all images initially */
+    display: none; /* Hide all images initially */
 }
 
 .award-pic.active {
-    display: block;  /* Display the active image */
-    animation: fade 1s;  /* Optional fade effect */
+    display: block; /* Only show the active image */
+    animation: fade 1s; /* Optional fade effect */
 }
 
 /* Fade animation for smooth transitions */
@@ -714,15 +714,15 @@ footer p a:hover {
     background-color: #ffbf00;  /* Yellow active dot */
 }
 
-
+/* Mobile Optimization */
 @media screen and (max-width: 768px) {
     .slideshow-container {
-        max-width: 100%;  /* Full width on mobile */
-        height: auto;     /* Adjust height for smaller screens */
+        max-width: 100%;
+        height: auto;
     }
 
     .award-pic {
-        height: auto;  /* Let the height adjust naturally for mobile screens */
+        height: auto;
     }
 
     .dot {
@@ -730,4 +730,5 @@ footer p a:hover {
         height: 10px;
     }
 }
+
 
