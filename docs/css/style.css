@@ -386,78 +386,88 @@ nav ul li a:hover {
 
 
 
-/* About Me Section (Responsive & Flexible) */
+/* About Me Section (Full-Screen Fit) */
 .about-section {
-    background: linear-gradient(135deg, #2a2a2a, #000); /* Gradient background for depth */
-    padding: 80px 20px;
+    background: linear-gradient(135deg, #2a2a2a, #000);
+    height: 100vh; /* Take up the full viewport height */
+    padding: 20px;
+    display: flex; /* Flexbox for aligning content */
+    justify-content: center;
+    align-items: center;
     text-align: center;
     color: #f1f1f1;
+    box-sizing: border-box;
 }
 
+/* Container for Image and Text */
 .about-container {
     display: flex;
-    flex-wrap: wrap; /* Allow wrapping for smaller screens */
-    justify-content: space-between; /* Make better use of available space */
+    justify-content: space-between;
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
-    background-color: #2a2a2a; /* Subtle background for readability */
+    gap: 40px;
+    background-color: #2a2a2a;
     border-radius: 15px;
+    padding: 20px;
     box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.7);
+    height: auto; /* Make sure it adapts to the content size */
 }
 
+/* Profile Picture */
 .about-pic {
-    width: 25%; /* Set to a percentage for flexibility */
-    max-width: 300px;
+    width: 25%; /* Size image relative to container */
+    max-width: 220px;
     min-width: 150px;
     height: auto;
     border-radius: 50%;
     object-fit: cover;
-    border: 6px solid #ffbf00; /* Gold border */
-    box-shadow: 0px 8px 20px rgba(212, 175, 55, 0.6); /* Subtle shadow */
+    border: 5px solid #ffbf00;
+    box-shadow: 0px 8px 20px rgba(212, 175, 55, 0.6);
     transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
 }
 
 .about-pic:hover {
-    transform: scale(1.05); /* Slight zoom on hover */
-    box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.8); /* Shadow on hover */
+    transform: scale(1.05);
+    box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.8);
 }
 
+/* About Me Text */
 .about-text {
-    flex: 1; /* Take remaining space */
+    flex: 1;
     color: #f1f1f1;
-    font-size: 1.4em;
-    line-height: 1.6em;
-    padding-left: 30px;
-    min-width: 300px; /* Ensure readability on smaller screens */
+    font-size: 1.2em;
+    line-height: 1.4em;
     text-align: left;
+    max-width: 600px;
 }
 
-/* Text emphasis styling */
+/* Emphasized Text */
 .about-text strong {
     color: #ffbf00;
     font-weight: bold;
 }
 
-/* Responsive Design for Smaller Screens */
+/* Responsive Adjustments */
 @media screen and (max-width: 768px) {
     .about-container {
-        flex-direction: column; /* Stack content vertically */
+        flex-direction: column; /* Stack image and text vertically on smaller screens */
         padding: 20px;
         text-align: center;
     }
 
     .about-pic {
-        width: 50%; /* Adjust image size for smaller screens */
-        margin: 0 auto 20px; /* Center the image */
+        width: 40%; /* Adjust image size for mobile */
+        max-width: 150px;
+        margin-bottom: 20px;
     }
 
     .about-text {
-        padding-left: 0;
-        font-size: 1.2em; /* Reduce font size for readability on smaller screens */
+        font-size: 1em; /* Reduce text size for smaller screens */
+        line-height: 1.3em;
     }
 }
+
 
 
 
