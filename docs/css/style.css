@@ -389,154 +389,108 @@ nav ul li a:hover {
 
 
 
-/* About Me Section (Further Adjusted for Better Fit) */
+
+
+
+
+
+
+/* About Me Section (Responsive & Centered Title) */
 .about-section {
-    background: linear-gradient(135deg, #2a2a2a, #000);
-    padding: 20px 10px; /* Reduced padding */
+    background: linear-gradient(135deg, #2a2a2a, #000); /* Gradient background */
+    padding: 40px 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     color: #f1f1f1;
-    min-height: 100vh; /* Ensure section fits full height of the screen */
     box-sizing: border-box;
 }
 
 /* About Me Title */
 .about-section h2 {
-    font-size: 2em; /* Reduced font size */
+    font-size: 3em;
     color: #ffbf00;
-    margin-bottom: 20px; /* Reduced margin */
+    margin-bottom: 40px; /* Space between title and content */
+    position: relative;
+    text-align: center;
 }
 
 .about-section h2:after {
     content: '';
     display: block;
-    width: 50px; /* Keep the underline smaller */
-    height: 3px;
+    width: 50px;
+    height: 4px;
     background-color: #ffbf00;
-    margin: 8px auto;
+    margin: 10px auto;
 }
 
 /* Container for Image and Text */
 .about-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Space out the image and text */
     align-items: center;
-    max-width: 900px; /* Reduced width to fit better */
+    max-width: 1100px; /* Limit width to keep things compact */
     margin: 0 auto;
-    padding: 15px; /* Further reduced padding */
+    padding: 20px;
     background-color: #2a2a2a;
-    border-radius: 10px;
-    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.6);
-    flex-wrap: wrap; /* Ensures wrapping for smaller screens */
+    border-radius: 15px;
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.7);
 }
 
 /* Profile Picture */
 .about-pic {
-    width: 180px; /* Smaller size */
-    height: 180px;
+    width: 240px;
+    height: 240px;
     border-radius: 50%;
     object-fit: cover;
-    border: 4px solid #ffbf00;
-    box-shadow: 0px 5px 15px rgba(212, 175, 55, 0.6);
-    margin-right: 20px; /* Reduced margin */
-    margin-bottom: 10px; /* Small margin below on smaller screens */
+    border: 6px solid #ffbf00;
+    box-shadow: 0px 8px 20px rgba(212, 175, 55, 0.6);
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+    margin-right: 40px; /* Space between image and text */
+}
+
+.about-pic:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.8);
 }
 
 /* About Me Text */
 .about-text {
     flex: 1;
     color: #f1f1f1;
-    font-size: 1em; /* Slightly reduced font size */
-    line-height: 1.4em;
-    max-width: 550px; /* Narrower text container for balance */
-    text-align: left;
-    padding-left: 20px;
+    font-size: 1.4em;
+    line-height: 1.6em;
+    max-width: 700px;
+    text-align: center; /* Left-align the text */
 }
 
-/* Subheadings */
-.about-text h3 {
-    color: #ffbf00;
-    font-size: 1.2em; /* Reduced heading size */
-    margin-top: 15px;
-}
-
-/* Lists */
-.about-text ul {
-    margin-left: 15px; /* Adjusted margin */
-    list-style: disc;
-}
-
-/* Quote Styling */
-.about-text em {
-    font-size: 1.2em; /* Reduced font size */
-    color: #ffbf00;
-    display: block;
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-/* Carl Sagan's Name on Right */
-.about-text .quote-author {
-    text-align: right;
-    margin-top: -10px;
-    font-size: 1em; /* Reduced font size */
-    color: #f1f1f1;
-    margin-right: 10px;
-}
-
-/* Highlighted Text */
+/* Emphasized Text */
 .about-text strong {
     color: #ffbf00;
     font-weight: bold;
 }
 
-/* Links */
-.about-text a {
-    color: #ffbf00;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.about-text a:hover {
-    color: #fff;
-}
-
-/* Responsive Design for Smaller Screens */
+/* Responsive Design for Larger Screens */
 @media screen and (max-width: 768px) {
     .about-container {
-        flex-direction: column;
+        flex-direction: column; /* Stack image and text for mobile screens */
         text-align: center;
-        padding: 10px; /* Reduced padding */
     }
 
     .about-pic {
-        margin-right: 0;
-        margin-bottom: 15px;
-        width: 140px; /* Smaller profile picture */
-        height: 140px;
+        margin-right: 0; /* Remove the margin when stacked */
+        margin-bottom: 20px; /* Add space below the image */
+        width: 180px;
+        height: 180px; /* Adjust image size for smaller screens */
     }
 
     .about-text {
-        text-align: center;
-        font-size: 0.9em; /* Slightly reduced text size for mobile */
-    }
-
-    .about-text .quote-author {
-        text-align: center;
+        text-align: center; /* Center text for mobile */
+        font-size: 1em; /* Reduce text size for mobile */
     }
 }
-
-
-
-
-
-
-
-
-
 
 
 
