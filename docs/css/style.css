@@ -656,3 +656,60 @@ footer p a {
 footer p a:hover {
     text-decoration: underline;
 }
+
+
+/* Awards Section */
+.awards-section {
+    background-color: #1a1a1a;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.slideshow-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.award-pic {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 15px;
+    display: none;  /* Hide all images initially */
+}
+
+.award-pic.active {
+    display: block;  /* Display the active image */
+    animation: fade 1s;  /* Optional fade effect */
+}
+
+/* Fade animation for smooth transitions */
+@keyframes fade {
+    from {opacity: 0.4;}
+    to {opacity: 1;}
+}
+
+/* Slideshow Navigation Dots (Optional) */
+.dot-container {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active-dot {
+    background-color: #ffbf00;  /* Yellow active dot */
+}
