@@ -427,19 +427,18 @@ nav ul li a:hover {
 }
 
 
-
-/* Profile Picture Adjustment */
+/* Profile Picture Adjustment for Mobile */
 .about-pic {
-    width: 180px;
-    height: 180px;
+    width: 160px; /* Slightly smaller for mobile screens */
+    height: 160px;
     border-radius: 50%;
     object-fit: cover;
     border: 4px solid #ffbf00;
     box-shadow: 0px 5px 15px rgba(212, 175, 55, 0.6);
     margin-right: 20px;
     margin-bottom: 10px;
-    position: relative; /* Allows precise positioning */
-    top: -90px; /* Moves the image up */
+    position: relative;
+    top: 0; /* Reset for mobile */
 }
 
 /* Optional: Adjust container to ensure the photo remains aligned */
@@ -487,23 +486,37 @@ nav ul li a:hover {
     font-weight: bold;
 }
 
-/* Responsive Design for Larger Screens */
+/* Container for About Me on Mobile */
 @media screen and (max-width: 768px) {
+    .about-section {
+        padding-top: 20px; /* Ensure padding at top for mobile */
+    }
+    
     .about-container {
-        flex-direction: column; /* Stack image and text for mobile screens */
-        text-align: center;
+        flex-direction: column; /* Stack profile pic and text vertically on mobile */
+        align-items: center; /* Center everything */
+        padding: 10px; /* Reduced padding */
+    }
+
+    /* Adjust About Me Title */
+    .about-section h2 {
+        font-size: 1.8em; /* Slightly smaller title size for mobile */
+        margin-bottom: 20px;
     }
 
     .about-pic {
-        margin-right: 0; /* Remove the margin when stacked */
-        margin-bottom: 20px; /* Add space below the image */
-        width: 180px;
-        height: 180px; /* Adjust image size for smaller screens */
+        top: 0; /* Reset top margin on mobile */
+        margin-bottom: 20px; /* Add more space below image */
     }
 
     .about-text {
         text-align: center; /* Center text for mobile */
-        font-size: 1em; /* Reduce text size for mobile */
+        font-size: 0.9em; /* Slightly smaller text for mobile */
+        padding: 0; /* Remove extra padding for mobile */
+    }
+
+    .about-text .quote-author {
+        text-align: center;
     }
 }
 
