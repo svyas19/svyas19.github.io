@@ -395,24 +395,19 @@ nav ul li a:hover {
 
 
 
-/* About Me Section (Responsive & Centered Title) */
+/* About Me Section */
 .about-section {
-    background: linear-gradient(135deg, #2a2a2a, #000); /* Gradient background */
-    padding: 40px 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: #f1f1f1;
-    box-sizing: border-box;
+    padding: 60px 20px; /* Add more top padding for spacing */
+    background-color: #2a2a2a;
+    text-align: left; /* Align text to the left */
+    position: relative;
 }
 
 /* About Me Title */
 .about-section h2 {
     font-size: 3em;
     color: #ffbf00;
-    margin-bottom: 40px; /* Space between title and content */
+    margin-bottom: 20px; /* Space between title and content */
     position: relative;
     text-align: center;
 }
@@ -447,67 +442,98 @@ nav ul li a:hover {
     box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.8);
 }
 
-/* About Me Text */
-.about-text {
-    flex: 1;
-    color: #f1f1f1;
-    font-size: 1.4em;
-    line-height: 1.6em;
-    max-width: 700px;
-    text-align: left; /* Left-align the text */
-}
-
-.about-section a {
-    color: #ffbf00; /* Set link color to yellow */
-    text-decoration: none; /* Removes the underline */
-    transition: color 0.3s ease;
-}
-
-/* Hover effect for links in About Me */
-.about-section a:hover {
-    color: #ffffff; /* Change color on hover */
-}
-
-/* Emphasized Text */
-.about-text strong {
-    color: #ffbf00;
-    font-weight: bold;
-}
-
-/* Responsive Design for Larger Screens */
-@media screen and (max-width: 768px) {
-    .about-container {
-        flex-direction: column; /* Stack image and text for mobile screens */
-        text-align: center;
-    }
-
-    .about-pic {
-        margin-right: 0; /* Remove the margin when stacked */
-        margin-bottom: 20px; /* Add space below the image */
-        width: 180px;
-        height: 180px; /* Adjust image size for smaller screens */
-    }
-
-    .about-text {
-        text-align: center; /* Center text for mobile */
-        font-size: 1em; /* Reduce text size for mobile */
-    }
-}
-
-
-/* Profile Picture Adjustment for Mobile */
+/* Profile Picture Styling (Top Left of About Me Section) */
 .about-pic {
-    width: 160px; /* Slightly smaller for mobile screens */
-    height: 160px;
+    width: 140px; /* Adjust size for big screens */
+    height: 140px;
     border-radius: 50%;
     object-fit: cover;
     border: 4px solid #ffbf00;
     box-shadow: 0px 5px 15px rgba(212, 175, 55, 0.6);
     margin-right: 20px;
-    margin-bottom: 10px;
-    position: relative;
-    top: 0; /* Reset for mobile */
+    margin-bottom: 20px;
+    margin-top: -50px; /* Shift the image slightly upwards */
+    float: left; /* Align it to the left of the text */
 }
+
+/* About Text Styling */
+.about-text {
+    color: #f1f1f1;
+    font-size: 1.1em; /* Bigger for readability */
+    line-height: 1.6em;
+    text-align: left;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Subheadings in the About Section */
+.about-text h3 {
+    color: #ffbf00; /* Highlight in yellow */
+    font-size: 1.4em;
+    margin-top: 20px;
+}
+
+/* Highlighted Text */
+.about-text strong {
+    color: #ffbf00; /* Highlight important text in yellow */
+}
+
+/* Quote Styling */
+.about-text em {
+    color: #ffbf00;
+    font-size: 1.2em;
+}
+
+.about-text .quote-author {
+    text-align: right;
+    font-size: 1em;
+    color: #f1f1f1;
+    margin-right: 10px;
+}
+
+/* Responsive Design for Mobile */
+@media screen and (max-width: 768px) {
+    /* Adjust for mobile */
+    .about-container {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .about-pic {
+        position: static; /* Reset positioning for mobile */
+        margin-right: 0;
+        margin-bottom: 20px;
+        width: 120px; /* Smaller for mobile */
+        height: 120px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .about-text {
+        padding-left: 0; /* No left padding for mobile */
+        text-align: center; /* Center text on mobile */
+        font-size: 1em;
+    }
+
+    .about-text .quote-author {
+        text-align: center; /* Center author on mobile */
+    }
+}
+
+/* Adjustments for Extra Large Screens */
+@media screen and (min-width: 1200px) {
+    .about-pic {
+        width: 160px; /* Larger size for big screens */
+        height: 160px;
+    }
+
+    .about-text {
+        font-size: 1.3em; /* Larger font size for big screens */
+        line-height: 1.8em;
+    }
+}
+
+
 
 /* Container for About Me on Mobile */
 @media screen and (max-width: 768px) {
