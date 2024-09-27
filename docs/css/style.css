@@ -389,12 +389,15 @@ nav ul li a:hover {
 
 
 
-/* About Me Section (Responsive & Centered) */
+
+
+/* About Me Section (Centered Layout with Title on Top) */
 .about-section {
     background: linear-gradient(135deg, #2a2a2a, #000); /* Gradient background */
     height: 100vh; /* Full viewport height */
     padding: 40px 20px;
     display: flex;
+    flex-direction: column; /* Stack content vertically */
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -402,13 +405,31 @@ nav ul li a:hover {
     box-sizing: border-box;
 }
 
+/* About Me Title */
+.about-section h2 {
+    font-size: 3em;
+    color: #ffbf00;
+    margin-bottom: 40px; /* Space between title and content */
+    position: relative;
+    text-align: center;
+}
+
+.about-section h2:after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 4px;
+    background-color: #ffbf00;
+    margin: 10px auto;
+}
+
 /* Container for Image and Text */
 .about-container {
     display: flex;
-    flex-direction: column; /* Stack content vertically for better alignment */
+    flex-direction: column; /* Stack image and text vertically */
     justify-content: center;
     align-items: center;
-    max-width: 900px; /* Limit width for a more compact look */
+    max-width: 900px; /* Limit width for a compact look */
     margin: 0 auto;
     padding: 20px;
     background-color: #2a2a2a;
@@ -422,7 +443,7 @@ nav ul li a:hover {
     height: 220px; /* Fixed height */
     border-radius: 50%;
     object-fit: cover;
-    border: 5px solid #ffbf00;
+    border: 5px solid #ffbf00; /* Gold border */
     box-shadow: 0px 8px 20px rgba(212, 175, 55, 0.6); /* Subtle shadow */
     transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
     margin-bottom: 20px; /* Add space between the image and text */
@@ -450,25 +471,19 @@ nav ul li a:hover {
 
 /* Responsive Design for Larger Screens */
 @media screen and (min-width: 768px) {
-    .about-container {
-        flex-direction: row; /* Align items in a row on larger screens */
-        text-align: left; /* Left-align text on larger screens */
-    }
-
-    .about-pic {
-        margin-right: 30px; /* Add space between image and text */
-        margin-bottom: 0; /* Remove bottom margin on larger screens */
+    .about-section {
+        padding: 60px 20px; /* Increase padding for larger screens */
     }
 
     .about-text {
-        text-align: left; /* Left-align text for desktop */
+        text-align: center; /* Keep text centered for larger screens */
     }
 }
 
 /* Responsive Design for Smaller Screens */
 @media screen and (max-width: 768px) {
     .about-container {
-        flex-direction: column; /* Stack image and text for smaller screens */
+        padding: 20px;
         text-align: center; /* Center content for mobile */
     }
 
