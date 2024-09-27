@@ -391,13 +391,12 @@ nav ul li a:hover {
 
 
 
-/* About Me Section (Centered Layout with Title on Top) */
+/* About Me Section (Responsive & Centered Title) */
 .about-section {
     background: linear-gradient(135deg, #2a2a2a, #000); /* Gradient background */
-    height: 100vh; /* Full viewport height */
     padding: 40px 20px;
     display: flex;
-    flex-direction: column; /* Stack content vertically */
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -426,10 +425,9 @@ nav ul li a:hover {
 /* Container for Image and Text */
 .about-container {
     display: flex;
-    flex-direction: column; /* Stack image and text vertically */
-    justify-content: center;
+    justify-content: space-between; /* Space out the image and text */
     align-items: center;
-    max-width: 900px; /* Limit width for a compact look */
+    max-width: 1100px; /* Limit width to keep things compact */
     margin: 0 auto;
     padding: 20px;
     background-color: #2a2a2a;
@@ -439,14 +437,14 @@ nav ul li a:hover {
 
 /* Profile Picture */
 .about-pic {
-    width: 220px; /* Fixed width */
-    height: 220px; /* Fixed height */
+    width: 240px;
+    height: 240px;
     border-radius: 50%;
     object-fit: cover;
-    border: 5px solid #ffbf00; /* Gold border */
-    box-shadow: 0px 8px 20px rgba(212, 175, 55, 0.6); /* Subtle shadow */
+    border: 6px solid #ffbf00;
+    box-shadow: 0px 8px 20px rgba(212, 175, 55, 0.6);
     transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
-    margin-bottom: 20px; /* Add space between the image and text */
+    margin-right: 40px; /* Space between image and text */
 }
 
 .about-pic:hover {
@@ -456,46 +454,42 @@ nav ul li a:hover {
 
 /* About Me Text */
 .about-text {
+    flex: 1;
     color: #f1f1f1;
     font-size: 1.2em;
     line-height: 1.6em;
     max-width: 700px;
-    text-align: center; /* Center text for a more balanced look */
+    text-align: left; /* Left-align the text */
 }
 
-/* Text emphasis styling */
+/* Emphasized Text */
 .about-text strong {
     color: #ffbf00;
     font-weight: bold;
 }
 
 /* Responsive Design for Larger Screens */
-@media screen and (min-width: 768px) {
-    .about-section {
-        padding: 60px 20px; /* Increase padding for larger screens */
-    }
-
-    .about-text {
-        text-align: center; /* Keep text centered for larger screens */
-    }
-}
-
-/* Responsive Design for Smaller Screens */
 @media screen and (max-width: 768px) {
     .about-container {
-        padding: 20px;
-        text-align: center; /* Center content for mobile */
+        flex-direction: column; /* Stack image and text for mobile screens */
+        text-align: center;
     }
 
     .about-pic {
-        width: 180px; /* Adjust image size for mobile */
-        height: 180px;
+        margin-right: 0; /* Remove the margin when stacked */
+        margin-bottom: 20px; /* Add space below the image */
+        width: 180px;
+        height: 180px; /* Adjust image size for smaller screens */
     }
 
     .about-text {
+        text-align: center; /* Center text for mobile */
         font-size: 1em; /* Reduce text size for mobile */
     }
 }
+
+
+
 
 
 
