@@ -421,13 +421,23 @@
             awardSlides[awardsSlideIndex].classList.add('active');
             dots[awardsSlideIndex].classList.add('active-dot');
     
-            // Move to the next slide every 3 seconds
-            setTimeout(showAwardSlides, 3000);  // Adjust the time interval if needed
+            // Move to the next slide every 3 seconds, but skip auto-scrolling for About Me and Contact Me
+            if (!isSectionInView("#about") && !isSectionInView("#contact")) {
+                setTimeout(showAwardSlides, 3000);  // Adjust the time interval if needed
+            }
+        }
+    
+        // Function to check if a section is in view
+        function isSectionInView(sectionId) {
+            const section = document.querySelector(sectionId);
+            const rect = section.getBoundingClientRect();
+            return (rect.top >= 0 && rect.bottom <= window.innerHeight);
         }
     
         // Start the slideshow
         showAwardSlides();
     </script>
+    
     
     
     <script>
