@@ -9,6 +9,26 @@ body {
     text-align: center;
 }
 
+/* Global Section Titles */
+h2 {
+    font-size: 2.5em; /* Increased size for section titles */
+    color: #ffbf00;   /* Yellow color */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+    position: relative;
+    display: inline-block;
+}
+
+h2:after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 4px;
+    background-color: #ffbf00; /* Yellow underline */
+    margin: 10px auto;
+}
+
 /* Navigation */
 nav {
     position: fixed;
@@ -235,7 +255,7 @@ nav ul li a:hover {
 }
 
 .timeline-content h3 {
-    color: #ffbf00;  /* Changed to yellow */
+    color: #ffbf00;  /* Yellow for timeline titles */
     font-size: 1.8em;
     margin-bottom: 10px;
 }
@@ -269,7 +289,7 @@ nav ul li a:hover {
 .skill-card h3 {
     font-size: 1.8em;
     margin-bottom: 10px;
-    color: #ffbf00;  /* Changed to yellow */
+    color: #ffbf00;  /* Yellow for skill titles */
 }
 
 .skill-card ul {
@@ -309,7 +329,7 @@ nav ul li a:hover {
 .education-card h3 {
     font-size: 1.8em;
     margin-bottom: 10px;
-    color: #ffbf00;  /* Changed to yellow */
+    color: #ffbf00;  /* Yellow for education titles */
 }
 
 .education-card p {
@@ -339,7 +359,7 @@ nav ul li a:hover {
 }
 
 .experience-card h3 {
-    color: #ffbf00;  /* Changed to yellow */
+    color: #ffbf00;  /* Yellow for experience titles */
     font-size: 2em;
     margin-bottom: 20px;
 }
@@ -591,7 +611,7 @@ nav ul li a:hover {
 
 .disclaimer-section h2 {
     font-size: 2.5em;
-    color: #ffbf00;  /* Changed to yellow */
+    color: #ffbf00;  /* Yellow */
     margin-bottom: 40px;
 }
 
