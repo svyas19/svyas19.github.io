@@ -488,7 +488,7 @@ nav ul li a:hover {
 
     .about-text {
         font-size: 1.2em; /* Slightly reduce text size for mobile */
-        text-align: center; /* Center text for mobile */
+        text-align: center; /* Center text for mobile device */
     }
 }
 
