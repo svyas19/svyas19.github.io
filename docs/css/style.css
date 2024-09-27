@@ -390,11 +390,6 @@ nav ul li a:hover {
 
 
 
-
-
-
-
-
 /* About Me Section (Responsive & Centered Title) */
 .about-section {
     background: linear-gradient(135deg, #2a2a2a, #000); /* Gradient background */
@@ -426,11 +421,10 @@ nav ul li a:hover {
     margin: 10px auto;
 }
 
-
-/* Profile Picture Adjustment for Mobile */
+/* Profile Picture Adjustment (Increased size and shifted upwards) */
 .about-pic {
-    width: 160px; /* Slightly smaller for mobile screens */
-    height: 160px;
+    width: 200px; /* Increased size for larger screens */
+    height: 200px;
     border-radius: 50%;
     object-fit: cover;
     border: 4px solid #ffbf00;
@@ -438,7 +432,13 @@ nav ul li a:hover {
     margin-right: 20px;
     margin-bottom: 10px;
     position: relative;
-    top: 0; /* Reset for mobile */
+    top: -30px; /* Bring the image a bit up */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-pic:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.8);
 }
 
 /* Optional: Adjust container to ensure the photo remains aligned */
@@ -453,10 +453,6 @@ nav ul li a:hover {
     border-radius: 10px;
     box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.6);
     flex-wrap: wrap;
-}
-.about-pic:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.8);
 }
 
 /* About Me Text */
@@ -486,7 +482,7 @@ nav ul li a:hover {
     font-weight: bold;
 }
 
-/* Responsive Design for Larger Screens */
+/* Responsive Design for Mobile */
 @media screen and (max-width: 768px) {
     .about-container {
         flex-direction: column; /* Stack image and text for mobile screens */
@@ -498,6 +494,7 @@ nav ul li a:hover {
         margin-bottom: 20px; /* Add space below the image */
         width: 180px;
         height: 180px; /* Adjust image size for smaller screens */
+        top: 0; /* Reset the upward shift for mobile */
     }
 
     .about-text {
@@ -506,27 +503,12 @@ nav ul li a:hover {
     }
 }
 
-
-/* Profile Picture Adjustment for Mobile */
-.about-pic {
-    width: 160px; /* Slightly smaller for mobile screens */
-    height: 160px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 4px solid #ffbf00;
-    box-shadow: 0px 5px 15px rgba(212, 175, 55, 0.6);
-    margin-right: 20px;
-    margin-bottom: 10px;
-    position: relative;
-    top: 0; /* Reset for mobile */
-}
-
 /* Container for About Me on Mobile */
 @media screen and (max-width: 768px) {
     .about-section {
         padding-top: 20px; /* Ensure padding at top for mobile */
     }
-    
+
     .about-container {
         flex-direction: column; /* Stack profile pic and text vertically on mobile */
         align-items: center; /* Center everything */
@@ -554,6 +536,14 @@ nav ul li a:hover {
         text-align: center;
     }
 }
+
+
+
+
+
+
+
+
 
 
 
