@@ -406,24 +406,26 @@
 
     <script>
         let awardsSlideIndex = 0;
+        let autoScrollEnabled = true; // Flag to control auto-scrolling behavior
         const awardSlides = document.querySelectorAll('.award-pic');
         const dots = document.querySelectorAll('.dot');
     
+        // Function to show the slides
         function showAwardSlides() {
-            // Hide all award slides and deactivate all dots
-            awardSlides.forEach(slide => slide.classList.remove('active'));
-            dots.forEach(dot => dot.classList.remove('active-dot'));
+            if (autoScrollEnabled) {
+                // Hide all slides and deactivate dots
+                awardSlides.forEach(slide => slide.classList.remove('active'));
+                dots.forEach(dot => dot.classList.remove('active-dot'));
     
-            // Increment the slide index and wrap around if necessary
-            awardsSlideIndex = (awardsSlideIndex + 1) % awardSlides.length;
+                // Increment the slide index and wrap around if necessary
+                awardsSlideIndex = (awardsSlideIndex + 1) % awardSlides.length;
     
-            // Show the current slide and activate the corresponding dot
-            awardSlides[awardsSlideIndex].classList.add('active');
-            dots[awardsSlideIndex].classList.add('active-dot');
+                // Show the current slide and activate the corresponding dot
+                awardSlides[awardsSlideIndex].classList.add('active');
+                dots[awardsSlideIndex].classList.add('active-dot');
     
-            // Move to the next slide every 3 seconds, but skip auto-scrolling for About Me and Contact Me
-            if (!isSectionInView("#about") && !isSectionInView("#contact")) {
-                setTimeout(showAwardSlides, 3000);  // Adjust the time interval if needed
+                // Schedule the next slide change if auto-scrolling is enabled
+                setTimeout(showAwardSlides, 3000);
             }
         }
     
@@ -434,9 +436,22 @@
             return (rect.top >= 0 && rect.bottom <= window.innerHeight);
         }
     
+        // Function to control the auto-scrolling behavior based on visible sections
+        function checkAutoScroll() {
+            if (isSectionInView("#about") || isSectionInView("#contact")) {
+                autoScrollEnabled = false; // Disable auto-scroll if About or Contact is in view
+            } else {
+                autoScrollEnabled = true; // Enable auto-scroll for other sections
+            }
+        }
+    
+        // Add an event listener to check for scrolling
+        window.addEventListener('scroll', checkAutoScroll);
+    
         // Start the slideshow
         showAwardSlides();
     </script>
+    
     
     
     
