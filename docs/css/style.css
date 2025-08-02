@@ -432,7 +432,7 @@ nav ul li a:hover {
     margin-right: 20px;
     margin-bottom: 9px;
     position: relative;
-    top: -5px; /* Bring the image a bit up */
+    top: 0px; /* Bring the image a bit up */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
