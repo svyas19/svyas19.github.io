@@ -2109,4 +2109,13 @@
 
         function goToAwardSlide(index) {
             currentAwardSlide = index;
-            updateA
+            updateAwardsCarousel();
+        }
+
+        // Auto-advance carousel every 5 seconds
+        setInterval(() => {
+            moveAwardsCarousel(1);
+        }, 5000);
+    </script>
+</body>
+</html>
