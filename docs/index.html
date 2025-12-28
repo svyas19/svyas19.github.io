@@ -136,16 +136,35 @@
             display: flex;
             align-items: center;
             gap: 0.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            padding: 0.5rem 0.8rem;
+            border-radius: 6px;
+        }
+
+        .logo:hover {
+            background: rgba(0, 217, 255, 0.1);
+            transform: translateY(-2px);
         }
 
         .logo::before {
             content: '<';
             color: var(--accent);
+            transition: transform 0.3s ease;
         }
 
         .logo::after {
             content: '/>';
             color: var(--accent);
+            transition: transform 0.3s ease;
+        }
+
+        .logo:hover::before {
+            transform: translateX(-2px);
+        }
+
+        .logo:hover::after {
+            transform: translateX(2px);
         }
 
         .nav-links {
@@ -1304,7 +1323,7 @@
         }
     </style>
 </head>
-<body data-theme="dark">
+<body data-theme="dark" id="top">
     <div class="bg-grid"></div>
     <div class="bg-gradient"></div>
     <div class="scroll-indicator" id="scrollIndicator"></div>
@@ -1312,7 +1331,7 @@
     <!-- Navigation -->
     <nav id="navbar">
         <div class="nav-container">
-            <a href="#" class="logo">SV</a>
+            <a href="#top" class="logo" id="scrollToTop" title="Back to top">SV</a>
             <ul class="nav-links">
                 <li><a href="#timeline">timeline</a></li>
                 <li><a href="#awards">awards</a></li>
@@ -1979,7 +1998,7 @@
                     Let's connect if you're looking for someone who ships production ML systems.
                 </p>
                 <div class="contact-links">
-                    <a href="mailto:shivvyas3030@gmail.com" class="contact-link">
+                    <a href="/cdn-cgi/l/email-protection#a2d1cacbd4d4dbc3d191929192e2c5cfc3cbce8cc1cdcf" class="contact-link">
                         📧 Email
                     </a>
                     <a href="https://linkedin.com/in/shiv-vyas/" class="contact-link" target="_blank">
@@ -2003,12 +2022,12 @@
             <p style="margin-top: 0.5rem;">
                 <a href="https://github.com/svyas19" target="_blank">GitHub</a> · 
                 <a href="https://linkedin.com/in/shiv-vyas/" target="_blank">LinkedIn</a> · 
-                <a href="mailto:shivvyas3030@gmail.com">Email</a>
+                <a href="/cdn-cgi/l/email-protection#e2918a8b94949b8391d1d2d1d2a2858f838b8ecc818d8f">Email</a>
             </p>
         </div>
     </footer>
 
-    <script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
         // Theme Toggle
         const themeToggle = document.getElementById('themeToggle');
         const html = document.documentElement;
@@ -2090,13 +2109,4 @@
 
         function goToAwardSlide(index) {
             currentAwardSlide = index;
-            updateAwardsCarousel();
-        }
-
-        // Auto-advance carousel every 5 seconds (optional)
-        setInterval(() => {
-            moveAwardsCarousel(1);
-        }, 5000);
-    </script>
-</body>
-</html>
+            updateA
