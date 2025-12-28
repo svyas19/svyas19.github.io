@@ -4,133 +4,232 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Neuralink: The Fusion of Humans and Machines</title>
-    <link rel="stylesheet" href="css/style.css"> <!-- Link to your CSS file -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        /* Blog Post Styling */
-        body {
-            background-color: #1a1a1a; /* Dark background */
-            color: #e0e0e0; /* Light text */
-            font-family: 'Poppins', sans-serif; /* Ensure consistent typography */
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
-        h1, h2 {
-            color: #ffbf00; /* Yellow color for headings */
+
+        body {
+            background-color: #0A0A0A;
+            color: #FFFFFF;
+            font-family: 'Inter', sans-serif;
+            line-height: 1.7;
         }
-        a {
-            color: #ffbf00; /* Yellow for links */
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid #222222;
+            padding: 1.2rem 2rem;
+            z-index: 1000;
+        }
+
+        nav {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #FFFFFF;
             text-decoration: none;
         }
-        a:hover {
-            color: #ffbf00; /* Hover effect for links */
+
+        .logo::before {
+            content: '<';
+            color: #00D9FF;
         }
-        header {
-            padding: 10px;
-            background-color: #333;
-            text-align: center;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+
+        .logo::after {
+            content: '/>';
+            color: #00D9FF;
         }
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            justify-content: center;
+
+        .back-link {
+            font-family: 'IBM Plex Mono', monospace;
+            color: #00D9FF;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: opacity 0.2s ease;
         }
-        nav ul li {
-            margin: 0 20px;
+
+        .back-link:hover {
+            opacity: 0.7;
         }
-        nav ul li a {
-            color: #fff;
-            font-weight: bold;
+
+        .blog-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 8rem 2rem 4rem;
         }
-        .blog-post {
-            max-width: 800px;
-            margin: 100px auto 50px auto; /* Spacing for fixed header */
-            padding: 20px;
-            background-color: #333;
-            border-radius: 10px;
-            box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.7);
+
+        .blog-header {
+            margin-bottom: 3rem;
         }
+
+        .blog-label {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.85rem;
+            color: #00D9FF;
+            margin-bottom: 1rem;
+            font-weight: 500;
+            display: inline-block;
+            padding: 0.3rem 0.8rem;
+            border: 1px solid #00D9FF;
+            border-radius: 4px;
+        }
+
         h1 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #00D9FF 0%, #7B61FF 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
+
         h2 {
-            font-size: 2em;
-            margin-top: 40px;
-            margin-bottom: 20px;
+            font-size: clamp(1.5rem, 3vw, 2.5rem);
+            font-weight: 600;
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            color: #00D9FF;
         }
+
         p {
-            font-size: 1.2em;
-            line-height: 1.8em;
-            margin-bottom: 20px;
+            font-size: 1.15rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            color: #A0A0A0;
         }
+
+        em {
+            color: #00D9FF;
+            font-style: italic;
+        }
+
+        strong {
+            color: #FFFFFF;
+            font-weight: 600;
+        }
+
         figure {
-            margin: 20px 0;
+            margin: 3rem 0;
         }
+
         figure img {
             width: 100%;
-            max-width: 600px;
-            border-radius: 10px;
-            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.6);
+            border-radius: 16px;
+            border: 1px solid #222222;
         }
-        figure figcaption {
-            font-size: 1em;
-            color: #ddd;
-            margin-top: 10px;
+
+        figcaption {
             text-align: center;
+            font-size: 0.95rem;
+            color: #666666;
+            margin-top: 1rem;
+            font-family: 'IBM Plex Mono', monospace;
         }
+
         ul {
-            list-style-type: disc;
-            margin-left: 20px;
+            list-style: none;
+            margin: 2rem 0;
         }
+
         ul li {
-            margin-bottom: 10px;
-            font-size: 1.1em;
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: 1rem;
+            font-size: 1.05rem;
+            color: #A0A0A0;
+            line-height: 1.7;
         }
+
+        ul li::before {
+            content: '▹';
+            position: absolute;
+            left: 0;
+            color: #00D9FF;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        a {
+            color: #00D9FF;
+            text-decoration: none;
+            transition: opacity 0.2s ease;
+        }
+
+        a:hover {
+            opacity: 0.7;
+        }
+
         footer {
+            background: #111111;
+            border-top: 1px solid #222222;
+            padding: 3rem 2rem;
             text-align: center;
-            padding: 20px;
-            background-color: #333;
-            color: white;
+            margin-top: 4rem;
         }
-        .image-center {
-            display: flex;
-            justify-content: center;
+
+        .footer-content {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.85rem;
+            color: #666666;
+        }
+
+        @media (max-width: 768px) {
+            .blog-container {
+                padding: 6rem 1.5rem 3rem;
+            }
         }
     </style>
 </head>
 <body>
-
-    <!-- Navigation Bar -->
     <header>
         <nav>
-            <ul>
-                <li><a href="../index.html">Home</a></li>
-            </ul>
+            <a href="../index.html" class="logo">SV</a>
+            <a href="../index.html#blogs" class="back-link">← Back to Portfolio</a>
         </nav>
     </header>
 
-    <!-- Blog Post Section -->
-    <section class="blog-post">
-        <h1>Neuralink: Merging Man and Machines</h1>
+    <div class="blog-container">
+        <div class="blog-header">
+            <div class="blog-label">NEUROTECHNOLOGY</div>
+            <h1>Neuralink: Merging Man and Machines</h1>
+        </div>
 
         <article>
             <p>
-                Imagine a world where you could instantly download new skills, like Neo from *The Matrix*. <br> 
-                What if you could become a superhero like Vision from *The Avengers* or Cyborg from *Justice League*? <br>
+                Imagine a world where you could instantly download new skills, like Neo from <em>The Matrix</em>. 
+            </p>
+            <p>
+                What if you could become a superhero like Vision from <em>The Avengers</em> or Cyborg from <em>Justice League</em>? 
+            </p>
+            <p>
                 What if you could control devices—music players, phones, or even computers—just by thinking? Or even upload and download your mind to a computer?
             </p>
+
             <figure>
-                <div class="image-center">
-                    <img src="../img/neuralink_blog_1.jpg" alt="Brain and chip illustration">
-                </div>
+                <img src="../img/neuralink_blog_1.jpg" alt="Brain and chip illustration">
             </figure>
+
             <p>
                 All this may seem like something out of a sci-fi movie, but it could soon become reality. Elon Musk and his team at Neuralink, a cutting-edge brain-machine interface company, are working on directly connecting the human brain to computers.
             </p>
@@ -138,20 +237,21 @@
             <h2>Human Brain in a Nutshell</h2>
 
             <p>
-                Carl Sagan once said, "The brain is a very big space in a small space." <br>
-                The human brain contains approximately 86 billion neurons, tiny cells ranging from 4 to 100 microns wide. Neurons transmit information through connections known as **synapses**. Synapses are the junctions where neurons communicate via chemical signals called **neurotransmitters**. Every sensation, action, and thought is the result of electrical signals generated by neurons through a process known as **action potential**.
+                Carl Sagan once said, "The brain is a very big space in a small space."
             </p>
 
-            <h2>Neuralink: A “Fitbit in Your Skull”</h2>
+            <p>
+                The human brain contains approximately 86 billion neurons, tiny cells ranging from 4 to 100 microns wide. Neurons transmit information through connections known as <strong>synapses</strong>. Synapses are the junctions where neurons communicate via chemical signals called <strong>neurotransmitters</strong>. Every sensation, action, and thought is the result of electrical signals generated by neurons through a process known as <strong>action potential</strong>.
+            </p>
+
+            <h2>Neuralink: A "Fitbit in Your Skull"</h2>
 
             <p>
                 As Elon Musk describes it, Neuralink is like a "Fitbit in your skull with tiny wires." The device is a small, coin-sized chip measuring about 8mm in diameter. It contains numerous electrodes that are 1/20th the thickness of a human hair, attached to ultra-thin threads. These electrodes are inserted into the brain with the help of a precision robotic system, capable of implanting six threads per minute. In the future, as many as 10,000 electrodes could be connected to individual neurons.
             </p>
 
             <figure>
-                <div class="image-center">
-                    <img src="../img/neuralink_blog_2.jpg" alt="Neuralink illustration">
-                </div>
+                <img src="../img/neuralink_blog_2.jpg" alt="Neuralink illustration">
             </figure>
 
             <h2>How Neuralink Works</h2>
@@ -161,9 +261,7 @@
             </p>
 
             <figure>
-                <div class="image-center">
-                    <img src="../img/neuralink_blog_3.jpg" alt="Neuralink implant process">
-                </div>
+                <img src="../img/neuralink_blog_3.jpg" alt="Neuralink implant process">
             </figure>
 
             <p>
@@ -179,7 +277,7 @@
             <h2>Possible Future with Neuralink</h2>
 
             <p>
-                According to Elon Musk, Neuralink might one day be able to **save and replay dreams**. Other potential applications include **telepathic communication**, advanced **gaming**, and even merging humans with **artificial intelligence**.
+                According to Elon Musk, Neuralink might one day be able to <strong>save and replay dreams</strong>. Other potential applications include <strong>telepathic communication</strong>, advanced <strong>gaming</strong>, and even merging humans with <strong>artificial intelligence</strong>.
             </p>
 
             <h2>References</h2>
@@ -191,15 +289,14 @@
                 <li>BBC News</li>
                 <li>Exploring Mind</li>
                 <li><a href="https://interestingengineering.com/" target="_blank">Interesting Engineering: How Neuralink works</a></li>
-                
             </ul>
         </article>
-    </section>
+    </div>
 
-    <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Shiv Vyas</p>
+        <div class="footer-content">
+            <p>© 2025 Shiv Vyas. Built with purpose. Designed for impact.</p>
+        </div>
     </footer>
-
 </body>
 </html>

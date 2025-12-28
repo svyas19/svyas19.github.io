@@ -3,187 +3,290 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Theory of Everything : All Physics, One Theory</title>
-    <link rel="stylesheet" href="css/style.css"> <!-- Link to your CSS file -->
+    <title>Theory of Everything: All Physics, One Theory</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        /* Blog Post Styling */
-        body {
-            background-color: #1a1a1a; /* Dark background */
-            color: #e0e0e0; /* Light text */
-            font-family: 'Poppins', sans-serif; /* Ensure consistent typography */
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
-        h1, h2 {
-            color: #ffbf00; /* Yellow color for headings */
+
+        body {
+            background-color: #0A0A0A;
+            color: #FFFFFF;
+            font-family: 'Inter', sans-serif;
+            line-height: 1.7;
         }
-        a {
-            color: #ffbf00; /* Yellow for links */
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid #222222;
+            padding: 1.2rem 2rem;
+            z-index: 1000;
+        }
+
+        nav {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #FFFFFF;
             text-decoration: none;
         }
-        a:hover {
-            color: #ffbf00; /* Hover effect for links */
+
+        .logo::before {
+            content: '<';
+            color: #00D9FF;
         }
-        header {
-            padding: 10px;
-            background-color: #333;
-            text-align: center;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+
+        .logo::after {
+            content: '/>';
+            color: #00D9FF;
         }
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            justify-content: center;
+
+        .back-link {
+            font-family: 'IBM Plex Mono', monospace;
+            color: #00D9FF;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: opacity 0.2s ease;
         }
-        nav ul li {
-            margin: 0 20px;
+
+        .back-link:hover {
+            opacity: 0.7;
         }
-        nav ul li a {
-            color: #fff;
-            font-weight: bold;
+
+        .blog-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 8rem 2rem 4rem;
         }
-        .blog-post {
-            max-width: 800px;
-            margin: 100px auto 50px auto; /* Spacing for fixed header */
-            padding: 20px;
-            background-color: #333;
-            border-radius: 10px;
-            box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.7);
+
+        .blog-header {
+            margin-bottom: 3rem;
         }
+
+        .blog-label {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.85rem;
+            color: #00D9FF;
+            margin-bottom: 1rem;
+            font-weight: 500;
+            display: inline-block;
+            padding: 0.3rem 0.8rem;
+            border: 1px solid #00D9FF;
+            border-radius: 4px;
+        }
+
         h1 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #00D9FF 0%, #7B61FF 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
+
         h2 {
-            font-size: 2em;
-            margin-top: 40px;
-            margin-bottom: 20px;
+            font-size: clamp(1.5rem, 3vw, 2.5rem);
+            font-weight: 600;
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            color: #00D9FF;
         }
+
         p {
-            font-size: 1.2em;
-            line-height: 1.8em;
-            margin-bottom: 20px;
+            font-size: 1.15rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            color: #A0A0A0;
         }
+
+        em {
+            color: #00D9FF;
+            font-style: italic;
+        }
+
+        strong {
+            color: #FFFFFF;
+            font-weight: 600;
+        }
+
         figure {
-            margin: 20px 0;
+            margin: 3rem 0;
         }
+
         figure img {
             width: 100%;
-            max-width: 600px;
-            border-radius: 10px;
-            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.6);
+            border-radius: 16px;
+            border: 1px solid #222222;
         }
-        figure figcaption {
-            font-size: 1em;
-            color: #ddd;
-            margin-top: 10px;
+
+        figcaption {
             text-align: center;
+            font-size: 0.95rem;
+            color: #666666;
+            margin-top: 1rem;
+            font-family: 'IBM Plex Mono', monospace;
         }
+
         ul {
-            list-style-type: disc;
-            margin-left: 20px;
+            list-style: none;
+            margin: 2rem 0;
         }
+
         ul li {
-            margin-bottom: 10px;
-            font-size: 1.1em;
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: 1rem;
+            font-size: 1.05rem;
+            color: #A0A0A0;
+            line-height: 1.7;
         }
+
+        ul li::before {
+            content: '▹';
+            position: absolute;
+            left: 0;
+            color: #00D9FF;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        a {
+            color: #00D9FF;
+            text-decoration: none;
+            transition: opacity 0.2s ease;
+        }
+
+        a:hover {
+            opacity: 0.7;
+        }
+
         footer {
+            background: #111111;
+            border-top: 1px solid #222222;
+            padding: 3rem 2rem;
             text-align: center;
-            padding: 20px;
-            background-color: #333;
-            color: white;
+            margin-top: 4rem;
         }
-        .image-center {
-            display: flex;
-            justify-content: center;
+
+        .footer-content {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.85rem;
+            color: #666666;
+        }
+
+        @media (max-width: 768px) {
+            .blog-container {
+                padding: 6rem 1.5rem 3rem;
+            }
         }
     </style>
 </head>
 <body>
-
-    <!-- Navigation Bar -->
     <header>
         <nav>
-            <ul>
-                <li><a href="../index.html">Home</a></li>
-            </ul>
+            <a href="../index.html" class="logo">SV</a>
+            <a href="../index.html#blogs" class="back-link">← Back to Portfolio</a>
         </nav>
     </header>
 
-    <!-- Blog Post Section -->
-    <section class="blog-post">
-        <h1>Theory of Everything : All Physics, One Theory</h1>
+    <div class="blog-container">
+        <div class="blog-header">
+            <div class="blog-label">THEORETICAL PHYSICS</div>
+            <h1>Theory of Everything: All Physics, One Theory</h1>
+        </div>
 
         <article>
-            <p>The fundamental nature of our curious human minds is to question every essential aspect of the universe we live in and learn about them. In the pursuit of such eternal knowledge, many intellectuals throughout history have sought to unravel the mysteries of the universe.<br>
-                People have gained knowledge of particles as small as quarks to phenomena as vast as black holes. Even after acquiring so much knowledge, we realize there is still so much more to understand.<br></p>
+            <p>The fundamental nature of our curious human minds is to question every essential aspect of the universe we live in and learn about them. In the pursuit of such eternal knowledge, many intellectuals throughout history have sought to unravel the mysteries of the universe.</p>
+
+            <p>People have gained knowledge of particles as small as quarks to phenomena as vast as black holes. Even after acquiring so much knowledge, we realize there is still so much more to understand.</p>
 
             <figure>
-                <div class="image-center">
-                    <img src="../img/theor_blog_1.jpg" alt="Albert Einstein image">
-                </div>
+                <img src="../img/theor_blog_1.jpg" alt="Albert Einstein image">
             </figure>
 
             <p>
-                The recent baffling question among the physics community is, <em>"What is the theory that can combine the properties of the four fundamental forces: electromagnetic, weak nuclear, strong nuclear, and gravity?</em>" Or to put it simply: "The Theory of Everything."<br>
+                The recent baffling question among the physics community is, <em>"What is the theory that can combine the properties of the four fundamental forces: electromagnetic, weak nuclear, strong nuclear, and gravity?"</em> Or to put it simply: "The Theory of Everything."
+            </p>
+
+            <p>
                 We all know that gravity and electromagnetism are long-range forces, while the weak nuclear and strong nuclear forces are short-range. Einstein's General Theory of Relativity describes gravity as the curvature of the space-time fabric. Quantum mechanics explains the origin of the other three fundamental forces through particle interactions and gauge invariance. 21st-century scientists try to establish a way to incorporate Einstein's field equations and the Standard Model's particle equations to achieve a grand unified theory. But alas, they haven't found it yet. So, it's time for a new theory to solve this grand unification problem.
             </p>
 
             <figure>
-                <div class="image-center">
-                    <img src="../img/theor_blog_2.jpg" alt="Fundamental forces image">
-                </div>
+                <img src="../img/theor_blog_2.jpg" alt="Fundamental forces image">
             </figure>
 
             <p>
-                The two competing theories to solve this are <strong>string theory</strong> and <strong>loop quantum gravity</strong>.<br>
-                String theory states that every fundamental particle in our universe is composed of tiny strings vibrating at specific frequencies and patterns, giving rise to all matter. It suggests that there are additional spatial dimensions beyond the familiar three, often proposing up to ten dimensions, which are beyond human perception. String theory also proposes that gravity is mediated by hypothetical particles called gravitons, providing a new perspective in particle physics.<br>
+                The two competing theories to solve this are <strong>string theory</strong> and <strong>loop quantum gravity</strong>.
+            </p>
+
+            <p>
+                String theory states that every fundamental particle in our universe is composed of tiny strings vibrating at specific frequencies and patterns, giving rise to all matter. It suggests that there are additional spatial dimensions beyond the familiar three, often proposing up to ten dimensions, which are beyond human perception. String theory also proposes that gravity is mediated by hypothetical particles called gravitons, providing a new perspective in particle physics.
+            </p>
+
+            <p>
                 On the other hand, loop quantum gravity attempts to quantize space-time itself, offering a different approach to unifying general relativity and quantum mechanics.
             </p>
 
             <figure>
-                <div class="image-center">
-                    <img src="../img/theor_blog_3.jpg" alt="String theory image">
-                </div>
+                <img src="../img/theor_blog_3.jpg" alt="String theory image">
             </figure>
 
             <p>
-                Loop quantum gravity postulates that space is composed of finite loops woven into a fabric or network. These networks of loops are called spin networks. The evolution of a spin network, or spin foam, occurs at the Planck length scale, approximately 10^−35 meters, and scales smaller than the Planck length are considered meaningless.<br>
-                Consequently, not just matter but space itself exhibits an atomic structure.<br>
+                Loop quantum gravity postulates that space is composed of finite loops woven into a fabric or network. These networks of loops are called spin networks. The evolution of a spin network, or spin foam, occurs at the Planck length scale, approximately 10^−35 meters, and scales smaller than the Planck length are considered meaningless.
+            </p>
+
+            <p>
+                Consequently, not just matter but space itself exhibits an atomic structure.
+            </p>
+
+            <p>
                 Despite these theoretical developments, there is still no experimental evidence for these theories.
             </p>
 
             <figure>
-                <div class="image-center">
-                    <img src="../img/theor_blog_4.jpg" alt="Quantum Loop theory image">
-                </div>
+                <img src="../img/theor_blog_4.jpg" alt="Quantum Loop theory image">
             </figure>
 
             <p><em>"The future awaits empirical evidence that will help humanity discover the grand unified theory."</em></p>
 
             <h2>References</h2>
             <ul>
-                <li><a href="https://www.forbes.com/sites/annapowers/2018/03/14/the-theory-of-everything-remembering-stephen-hawkings-greatest-contribution/?sh=4901c2c023edg">The Theory of Everything - Forbes</a></li>
-                <li><a href="https://www.thegreatcoursesdaily.com/the-theory-of-everything/">The Great Courses Daily - The Theory of Everything</a></li>
-                <li><a href="https://www.clearias.com/four-fundamental-forces-of-nature/">Clear IAS - Four Fundamental Forces of Nature</a></li>
-                <li><a href="https://www.space.com/17594-string-theory.html">Space.com - String Theory</a></li>
-                <li><a href="https://www.linkedin.com/pulse/loop-quantum-gravity-abhigna-joshi/">LinkedIn - Loop Quantum Gravity</a></li>
-                <li><a href="https://www.pinterest.com/pin/411586853440626871/">Pinterest - Quantum Gravity</a></li>
-                <li><a href="https://medium.com/starts-with-a-bang/new-podcast-on-string-theory-and-quantum-gravity-is-live-e155c592be3">Medium - Podcast on String Theory and Quantum Gravity</a></li>
+                <li><a href="https://www.forbes.com/sites/annapowers/2018/03/14/the-theory-of-everything-remembering-stephen-hawkings-greatest-contribution/?sh=4901c2c023edg" target="_blank">The Theory of Everything - Forbes</a></li>
+                <li><a href="https://www.thegreatcoursesdaily.com/the-theory-of-everything/" target="_blank">The Great Courses Daily - The Theory of Everything</a></li>
+                <li><a href="https://www.clearias.com/four-fundamental-forces-of-nature/" target="_blank">Clear IAS - Four Fundamental Forces of Nature</a></li>
+                <li><a href="https://www.space.com/17594-string-theory.html" target="_blank">Space.com - String Theory</a></li>
+                <li><a href="https://www.linkedin.com/pulse/loop-quantum-gravity-abhigna-joshi/" target="_blank">LinkedIn - Loop Quantum Gravity</a></li>
+                <li><a href="https://www.pinterest.com/pin/411586853440626871/" target="_blank">Pinterest - Quantum Gravity</a></li>
+                <li><a href="https://medium.com/starts-with-a-bang/new-podcast-on-string-theory-and-quantum-gravity-is-live-e155c592be3" target="_blank">Medium - Podcast on String Theory and Quantum Gravity</a></li>
             </ul>
         </article>
-    </section>
+    </div>
 
-    <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Shiv Vyas</p>
+        <div class="footer-content">
+            <p>© 2025 Shiv Vyas. Built with purpose. Designed for impact.</p>
+        </div>
     </footer>
-
 </body>
 </html>
