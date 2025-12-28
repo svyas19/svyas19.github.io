@@ -1059,12 +1059,6 @@
             overflow: hidden;
         }
 
-        .blog-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
         .blog-placeholder {
             position: absolute;
             top: 0;
@@ -1076,6 +1070,17 @@
             justify-content: center;
             font-size: 4rem;
             background: linear-gradient(135deg, var(--bg-tertiary) 0%, var(--bg-secondary) 100%);
+            z-index: 1;
+        }
+
+        .blog-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 2;
         }
 
         .blog-content {
@@ -1771,8 +1776,8 @@
             <div class="blog-grid">
                 <a href="blogs/4d.html" class="blog-card">
                     <div class="blog-image">
-                        <img src="img/4d.jpg" alt="Fourth Dimension" onerror="this.style.display='none'">
                         <div class="blog-placeholder">📐</div>
+                        <img src="img/4d.jpg" alt="Fourth Dimension">
                     </div>
                     <div class="blog-content">
                         <h3>The Fourth Dimension</h3>
@@ -1782,8 +1787,8 @@
                 </a>
                 <a href="blogs/alltheory.html" class="blog-card">
                     <div class="blog-image">
-                        <img src="img/toa_tittle.jpg" alt="Theory of Everything" onerror="this.style.display='none'">
                         <div class="blog-placeholder">🌌</div>
+                        <img src="img/toa_tittle.jpg" alt="Theory of Everything">
                     </div>
                     <div class="blog-content">
                         <h3>The Theory of Everything</h3>
@@ -1793,8 +1798,8 @@
                 </a>
                 <a href="blogs/neuralink.html" class="blog-card">
                     <div class="blog-image">
-                        <img src="img/neuralink_titlte.jpg" alt="Neuralink" onerror="this.style.display='none'">
                         <div class="blog-placeholder">🧠</div>
+                        <img src="img/neuralink_titlte.jpg" alt="Neuralink">
                     </div>
                     <div class="blog-content">
                         <h3>Neuralink</h3>
